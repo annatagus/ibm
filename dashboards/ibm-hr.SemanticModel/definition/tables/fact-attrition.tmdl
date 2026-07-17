@@ -1,0 +1,196 @@
+table fact-attrition
+	lineageTag: 53ecabf8-9e72-4a31-9f51-e55711031350
+
+	column Attrition
+		dataType: string
+		lineageTag: 4a990a81-1532-4bb8-9ef3-78fb799fb34a
+		summarizeBy: none
+		sourceColumn: Attrition
+
+		annotation SummarizationSetBy = Automatic
+
+	column DailyRate
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bd8b945-4cf6-41d7-8144-6fc9fc07defb
+		summarizeBy: sum
+		sourceColumn: DailyRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column HourlyRate
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cbfb8d6-fd3d-4662-986e-67a265ba4464
+		summarizeBy: sum
+		sourceColumn: HourlyRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyIncome
+		dataType: int64
+		formatString: 0
+		lineageTag: ef344cb3-ccbb-46d8-ad34-0f45a3c28efe
+		summarizeBy: sum
+		sourceColumn: MonthlyIncome
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyRate
+		dataType: int64
+		formatString: 0
+		lineageTag: 24123a8a-b34a-47cd-85e0-234ed03f6362
+		summarizeBy: sum
+		sourceColumn: MonthlyRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumCompaniesWorked
+		dataType: int64
+		formatString: 0
+		lineageTag: d88060f4-e924-44f4-b96a-f8b2f624943a
+		summarizeBy: sum
+		sourceColumn: NumCompaniesWorked
+
+		annotation SummarizationSetBy = Automatic
+
+	column PercentSalaryHike
+		dataType: int64
+		formatString: 0
+		lineageTag: 06c2328e-9f33-47d4-b631-5c2ee7a59c44
+		summarizeBy: sum
+		sourceColumn: PercentSalaryHike
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalWorkingYears
+		dataType: int64
+		formatString: 0
+		lineageTag: ae1aaeba-b586-4f7c-ac60-9862e374b96b
+		summarizeBy: sum
+		sourceColumn: TotalWorkingYears
+
+		annotation SummarizationSetBy = Automatic
+
+	column TrainingTimesLastYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 29174ffd-39a3-46df-9634-a7b26812d52a
+		summarizeBy: sum
+		sourceColumn: TrainingTimesLastYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsAtCompany
+		dataType: int64
+		formatString: 0
+		lineageTag: 73f9ddcc-10c5-4e32-bafa-24a3fee77eae
+		summarizeBy: sum
+		sourceColumn: YearsAtCompany
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsInCurrentRole
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b6dfc39-0b55-4bb1-afe3-a026f328f0cd
+		summarizeBy: sum
+		sourceColumn: YearsInCurrentRole
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsSinceLastPromotion
+		dataType: int64
+		formatString: 0
+		lineageTag: fc0a46c5-bab1-4daf-a399-893b17e00450
+		summarizeBy: sum
+		sourceColumn: YearsSinceLastPromotion
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsWithCurrManager
+		dataType: int64
+		formatString: 0
+		lineageTag: 5010d2f2-d065-4d92-ab20-1ec324cd29d4
+		summarizeBy: sum
+		sourceColumn: YearsWithCurrManager
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 4dc2add4-8868-419d-86db-e318b1291da0
+		summarizeBy: none
+		sourceColumn: EmployeeNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Education_Id
+		dataType: int64
+		formatString: 0
+		lineageTag: a040c137-cbe8-4cfe-b8ca-0aac25ad9b5f
+		summarizeBy: none
+		sourceColumn: Education_Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentJob_Id
+		dataType: int64
+		formatString: 0
+		lineageTag: d07c4871-92aa-48a8-a16c-224329588a90
+		summarizeBy: none
+		sourceColumn: DepartmentJob_Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Satisfaction_Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b6f70c8-7fe5-4e9c-880c-625366fc6f73
+		summarizeBy: none
+		sourceColumn: Satisfaction_Id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact-attrition = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Formando\Desktop\IBM\dados\IBM-HR-Employee-Attrition.csv"),[Delimiter=";", Columns=35, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Age", Int64.Type}, {"Attrition", type text}, {"BusinessTravel", type text}, {"DailyRate", Int64.Type}, {"Department", type text}, {"DistanceFromHome", Int64.Type}, {"Education", Int64.Type}, {"EducationField", type text}, {"EmployeeCount", Int64.Type}, {"EmployeeNumber", Int64.Type}, {"EnvironmentSatisfaction", Int64.Type}, {"Gender", type text}, {"HourlyRate", Int64.Type}, {"JobInvolvement", Int64.Type}, {"JobLevel", Int64.Type}, {"JobRole", type text}, {"JobSatisfaction", Int64.Type}, {"MaritalStatus", type text}, {"MonthlyIncome", Int64.Type}, {"MonthlyRate", Int64.Type}, {"NumCompaniesWorked", Int64.Type}, {"Over18", type text}, {"OverTime", type text}, {"PercentSalaryHike", Int64.Type}, {"PerformanceRating", Int64.Type}, {"RelationshipSatisfaction", Int64.Type}, {"StandardHours", Int64.Type}, {"StockOptionLevel", Int64.Type}, {"TotalWorkingYears", Int64.Type}, {"TrainingTimesLastYear", Int64.Type}, {"WorkLifeBalance", Int64.Type}, {"YearsAtCompany", Int64.Type}, {"YearsInCurrentRole", Int64.Type}, {"YearsSinceLastPromotion", Int64.Type}, {"YearsWithCurrManager", Int64.Type}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Changed Type",{"EmployeeNumber", "Age", "Attrition", "BusinessTravel", "DailyRate", "Department", "DistanceFromHome", "Education", "EducationField", "EmployeeCount", "EnvironmentSatisfaction", "Gender", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MaritalStatus", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "Over18", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "StandardHours", "StockOptionLevel", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Sorted Rows" = Table.Sort(#"Reordered Columns",{{"EmployeeNumber", Order.Ascending}}),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Sorted Rows",{"EmployeeNumber", "Attrition", "Age", "BusinessTravel", "DailyRate", "Department", "DistanceFromHome", "Education", "EducationField", "EmployeeCount", "EnvironmentSatisfaction", "Gender", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MaritalStatus", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "Over18", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "StandardHours", "StockOptionLevel", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns1",{"EmployeeCount", "Over18", "StandardHours"}),
+				    #"Reordered Columns2" = Table.ReorderColumns(#"Removed Columns",{"EmployeeNumber", "Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "Education", "EducationField", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Reordered Columns2", {"EmployeeNumber"}, #"dim-employee", {"EmployeeNumber"}, "dim-employee", JoinKind.LeftOuter),
+				    #"Expanded dim-employee" = Table.ExpandTableColumn(#"Merged Queries", "dim-employee", {"EmployeeNumber"}, {"dim-employee.EmployeeNumber"}),
+				    #"Reordered Columns3" = Table.ReorderColumns(#"Expanded dim-employee",{"EmployeeNumber", "dim-employee.EmployeeNumber", "Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "Education", "EducationField", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Reordered Columns3",{"EmployeeNumber"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns1",{{"dim-employee.EmployeeNumber", "EmployeeNumber"}}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Renamed Columns", {"Education", "EducationField"}, #"dim-education", {"EducationLabel_Id", "EducationField"}, "dim-education", JoinKind.LeftOuter),
+				    #"Expanded dim-education" = Table.ExpandTableColumn(#"Merged Queries1", "dim-education", {"Education_Id"}, {"dim-education.Education_Id"}),
+				    #"Reordered Columns4" = Table.ReorderColumns(#"Expanded dim-education",{"EmployeeNumber", "Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "Education", "dim-education.Education_Id", "EducationField", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns4",{{"dim-education.Education_Id", "Education_Id"}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Renamed Columns1",{"Education", "EducationField"}),
+				    #"Reordered Columns5" = Table.ReorderColumns(#"Removed Columns2",{"EmployeeNumber", "Education_Id", "Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Removed Columns3" = Table.RemoveColumns(#"Reordered Columns5",{"Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "OverTime"}),
+				    #"Merged Queries2" = Table.NestedJoin(#"Removed Columns3", {"Department", "JobLevel", "JobRole"}, #"dim-department-job", {"Department", "JobLevel", "JobRole"}, "dim-department-job", JoinKind.LeftOuter),
+				    #"Expanded dim-department-job" = Table.ExpandTableColumn(#"Merged Queries2", "dim-department-job", {"DepartmentJob_Id"}, {"DepartmentJob_Id"}),
+				    #"Reordered Columns6" = Table.ReorderColumns(#"Expanded dim-department-job",{"EmployeeNumber", "Attrition", "Education_Id", "DepartmentJob_Id", "DailyRate", "Department", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Sorted Rows1" = Table.Sort(#"Reordered Columns6",{{"EmployeeNumber", Order.Ascending}}),
+				    #"Removed Columns4" = Table.RemoveColumns(#"Sorted Rows1",{"Department", "JobLevel", "JobRole"}),
+				    #"Merged Queries3" = Table.NestedJoin(#"Removed Columns4", {"EnvironmentSatisfaction", "JobSatisfaction", "JobInvolvement", "RelationshipSatisfaction", "WorkLifeBalance", "PerformanceRating"}, #"dim-satisfaction", {"EnvironmentSatisfaction", "JobSatisfaction", "JobInvolvement", "RelationshipSatisfaction", "WorkLifeBalance", "PerformanceRating"}, "dim-satisfaction", JoinKind.LeftOuter),
+				    #"Expanded dim-satisfaction" = Table.ExpandTableColumn(#"Merged Queries3", "dim-satisfaction", {"Satisfaction_Id"}, {"Satisfaction_Id"}),
+				    #"Reordered Columns7" = Table.ReorderColumns(#"Expanded dim-satisfaction",{"EmployeeNumber", "Attrition", "Education_Id", "DepartmentJob_Id", "Satisfaction_Id", "DailyRate", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Removed Columns5" = Table.RemoveColumns(#"Reordered Columns7",{"EnvironmentSatisfaction", "JobInvolvement", "JobSatisfaction", "PerformanceRating", "RelationshipSatisfaction", "WorkLifeBalance"}),
+				    #"Reordered Columns8" = Table.ReorderColumns(#"Removed Columns5",{"EmployeeNumber", "Attrition", "Education_Id", "DepartmentJob_Id", "Satisfaction_Id", "MonthlyIncome", "MonthlyRate", "DailyRate", "HourlyRate", "PercentSalaryHike", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager", "NumCompaniesWorked", "TotalWorkingYears", "TrainingTimesLastYear"})
+				in
+				    #"Reordered Columns8"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

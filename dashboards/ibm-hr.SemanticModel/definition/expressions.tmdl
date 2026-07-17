@@ -1,0 +1,7 @@
+expression StandardHours = 80 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=true]
+	lineageTag: 3d1c4048-226c-42d7-b06f-7008f5241420
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Number
+

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "f3cd63b1b4df1acc92ee",
+  "position": {
+    "x": 264,
+    "y": 8,
+    "z": 0,
+    "height": 119.99999999999999,
+    "width": 248
+  },
+  "visual": {
+    "visualType": "card",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Total_Empregados_Ativos"
+                }
+              },
+              "queryRef": "_Medidas.Total_Empregados_Ativos",
+              "nativeQueryRef": "Total_Empregados_Ativos"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

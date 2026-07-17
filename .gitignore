@@ -1,0 +1,55 @@
+# ====================================================================
+# Ignore files
+# ====================================================================
+
+*~
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+
+# Python Tools for Visual Studio (PTVS)
+**/__pycache__/
+*.pyc
+
+
+# ====================================================================
+# Ficheiros Temporários do Excel e Office
+# ====================================================================
+# Ignora os ficheiros temporários ocultos que o Excel cria quando está aberto
+~$*.xlsx
+~$*.xls
+~$*.csv
+
+# Ficheiros temporários gerais do Office
+*.tmp
+~*
+
+
+# ====================================================================
+# Ficheiros Temporários e Detritos do Power BI
+# ====================================================================
+# Ficheiros de backup automático e recuperação do Power BI
+*.tmp
+*.pbi.bak
+
+# Ignora dados locais em cache se usar o formato PBIP (Power BI Project)
+# (Muito importante para segurança se o formato PBIP for adotado no futuro)
+**/__cache__
+.pbi/
+
+
+# ====================================================================
+# Ficheiros do Sistema Operativo
+# ====================================================================
+# Windows
+Thumbs.db
+Ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride

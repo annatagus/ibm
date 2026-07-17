@@ -1,0 +1,25 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-PT
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["fact-attrition","StandardHours","dim-employee","dim-education","dim-department-job","dim-satisfaction"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table fact-attrition
+ref table _Medidas
+ref table dim-employee
+ref table dim-education
+ref table dim-department-job
+ref table dim-satisfaction
+ref table DateTableTemplate_d4432224-573d-42e6-894f-ca97203363c3
+ref table LocalDateTable_e5c9f64c-d53b-414e-a7b4-58b42903296a
+
+ref cultureInfo en-US
+

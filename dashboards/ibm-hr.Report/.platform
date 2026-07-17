@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ibm-hr"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "099dbb9a-71ef-4a07-a067-da9dae1e2d3c"
+  }
+}

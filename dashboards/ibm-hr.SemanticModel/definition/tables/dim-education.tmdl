@@ -1,0 +1,78 @@
+table dim-education
+	lineageTag: a6b68d82-8b91-4412-a735-a0007d9b5425
+
+	column Education_Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 524b9f38-d071-47a2-9797-80dd93fde47f
+		summarizeBy: none
+		sourceColumn: Education_Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column EducationLabel_Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c10059d-7a65-4d34-8ae7-05fb2eb19f43
+		summarizeBy: none
+		sourceColumn: EducationLabel_Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column EducationLabel
+		dataType: string
+		lineageTag: 9efb8707-4519-47a4-9759-691ba745ec8c
+		summarizeBy: none
+		sourceColumn: EducationLabel
+
+		annotation SummarizationSetBy = Automatic
+
+	column EducationField
+		dataType: string
+		lineageTag: d2f926da-186f-4fbc-98c0-b05f4a647682
+		summarizeBy: none
+		sourceColumn: EducationField
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim-education = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Formando\Desktop\IBM\dados\IBM-HR-Employee-Attrition.csv"),[Delimiter=";", Columns=35, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Age", Int64.Type}, {"Attrition", type text}, {"BusinessTravel", type text}, {"DailyRate", Int64.Type}, {"Department", type text}, {"DistanceFromHome", Int64.Type}, {"Education", Int64.Type}, {"EducationField", type text}, {"EmployeeCount", Int64.Type}, {"EmployeeNumber", Int64.Type}, {"EnvironmentSatisfaction", Int64.Type}, {"Gender", type text}, {"HourlyRate", Int64.Type}, {"JobInvolvement", Int64.Type}, {"JobLevel", Int64.Type}, {"JobRole", type text}, {"JobSatisfaction", Int64.Type}, {"MaritalStatus", type text}, {"MonthlyIncome", Int64.Type}, {"MonthlyRate", Int64.Type}, {"NumCompaniesWorked", Int64.Type}, {"Over18", type text}, {"OverTime", type text}, {"PercentSalaryHike", Int64.Type}, {"PerformanceRating", Int64.Type}, {"RelationshipSatisfaction", Int64.Type}, {"StandardHours", Int64.Type}, {"StockOptionLevel", Int64.Type}, {"TotalWorkingYears", Int64.Type}, {"TrainingTimesLastYear", Int64.Type}, {"WorkLifeBalance", Int64.Type}, {"YearsAtCompany", Int64.Type}, {"YearsInCurrentRole", Int64.Type}, {"YearsSinceLastPromotion", Int64.Type}, {"YearsWithCurrManager", Int64.Type}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Changed Type",{"EmployeeNumber", "Age", "Attrition", "BusinessTravel", "DailyRate", "Department", "DistanceFromHome", "Education", "EducationField", "EmployeeCount", "EnvironmentSatisfaction", "Gender", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MaritalStatus", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "Over18", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "StandardHours", "StockOptionLevel", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Sorted Rows" = Table.Sort(#"Reordered Columns",{{"EmployeeNumber", Order.Ascending}}),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Sorted Rows",{"EmployeeNumber", "Attrition", "Age", "BusinessTravel", "DailyRate", "Department", "DistanceFromHome", "Education", "EducationField", "EmployeeCount", "EnvironmentSatisfaction", "Gender", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MaritalStatus", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "Over18", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "StandardHours", "StockOptionLevel", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns1",{"EmployeeCount", "Over18", "StandardHours"}),
+				    #"Reordered Columns2" = Table.ReorderColumns(#"Removed Columns",{"EmployeeNumber", "Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "Education", "EducationField", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Reordered Columns2", {"EmployeeNumber"}, #"dim-employee", {"EmployeeNumber"}, "dim-employee", JoinKind.LeftOuter),
+				    #"Expanded dim-employee" = Table.ExpandTableColumn(#"Merged Queries", "dim-employee", {"EmployeeNumber"}, {"dim-employee.EmployeeNumber"}),
+				    #"Reordered Columns3" = Table.ReorderColumns(#"Expanded dim-employee",{"EmployeeNumber", "dim-employee.EmployeeNumber", "Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "Education", "EducationField", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Reordered Columns3",{"EmployeeNumber"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Columns1",{{"dim-employee.EmployeeNumber", "EmployeeNumber"}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Renamed Columns",{"Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Removed Columns2", "Education", "Education - Copy"),
+				    #"Reordered Columns4" = Table.ReorderColumns(#"Duplicated Column",{"EmployeeNumber", "Education", "Education - Copy", "EducationField"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns4",{{"Education", "Education_Id"}, {"Education - Copy", "EducationLabel"}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Renamed Columns1",{{"EducationLabel", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type1","1","Below College",Replacer.ReplaceText,{"EducationLabel"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","2","College",Replacer.ReplaceText,{"EducationLabel"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","3","Bachelor",Replacer.ReplaceText,{"EducationLabel"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","4","Master",Replacer.ReplaceText,{"EducationLabel"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","5","Doctor",Replacer.ReplaceText,{"EducationLabel"}),
+				    #"Removed Columns3" = Table.RemoveColumns(#"Replaced Value4",{"EmployeeNumber"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Columns3"),
+				    #"Sorted Rows1" = Table.Sort(#"Removed Duplicates",{{"Education_Id", Order.Ascending}, {"EducationField", Order.Ascending}}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Sorted Rows1",{{"Education_Id", "Educationx_Id"}}),
+				    #"Added Index" = Table.AddIndexColumn(#"Renamed Columns2", "Index", 1, 1, Int64.Type),
+				    #"Reordered Columns5" = Table.ReorderColumns(#"Added Index",{"Index", "Educationx_Id", "EducationLabel", "EducationField"}),
+				    #"Renamed Columns3" = Table.RenameColumns(#"Reordered Columns5",{{"Educationx_Id", "EducationLabel_Id"}, {"Index", "Education_Id"}})
+				in
+				    #"Renamed Columns3"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

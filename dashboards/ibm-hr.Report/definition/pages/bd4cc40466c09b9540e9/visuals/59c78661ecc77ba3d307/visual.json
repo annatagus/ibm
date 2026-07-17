@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "59c78661ecc77ba3d307",
+  "position": {
+    "x": 520,
+    "y": 8,
+    "z": 1000,
+    "height": 119.99999999999999,
+    "width": 248,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "card",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Total_Empregados_Sairam"
+                }
+              },
+              "queryRef": "_Medidas.Total_Empregados_Sairam",
+              "nativeQueryRef": "Total_Empregados_Sairam"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
