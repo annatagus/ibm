@@ -1,9 +1,3 @@
-relationship AutoDetected_69f8d222-a3e8-4f75-b787-4282689905bd
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: dim-employee.EmployeeNumber
-	toColumn: fact-attrition.EmployeeNumber
-
 relationship AutoDetected_46f41233-5ef0-40d8-828a-f1a2ac0bd0f7
 	fromColumn: fact-attrition.Education_Id
 	toColumn: dim-education.Education_Id
@@ -20,4 +14,8 @@ relationship 7c56ff5e-282f-42ac-ba05-8efb509530c0
 	joinOnDateBehavior: datePartOnly
 	fromColumn: _Medidas.'Last update'
 	toColumn: LocalDateTable_e5c9f64c-d53b-414e-a7b4-58b42903296a.Date
+
+relationship d51e46c0-e008-cff5-58c1-a60a210bdca3
+	fromColumn: fact-attrition.EmployeeNumber
+	toColumn: dim-employee.EmployeeNumber
 

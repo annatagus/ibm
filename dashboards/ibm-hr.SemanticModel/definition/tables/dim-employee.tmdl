@@ -14,7 +14,7 @@ table dim-employee
 		dataType: int64
 		formatString: 0
 		lineageTag: 083bbd8d-335b-4167-8350-9b73ee3a5308
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Age
 
 		annotation SummarizationSetBy = Automatic
@@ -39,7 +39,7 @@ table dim-employee
 		dataType: int64
 		formatString: 0
 		lineageTag: 4a0f302f-c732-429d-b358-2994c9923c46
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: DistanceFromHome
 
 		annotation SummarizationSetBy = Automatic
@@ -48,7 +48,7 @@ table dim-employee
 		dataType: int64
 		formatString: 0
 		lineageTag: 310115b7-3661-4836-90e8-bfdbd7dbd567
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: StockOptionLevel
 
 		annotation SummarizationSetBy = Automatic
