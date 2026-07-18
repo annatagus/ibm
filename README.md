@@ -55,6 +55,5 @@ Para manter o projeto limpo e colaborativo no Git, a estrutura de pastas foi org
 
 Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estruturado seguindo um esquema em estrela (*Star Schema*), composto por uma tabela central de factos interligada a tabelas de dimensões.
 
-![Modelo de Dados Power BI](img/modelo_star_schema.png)
-
-> 📖 **Documentação Detalhada:** Para consultar os tipos de dados, transformações de colunas e o mapeamento completo de cada atributo deste modelo, aceda ao nosso [Dicionário de Dados](documentation/dicionario_dados.md).
+* 🔍 [Visualizar Imagem do Modelo Star Schema (PNG)](img/modelo_star_schema.png)
+* 📖 [Consultar Dicionário de Dados Detalhado](documentation/dicionario_dados.md) (Tipos de dados, transformações e mapeamento de chaves)
