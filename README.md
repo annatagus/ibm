@@ -49,3 +49,12 @@ Para manter o projeto limpo e colaborativo no Git, a estrutura de pastas foi org
 * **Microsoft Word / PowerPoint / PDF** - Criação de relatórios escritos e suporte para a apresentação.
 * **Git & GitHub** - Controlo de versão e ambiente colaborativo para o grupo.
 
+---
+
+## 📐 Modelo de Dados (Star Schema)
+
+Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estruturado seguindo um esquema em estrela (*Star Schema*), composto por uma tabela central de factos interligada a tabelas de dimensões.
+
+![Modelo de Dados Power BI](img/modelo_star_schema.png)
+
+> 📖 **Documentação Detalhada:** Para consultar os tipos de dados, transformações de colunas e o mapeamento completo de cada atributo deste modelo, aceda ao nosso [Dicionário de Dados](documentation/dicionario_dados.md).
