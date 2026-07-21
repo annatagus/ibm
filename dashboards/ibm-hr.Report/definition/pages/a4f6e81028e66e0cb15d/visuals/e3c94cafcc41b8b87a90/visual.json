@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "e3c94cafcc41b8b87a90",
+  "position": {
+    "x": 208,
+    "y": 248,
+    "z": 0,
+    "height": 296,
+    "width": 872
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Página 2: "
+                  },
+                  {
+                    "value": "Attrition (Fatores de Risco)",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "•\tObjetivo: Isolar as variáveis que estão a fazer as pessoas demitirem-se.",
+                    "textStyle": {
+                      "color": "#dd6b7f"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "•\tVisuais Principais:",
+                    "textStyle": {
+                      "color": "#dd6b7f"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "o\tGráfico de Colunas Agrupadas: Taxa de Atrito vs. Horas Extraordinárias (OverTime).",
+                    "textStyle": {
+                      "color": "#dd6b7f"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "o\tMatriz / ? : Cruzamento de Nível de Satisfação (JobSatisfaction) com Função (JobRole).",
+                    "textStyle": {
+                      "color": "#dd6b7f"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "o\tGráfico de Dispersão: Relação entre Rendimento Mensal (MonthlyIncome) e Distância de Casa (DistanceFromHome).",
+                    "textStyle": {
+                      "color": "#dd6b7f"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "-> Comparação do "
+                  },
+                  {
+                    "value": "Survey PingPong - ",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "médias de satisfação",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#37a794"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "ANTES/DEPOIS"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

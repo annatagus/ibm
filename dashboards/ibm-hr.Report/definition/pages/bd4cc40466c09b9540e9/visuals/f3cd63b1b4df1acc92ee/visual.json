@@ -23,11 +23,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total_Empregados_Ativos"
+                  "Property": "Total_Colaboradores_Ativos"
                 }
               },
               "queryRef": "_Medidas.Total_Empregados_Ativos",
-              "nativeQueryRef": "Total_Empregados_Ativos"
+              "nativeQueryRef": "Total_Colaboradores_Ativos"
             }
           ]
         }

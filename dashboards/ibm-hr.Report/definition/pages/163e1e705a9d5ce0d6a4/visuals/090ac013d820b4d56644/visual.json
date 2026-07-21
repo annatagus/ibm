@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "090ac013d820b4d56644",
+  "position": {
+    "x": 216,
+    "y": 208,
+    "z": 0,
+    "height": 336,
+    "width": 712
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Página 3: "
+                  },
+                  {
+                    "value": "Recomendações ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#37a794"
+                    }
+                  },
+                  {
+                    "value": "e Plano de Ação",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "•\tObjetivo: Transformar dados em decisões estratégicas para o plano de ação dos RH."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "•\tVisuais Principais:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "o\tIndicadores de Alerta (Gauge): Setores que ultrapassaram o limite crítico de atrito (ex: acima de 15%)."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "o\tTabela de Detalhe: Lista de funções com pior equilíbrio vida/trabalho (WorkLifeBalance)."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "o\tCaixa de Texto com Recomendações Dinâmicas (Smart Narrative)."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

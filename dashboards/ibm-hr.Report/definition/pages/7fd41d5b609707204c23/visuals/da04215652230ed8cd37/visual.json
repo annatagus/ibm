@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "da04215652230ed8cd37",
+  "position": {
+    "x": 288,
+    "y": 208,
+    "z": 0,
+    "height": 264,
+    "width": 720
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Página 1: "
+                  },
+                  {
+                    "value": "Overview (O Estado Atual) - quem nós somos demog.",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "•\tObjetivo: Dar uma visão do estado atual ao novo Diretor RH."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "•\tKPIs no Topo (Cartões): Total de Colaboradores, Colaboradores Ativos, "
+                  },
+                  {
+                    "value": "Taxa de Atrito",
+                    "textStyle": {
+                      "color": "#d64550"
+                    }
+                  },
+                  {
+                    "value": " e Média Salarial."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "•\tVisuais Principais:"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "o\tGráfico de Linhas: Evolução do Atrito por Antiguidade (YearsAtCompany)."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "o\tGráfico de Barras: Distribuição de Colaboradores por Departamento e Género."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "o\t?"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

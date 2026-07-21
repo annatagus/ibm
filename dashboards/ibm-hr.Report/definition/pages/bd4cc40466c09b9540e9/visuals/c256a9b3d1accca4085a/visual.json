@@ -24,11 +24,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total_Empregados_Dataset"
+                  "Property": "Total_Colaboradores_Dataset"
                 }
               },
               "queryRef": "_Medidas.Total_Empregados_Dataset",
-              "nativeQueryRef": "Total_Empregados_Dataset"
+              "nativeQueryRef": "Total_Colaboradores_Dataset"
             }
           ]
         }

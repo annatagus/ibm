@@ -23,11 +23,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Taxa_Atrito %"
+                  "Property": "%Taxa_Atrito (Rotatividade)"
                 }
               },
               "queryRef": "_Medidas.Taxa_Rotatividade %",
-              "nativeQueryRef": "Taxa_Atrito %"
+              "nativeQueryRef": "%Taxa_Atrito (Rotatividade)"
             }
           ]
         }
@@ -41,6 +41,36 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }

@@ -1,41 +1,33 @@
-table dim-education
-	lineageTag: 93a0d02a-74b4-4df1-b0c1-6469cbc7141e
+table dim-job
+	lineageTag: 33c6c7d5-e933-430a-a88c-c67833527f79
 
-	column Education_Id
+	column Job_Id
 		dataType: int64
 		formatString: 0
-		lineageTag: ff07e9d1-6605-4eec-8802-2eaa0d42e695
+		lineageTag: b809a834-ad58-4d41-8edb-1c706e2d03f8
 		summarizeBy: none
-		sourceColumn: Education_Id
+		sourceColumn: Job_Id
 
 		annotation SummarizationSetBy = Automatic
 
-	column EducationItem
+	column JobLevel
 		dataType: int64
 		formatString: 0
-		lineageTag: 47885d5f-e6c3-46b1-8a3b-0bd0ba4a6bc6
+		lineageTag: c3a87d25-067f-43f4-9b5f-262119bce24b
 		summarizeBy: none
-		sourceColumn: EducationItem
+		sourceColumn: JobLevel
 
 		annotation SummarizationSetBy = Automatic
 
-	column EducationLabel
+	column JobRole
 		dataType: string
-		lineageTag: 016c078b-71cd-495e-ad80-44647a9455f2
+		lineageTag: e890adac-a0ed-466b-9d2a-7e42daa53e6f
 		summarizeBy: none
-		sourceColumn: EducationLabel
+		sourceColumn: JobRole
 
 		annotation SummarizationSetBy = Automatic
 
-	column EducationField
-		dataType: string
-		lineageTag: f6190312-77d1-42bb-ab3e-564981b43213
-		summarizeBy: none
-		sourceColumn: EducationField
-
-		annotation SummarizationSetBy = Automatic
-
-	partition dim-education = m
+	partition dim-job = m
 		mode: import
 		queryGroup: TABELAS-DIM
 		source =
@@ -49,19 +41,19 @@ table dim-education
 				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns1",{"EmployeeCount", "Over18", "StandardHours"}),
 				    #"Reordered Columns2" = Table.ReorderColumns(#"Removed Columns",{"EmployeeNumber", "Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "Education", "EducationField", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
 				    #"Removed Columns1" = Table.RemoveColumns(#"Reordered Columns2",{"Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "HourlyRate", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "TotalWorkingYears", "TrainingTimesLastYear", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
-				    #"Removed Other Columns" = Table.SelectColumns(#"Removed Columns1",{"Education", "EducationField", "EmployeeNumber"}),
-				    #"Reordered Columns3" = Table.ReorderColumns(#"Removed Other Columns",{"EmployeeNumber", "Education", "EducationField"}),
-				    #"Removed Duplicates" = Table.Distinct(#"Reordered Columns3", {"Education", "EducationField"}),
-				    #"Sorted Rows1" = Table.Sort(#"Removed Duplicates",{{"Education", Order.Ascending}}),
-				    #"Added Conditional Column" = Table.AddColumn(#"Sorted Rows1", "EducationLabel", each if [Education] = 1 then "Below College" else if [Education] = 2 then "College" else if [Education] = 3 then "Bachelor" else if [Education] = 4 then "Master" else if [Education] = 5 then "Doctor" else null),
-				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column",{{"EducationLabel", type text}}),
-				    #"Reordered Columns4" = Table.ReorderColumns(#"Changed Type1",{"EmployeeNumber", "Education", "EducationLabel", "EducationField"}),
-				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns4",{{"Education", "EducationLabel_Id"}}),
-				    #"Removed Columns2" = Table.RemoveColumns(#"Renamed Columns",{"EmployeeNumber"}),
-				    #"Added Index" = Table.AddIndexColumn(#"Removed Columns2", "Index", 1, 1, Int64.Type),
-				    #"Reordered Columns5" = Table.ReorderColumns(#"Added Index",{"Index", "EducationLabel_Id", "EducationLabel", "EducationField"}),
-				    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns5",{{"Index", "Education_Id"}, {"EducationLabel_Id", "EducationItem"}}),
-				    #"Sorted Rows2" = Table.Sort(#"Renamed Columns1",{{"Education_Id", Order.Ascending}})
+				    #"Merged Queries" = Table.NestedJoin(#"Removed Columns1", {"Education", "EducationField"}, #"dim-education", {"EducationItem", "EducationField"}, "dim-education", JoinKind.LeftOuter),
+				    #"Expanded dim-education" = Table.ExpandTableColumn(#"Merged Queries", "dim-education", {"Education_Id"}, {"dim-education.Education_Id"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded dim-education",{{"dim-education.Education_Id", "Education_Id"}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Renamed Columns",{"Education", "EducationField"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Removed Columns2", {"Department"}, #"dim-department", {"Department"}, "dim-department", JoinKind.LeftOuter),
+				    #"Expanded dim-department" = Table.ExpandTableColumn(#"Merged Queries1", "dim-department", {"Department_Id"}, {"Department_Id"}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Expanded dim-department",{"JobLevel", "JobRole"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Sorted Rows1" = Table.Sort(#"Removed Duplicates",{{"JobLevel", Order.Ascending}, {"JobRole", Order.Ascending}}),
+				    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows1", "Index", 1, 1, Int64.Type),
+				    #"Reordered Columns3" = Table.ReorderColumns(#"Added Index",{"Index", "JobLevel", "JobRole"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns3",{{"Index", "Job_Id"}}),
+				    #"Sorted Rows2" = Table.Sort(#"Renamed Columns1",{{"Job_Id", Order.Ascending}})
 				in
 				    #"Sorted Rows2"
 

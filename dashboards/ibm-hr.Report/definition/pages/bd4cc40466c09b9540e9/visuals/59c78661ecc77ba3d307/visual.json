@@ -24,11 +24,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total_Empregados_Sairam"
+                  "Property": "Total_Colaboradores_Sairam"
                 }
               },
               "queryRef": "_Medidas.Total_Empregados_Sairam",
-              "nativeQueryRef": "Total_Empregados_Sairam"
+              "nativeQueryRef": "Total_Colaboradores_Sairam"
             }
           ]
         }

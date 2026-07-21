@@ -1,38 +1,32 @@
 table _Medidas
 	lineageTag: 3e53132e-386d-44e4-b568-b5a781404dcd
 
-	measure Total_Empregados_Ativos = ```
+	measure Total_Colaboradores_Ativos =
 			
 			
-			  CALCULATE([Total_Empregados_Dataset], 'fact-attrition'[Attrition] = "No")
-			  
-			```
+			CALCULATE([Total_Colaboradores_Dataset], 'fact-attrition'[Attrition] = "No")
 		formatString: 0
 		lineageTag: 9583f2a0-20dd-4a75-9403-fe4eeae072ad
 
-	measure Total_Empregados_Sairam = ```
+	measure Total_Colaboradores_Sairam =
 			
 			
-			  CALCULATE([Total_Empregados_Dataset], 'fact-attrition'[Attrition] = "Yes")
-			  
-			```
+			CALCULATE([Total_Colaboradores_Dataset], 'fact-attrition'[Attrition] = "Yes")
 		formatString: 0
 		lineageTag: 0ab4bc98-1d34-42f0-b490-794c53f83fcd
 
-	measure 'Taxa_Atrito %' = ```
+	measure '%Taxa_Atrito (Rotatividade)' = ```
 			
-			
-			  DIVIDE([Total_Empregados_Sairam], [Total_Empregados_Dataset])
-			
+			 -- esta medida não vai ser necessária
+			DIVIDE([Total_Colaboradores_Sairam], [Total_Colaboradores_Dataset])
 			```
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: a54f844c-edbb-4c01-a746-af66494c27e3
 
-	measure Total_Empregados_Dataset = ```
+	measure Total_Colaboradores_Dataset = ```
 			
 			
-			  DISTINCTCOUNT('fact-attrition'[EmployeeNumber])
-			  
+			DISTINCTCOUNT('fact-attrition'[EmployeeNumber]) 
 			```
 		formatString: 0
 		lineageTag: 0957bf60-199e-436c-bf9e-e0dafd700441

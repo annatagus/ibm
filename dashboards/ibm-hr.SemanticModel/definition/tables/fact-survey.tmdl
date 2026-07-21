@@ -1,0 +1,111 @@
+table fact-survey
+	lineageTag: 7c1dd21a-8439-4f4a-9a2d-3e11324af7df
+
+	column EmployeeNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: bdab67ce-51a5-4acd-a8cd-def6d750d3e1
+		summarizeBy: none
+		sourceColumn: EmployeeNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnvironmentSatisfaction
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c4f3345-1e6d-4489-9860-46d6d2665ba3
+		summarizeBy: none
+		sourceColumn: EnvironmentSatisfaction
+
+		annotation SummarizationSetBy = Automatic
+
+	column JobInvolvement
+		dataType: int64
+		formatString: 0
+		lineageTag: 031e466b-39ce-45ef-a0bf-f2d40996df1e
+		summarizeBy: sum
+		sourceColumn: JobInvolvement
+
+		annotation SummarizationSetBy = Automatic
+
+	column JobSatisfaction
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ed1146e-8b23-4d53-8a97-4ad3e4195456
+		summarizeBy: sum
+		sourceColumn: JobSatisfaction
+
+		annotation SummarizationSetBy = Automatic
+
+	column RelationshipSatisfaction
+		dataType: int64
+		formatString: 0
+		lineageTag: a34d0801-4073-4022-b7f8-2419e6ce58a2
+		summarizeBy: sum
+		sourceColumn: RelationshipSatisfaction
+
+		annotation SummarizationSetBy = Automatic
+
+	column WorkLifeBalance
+		dataType: int64
+		formatString: 0
+		lineageTag: ad2883d5-4c52-42a4-b7aa-0f15492055ea
+		summarizeBy: sum
+		sourceColumn: WorkLifeBalance
+
+		annotation SummarizationSetBy = Automatic
+
+	column SurveyDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: b961dce3-fb93-425d-ba38-bcc5816980ae
+		summarizeBy: none
+		sourceColumn: SurveyDate
+
+		variation Variation
+			isDefault
+			relationship: bbe7d410-f3af-423c-9315-767006ab1021
+			defaultHierarchy: LocalDateTable_b3b1c7bb-59f4-47bb-90a8-a0ec9db5f946.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Survey_Id
+		dataType: int64
+		formatString: 0
+		lineageTag: c6c690f0-34aa-4f5a-9094-ade432d090af
+		summarizeBy: count
+		sourceColumn: Survey_Id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact-survey = m
+		mode: import
+		queryGroup: TABELAS-FACT
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Formando\Desktop\IBM\dados\SurveyPingPongTable.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"employee_number", Int64.Type}, {"environment_satisfaction", Int64.Type}, {"job_involvement", Int64.Type}, {"job_satisfaction", Int64.Type}, {"relationship_satisfaction", Int64.Type}, {"work_life_balance", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"employee_number", "EmployeeNumber"}, {"environment_satisfaction", "EnvironmentSatisfaction"}, {"job_involvement", "JobInvolvement"}, {"job_satisfaction", "JobSatisfaction"}, {"relationship_satisfaction", "RelationshipSatisfaction"}, {"work_life_balance", "WorkLifeBalance"}}),
+				    #"Sorted Rows" = Table.Sort(#"Renamed Columns",{{"EmployeeNumber", Order.Ascending}}),
+				    #"Added Custom" = Table.AddColumn(#"Sorted Rows", "SurveyDate", each #date(2026, 07, 01)),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"SurveyDate", type date}}),
+				    #"Appended Query" = Table.Combine({#"Changed Type1", #"fact-attrition"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Appended Query",{"Attrition", "Education_Id", "Department_Id", "Job_Id"}),
+				    #"Sorted Rows1" = Table.Sort(#"Removed Columns",{{"SurveyDate", Order.Ascending}, {"EmployeeNumber", Order.Ascending}}),
+				    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows1", "Index", 1, 1, Int64.Type),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Added Index",{{"Index", "Survey_Id"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns1",{"Survey_Id", "EmployeeNumber", "EnvironmentSatisfaction", "JobInvolvement", "JobSatisfaction", "RelationshipSatisfaction", "WorkLifeBalance", "SurveyDate"}),
+				    #"Sorted Rows2" = Table.Sort(#"Reordered Columns",{{"Survey_Id", Order.Ascending}})
+				in
+				    #"Sorted Rows2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

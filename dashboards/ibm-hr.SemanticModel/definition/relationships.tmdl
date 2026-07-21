@@ -1,21 +1,83 @@
-relationship AutoDetected_46f41233-5ef0-40d8-828a-f1a2ac0bd0f7
-	fromColumn: fact-attrition.Education_Id
-	toColumn: dim-education.Education_Id
-
-relationship AutoDetected_7e13270f-c98d-4183-8cf2-fc9f2b8ce247
-	fromColumn: fact-attrition.DepartmentJob_Id
-	toColumn: dim-department-job.DepartmentJob_Id
-
-relationship AutoDetected_88b3bc5b-d729-4311-9229-ff9c8fb278ed
-	fromColumn: fact-attrition.Satisfaction_Id
-	toColumn: dim-satisfaction.Satisfaction_Id
-
 relationship 7c56ff5e-282f-42ac-ba05-8efb509530c0
 	joinOnDateBehavior: datePartOnly
 	fromColumn: _Medidas.'Last update'
 	toColumn: LocalDateTable_e5c9f64c-d53b-414e-a7b4-58b42903296a.Date
 
-relationship d51e46c0-e008-cff5-58c1-a60a210bdca3
+relationship AutoDetected_a3373a7e-ace9-44dd-80fd-622b286eab08
+	fromColumn: fact-attrition.Department_Id
+	toColumn: dim-department.Department_Id
+
+relationship AutoDetected_ab1ce9b4-e8b2-4a06-9750-e873b726f02a
+	fromColumn: fact-attrition.Job_Id
+	toColumn: dim-job.Job_Id
+
+relationship 1d36a10e-676d-41f6-b956-04bafa3f7383
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact-attrition.SurveyDate
+	toColumn: LocalDateTable_2fcc799b-a3ee-4406-bb0d-e1384b7c108b.Date
+
+relationship fe0d07e9-7096-1786-31c4-2429228332e0
+	fromColumn: fact-attrition.Education_Id
+	toColumn: dim-education.Education_Id
+
+relationship b5f144ce-5db0-332d-9196-1e7b24f884c8
 	fromColumn: fact-attrition.EmployeeNumber
 	toColumn: dim-employee.EmployeeNumber
+
+relationship c7a65205-4573-e0db-209f-b731e9bacdbf
+	fromColumn: fact-attrition.EnvironmentSatisfaction
+	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship 4b3f25c3-56c8-0d13-ff24-1b9a4a0d728f
+	isActive: false
+	fromColumn: fact-attrition.JobInvolvement
+	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship 47f614a3-4e84-bff9-055c-506b87ed9bd0
+	isActive: false
+	fromColumn: fact-attrition.JobSatisfaction
+	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship 05d4d16e-feb1-c3f3-e3d1-8c75b52f0fa1
+	isActive: false
+	fromColumn: fact-attrition.RelationshipSatisfaction
+	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship d7297399-c212-47e3-4058-1699d9c5a8b6
+	isActive: false
+	fromColumn: fact-attrition.WorkLifeBalance
+	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship bbe7d410-f3af-423c-9315-767006ab1021
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact-survey.SurveyDate
+	toColumn: LocalDateTable_b3b1c7bb-59f4-47bb-90a8-a0ec9db5f946.Date
+
+relationship 6c80dcdd-77e1-7cb0-df2f-e83336eea742
+	fromColumn: fact-survey.EmployeeNumber
+	toColumn: dim-employee.EmployeeNumber
+
+relationship 4d51d786-015e-ac1a-983f-600ec869c689
+	fromColumn: fact-survey.EnvironmentSatisfaction
+	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship 43404299-7c48-6941-c477-3b44077e2cde
+	isActive: false
+	fromColumn: fact-survey.JobInvolvement
+	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship 352dc144-4aba-ca53-db15-a16172c49a24
+	isActive: false
+	fromColumn: fact-survey.JobSatisfaction
+	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship f41f100e-4caf-a206-b00b-93ed1a4494ec
+	isActive: false
+	fromColumn: fact-survey.RelationshipSatisfaction
+	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship fbdff8e7-3993-ed13-9b68-4ffb5f5fe527
+	isActive: false
+	fromColumn: fact-survey.WorkLifeBalance
+	toColumn: dim-satisfaction.Satisfaction_Id
 

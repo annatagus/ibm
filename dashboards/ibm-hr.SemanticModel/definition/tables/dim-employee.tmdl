@@ -1,10 +1,10 @@
 table dim-employee
-	lineageTag: 65b7845d-497f-49a9-9de0-044e7cebbab7
+	lineageTag: f2a5681c-6ec9-4629-ac1e-76bef803a480
 
 	column EmployeeNumber
 		dataType: int64
 		formatString: 0
-		lineageTag: 951ad04b-36d9-46b5-8843-426d3701f54e
+		lineageTag: d035ee07-4e2e-43ed-b9fe-56111f1e6d33
 		summarizeBy: none
 		sourceColumn: EmployeeNumber
 
@@ -13,15 +13,15 @@ table dim-employee
 	column Age
 		dataType: int64
 		formatString: 0
-		lineageTag: 083bbd8d-335b-4167-8350-9b73ee3a5308
-		summarizeBy: none
+		lineageTag: 924f67fb-2513-4ea8-9286-e74b8993b355
+		summarizeBy: sum
 		sourceColumn: Age
 
 		annotation SummarizationSetBy = Automatic
 
 	column Gender
 		dataType: string
-		lineageTag: 5d8e2c94-bc59-41b4-99f6-04a5d8245e89
+		lineageTag: 1cc97764-602f-4620-959b-be35cc3f06b3
 		summarizeBy: none
 		sourceColumn: Gender
 
@@ -29,7 +29,7 @@ table dim-employee
 
 	column MaritalStatus
 		dataType: string
-		lineageTag: 9690bf1b-a350-4e2e-b177-f2132c6b89f9
+		lineageTag: 6d46e56f-089f-4efa-bbdc-b351488c6bd2
 		summarizeBy: none
 		sourceColumn: MaritalStatus
 
@@ -38,8 +38,8 @@ table dim-employee
 	column DistanceFromHome
 		dataType: int64
 		formatString: 0
-		lineageTag: 4a0f302f-c732-429d-b358-2994c9923c46
-		summarizeBy: none
+		lineageTag: a3c13609-76eb-4b43-9022-931eddfd0023
+		summarizeBy: sum
 		sourceColumn: DistanceFromHome
 
 		annotation SummarizationSetBy = Automatic
@@ -47,30 +47,148 @@ table dim-employee
 	column StockOptionLevel
 		dataType: int64
 		formatString: 0
-		lineageTag: 310115b7-3661-4836-90e8-bfdbd7dbd567
-		summarizeBy: none
+		lineageTag: 421d85ff-7b52-4c06-a0b3-896526b7d2a2
+		summarizeBy: sum
 		sourceColumn: StockOptionLevel
 
 		annotation SummarizationSetBy = Automatic
 
 	column BusinessTravel
 		dataType: string
-		lineageTag: 0607c103-6f8c-4bc6-b498-329ca9c379a4
+		lineageTag: be766331-c4a5-4c74-baf4-3f7be21f407e
 		summarizeBy: none
 		sourceColumn: BusinessTravel
 
 		annotation SummarizationSetBy = Automatic
 
+	column DailyRate
+		dataType: int64
+		formatString: 0
+		lineageTag: 584d2c2f-96ca-472a-8da0-ccc53fce026d
+		summarizeBy: sum
+		sourceColumn: DailyRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column HourlyRate
+		dataType: int64
+		formatString: 0
+		lineageTag: be2411a2-b7d0-43ad-8dc5-ae460c90d300
+		summarizeBy: sum
+		sourceColumn: HourlyRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyIncome
+		dataType: int64
+		formatString: 0
+		lineageTag: 30bc45df-b81a-40a7-9409-4f01944fe5cf
+		summarizeBy: sum
+		sourceColumn: MonthlyIncome
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyRate
+		dataType: int64
+		formatString: 0
+		lineageTag: 99d1af0b-c29e-4d57-a9a7-3419bb2af752
+		summarizeBy: sum
+		sourceColumn: MonthlyRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumCompaniesWorked
+		dataType: int64
+		formatString: 0
+		lineageTag: 03db798b-3135-44b3-a962-a064bb01cb86
+		summarizeBy: sum
+		sourceColumn: NumCompaniesWorked
+
+		annotation SummarizationSetBy = Automatic
+
 	column OverTime
 		dataType: string
-		lineageTag: 5248eea9-ccbd-41a3-9583-bc6a82c7e1fb
+		lineageTag: a307f4be-d8b5-44cc-b612-99206dd6fcab
 		summarizeBy: none
 		sourceColumn: OverTime
 
 		annotation SummarizationSetBy = Automatic
 
+	column PercentSalaryHike
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ba7a278-9cf1-4405-bffd-23db52ecbc61
+		summarizeBy: sum
+		sourceColumn: PercentSalaryHike
+
+		annotation SummarizationSetBy = Automatic
+
+	column PerformanceRating
+		dataType: int64
+		formatString: 0
+		lineageTag: bf64a320-da6d-45ad-b445-ed1127650cba
+		summarizeBy: sum
+		sourceColumn: PerformanceRating
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalWorkingYears
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b3e31db-12fc-4638-9502-687a0ef208b6
+		summarizeBy: sum
+		sourceColumn: TotalWorkingYears
+
+		annotation SummarizationSetBy = Automatic
+
+	column TrainingTimesLastYear
+		dataType: int64
+		formatString: 0
+		lineageTag: a9f394da-44f4-4629-9c5e-fa644ae0d3ab
+		summarizeBy: sum
+		sourceColumn: TrainingTimesLastYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsAtCompany
+		dataType: int64
+		formatString: 0
+		lineageTag: d0440916-ce14-4bbe-b078-aaeb67354dcd
+		summarizeBy: sum
+		sourceColumn: YearsAtCompany
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsInCurrentRole
+		dataType: int64
+		formatString: 0
+		lineageTag: 58227cc3-e53d-4584-8f03-c141ecee30c1
+		summarizeBy: sum
+		sourceColumn: YearsInCurrentRole
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsSinceLastPromotion
+		dataType: int64
+		formatString: 0
+		lineageTag: 155c40eb-65ba-4ed7-a35f-dcdeb720008f
+		summarizeBy: sum
+		sourceColumn: YearsSinceLastPromotion
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearsWithCurrManager
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c9effce-1724-4f95-b10c-448cd1c2d858
+		summarizeBy: sum
+		sourceColumn: YearsWithCurrManager
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim-employee = m
 		mode: import
+		queryGroup: TABELAS-DIM
 		source =
 				let
 				    Source = Csv.Document(File.Contents("C:\Users\Formando\Desktop\IBM\dados\IBM-HR-Employee-Attrition.csv"),[Delimiter=";", Columns=35, Encoding=65001, QuoteStyle=QuoteStyle.None]),
@@ -81,9 +199,10 @@ table dim-employee
 				    #"Reordered Columns1" = Table.ReorderColumns(#"Sorted Rows",{"EmployeeNumber", "Attrition", "Age", "BusinessTravel", "DailyRate", "Department", "DistanceFromHome", "Education", "EducationField", "EmployeeCount", "EnvironmentSatisfaction", "Gender", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MaritalStatus", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "Over18", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "StandardHours", "StockOptionLevel", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
 				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns1",{"EmployeeCount", "Over18", "StandardHours"}),
 				    #"Reordered Columns2" = Table.ReorderColumns(#"Removed Columns",{"EmployeeNumber", "Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "Education", "EducationField", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
-				    #"Removed Other Columns" = Table.SelectColumns(#"Reordered Columns2",{"EmployeeNumber", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "BusinessTravel", "OverTime", "StockOptionLevel"})
+				    #"Removed Columns1" = Table.RemoveColumns(#"Reordered Columns2",{"Attrition", "Department", "Education", "EducationField", "EnvironmentSatisfaction", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "RelationshipSatisfaction", "WorkLifeBalance"}),
+				    #"Sorted Rows1" = Table.Sort(#"Removed Columns1",{{"EmployeeNumber", Order.Ascending}})
 				in
-				    #"Removed Other Columns"
+				    #"Sorted Rows1"
 
 	annotation PBI_NavigationStepName = Navigation
 

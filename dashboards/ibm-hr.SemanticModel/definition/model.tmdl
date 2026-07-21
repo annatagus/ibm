@@ -6,20 +6,36 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
+queryGroup TABELAS-FACT
+
+	annotation PBI_QueryGroupOrder = 3
+
+queryGroup TABELAS-DIM
+
+	annotation PBI_QueryGroupOrder = 4
+
+queryGroup PARAMETROS
+
+	annotation PBI_QueryGroupOrder = 2
+
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["fact-attrition","StandardHours","dim-employee","dim-education","dim-department-job","dim-satisfaction"]
+annotation PBI_QueryOrder = ["StandardHours","fact-attrition","fact-survey","dim-employee","dim-education","dim-department","dim-job","dim-satisfaction"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table fact-attrition
 ref table _Medidas
-ref table dim-employee
-ref table dim-education
-ref table dim-department-job
-ref table dim-satisfaction
 ref table DateTableTemplate_d4432224-573d-42e6-894f-ca97203363c3
 ref table LocalDateTable_e5c9f64c-d53b-414e-a7b4-58b42903296a
+ref table fact-attrition
+ref table dim-employee
+ref table dim-education
+ref table dim-department
+ref table dim-job
+ref table LocalDateTable_2fcc799b-a3ee-4406-bb0d-e1384b7c108b
+ref table dim-satisfaction
+ref table fact-survey
+ref table LocalDateTable_b3b1c7bb-59f4-47bb-90a8-a0ec9db5f946
 
 ref cultureInfo en-US
 
