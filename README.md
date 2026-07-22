@@ -8,10 +8,10 @@ O projeto será apresentado nos **dias 5 e 6 (primeira semana) de agosto de 2026
 ---
 
 ## 👥 Elementos do Grupo
-* Edgar Apolinário: 📧 mailto:edgarapolinario855@gmail.com :octocat: [@Edgar295](https://github.com/Edgar295)
-* Nilton Ávido: 📧 mailto:capaia1986@gmail.com :octocat: [@NiltonAvido](https://github.com/NiltonAvido)
-* Raquel Cunha: 📧 mailto:raquelmcunha@gmail.com :octocat: [@annatagus](https://github.com/annatagus)
-* Tiago Rodrigues: 📧 mailto:tiag0rkayh@gmail.com :octocat: [@Tiago-Alex](https://github.com/Tiago-Alex)
+* Edgar Apolinário: 📧 edgarapolinario855 [at] gmail [dot] com :octocat: [@Edgar295](https://github.com/Edgar295)
+* Nilton Ávido: 📧 capaia1986 [at] gmail [dot] com :octocat: [@NiltonAvido](https://github.com/NiltonAvido)
+* Raquel Cunha: 📧 raquelmcunha [at] gmail [dot] com :octocat: [@annatagus](https://github.com/annatagus)
+* Tiago Rodrigues: 📧 tiag0rkayh [at] gmail [dot] com :octocat: [@Tiago-Alex](https://github.com/Tiago-Alex)
 
 ## 👨‍🏫 Professor Orientador
 * João Lauro de Marco: 💼 https://pt.linkedin.com/in/joao-lauro-de-marco/pt
