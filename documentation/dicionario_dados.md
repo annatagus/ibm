@@ -102,23 +102,23 @@ Os valores numéricos originais da coluna `DistanceFromHome` foram mantidos inta
 
 ```mermaid
 erDiagram
-    dim-employee ||--o* fact-attrition : "1 : N"
-    dim-employee ||--o* fact-survey : "1 : N"
-    dim-education ||--o* fact-attrition : "1 : N"
-    dim-department ||--o* fact-attrition : "1 : N"
-    dim-job ||--o* fact-attrition : "1 : N"
-    dim-satisfaction ||--o* fact-attrition : "1 : N (Satisfaction*)" %% (EnvironmentSatisfaction)"
-    %% dim-satisfaction ||--o* fact-attrition : "1 : N (JobInvolvement)"
-    %% dim-satisfaction ||--o* fact-attrition : "1 : N (JobSatisfaction)"
-    %% dim-satisfaction ||--o* fact-attrition : "1 : N (RelationshipSatisfaction)"
-    %% dim-satisfaction ||--o* fact-attrition : "1 : N (WorkLifeBalance)"
-    dim-satisfaction ||--o* fact-survey : "1 : N (Satisfaction*)" %% (EnvironmentSatisfaction)"
-    %% dim-satisfaction ||--o* fact-survey : "1 : N (JobInvolvement)"
-    %% dim-satisfaction ||--o* fact-survey : "1 : N (JobSatisfaction)"
-    %% dim-satisfaction ||--o* fact-survey : "1 : N (RelationshipSatisfaction)"
-    %% dim-satisfaction ||--o* fact-survey : "1 : N (WorkLifeBalance)"
+    dim_employee ||--o* fact_attrition : "1 : N"
+    dim_employee ||--o* fact_survey : "1 : N"
+    dim_education ||--o* fact_attrition : "1 : N"
+    dim_department ||--o* fact_attrition : "1 : N"
+    dim_job ||--o* fact_attrition : "1 : N"
+    dim_satisfaction ||--o* fact_attrition : "1 : N (EnvironmentSatisfaction)"
+    %% dim_satisfaction ||--o* fact_attrition : "1 : N (JobInvolvement)"
+    %% dim_satisfaction ||--o* fact_attrition : "1 : N (JobSatisfaction)"
+    %% dim_satisfaction ||--o* fact_attrition : "1 : N (RelationshipSatisfaction)"
+    %% dim_satisfaction ||--o* fact_attrition : "1 : N (WorkLifeBalance)"
+    dim_satisfaction ||--o* fact_survey : "1 : N (EnvironmentSatisfaction)"
+    %% dim_satisfaction ||--o* fact_survey : "1 : N (JobInvolvement)"
+    %% dim_satisfaction ||--o* fact_survey : "1 : N (JobSatisfaction)"
+    %% dim_satisfaction ||--o* fact_survey : "1 : N (RelationshipSatisfaction)"
+    %% dim_satisfaction ||--o* fact_survey : "1 : N (WorkLifeBalance)"
 
-    dim-employee {
+    dim_employee {
         int Age
         string BusinessTravel
         int DailyRate
@@ -142,30 +142,30 @@ erDiagram
         int YearsWithCurrManager
     }
 
-    dim-education {
+    dim_education {
         int Education_Id PK
         string EducationField
         string EducationItem
         string EducationLabel
     }
 
-    dim-department {
+    dim_department {
         string Department
         int Department_Id PK
     }
 
-    dim-job {
+    dim_job {
         int Job_Id PK
         string JobLevel
         string JobRole
     }
 
-    dim-satisfaction {
+    dim_satisfaction {
         int Level
         int Satisfaction_Id PK
     }
 
-    fact-attrition {
+    fact_attrition {
         string Attrition
         int Department_Id FK
         int Education_Id FK
@@ -179,7 +179,7 @@ erDiagram
         int WorkLifeBalance FK
     }
 
-    fact-survey {
+    fact_survey {
         int EmployeeNumber FK
         int EnvironmentSatisfaction FK
         int JobInvolvement FK
