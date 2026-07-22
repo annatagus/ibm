@@ -191,7 +191,7 @@ erDiagram
         int WorkLifeBalance FK
         date SurveyDate
     }
-
+```
 
 ---
 
@@ -241,4 +241,4 @@ erDiagram
         int JobSatisfaction FK
         date SurveyDate
     }
-
+```
