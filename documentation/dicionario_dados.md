@@ -100,6 +100,7 @@ Os valores numéricos originais da coluna `DistanceFromHome` foram mantidos inta
 
 ## 📐 Arquitetura do Modelo (Multi-Fact Star Schema)
 
+```mermaid
 erDiagram
     dim-employee ||--o{ fact-attrition : "EmployeeNumber"
     dim-employee ||--o{ fact-survey : "EmployeeNumber"
@@ -194,6 +195,7 @@ erDiagram
 
 ---
 
+```mermaid
 erDiagram
     %% Relacionamentos de Dimensão para Factos
     dim-employee ||--o{ fact-attrition : "EmployeeNumber"
