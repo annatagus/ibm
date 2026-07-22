@@ -102,30 +102,28 @@ Os valores numéricos originais da coluna `DistanceFromHome` foram mantidos inta
 
 ```mermaid
 erDiagram
-    dim-employee ||--o{ fact-attrition : "EmployeeNumber"
-    dim-employee ||--o{ fact-survey : "EmployeeNumber"
-    dim-education ||--o{ fact-attrition : "Education_Id"
-    dim-department ||--o{ fact-attrition : "Department_Id"
-    dim-job ||--o{ fact-attrition : "Job_Id"
-    
-    dim-satisfaction ||--o{ fact-attrition : "EnvironmentSatisfaction"
-    dim-satisfaction ||--o{ fact-attrition : "JobInvolvement"
-    dim-satisfaction ||--o{ fact-attrition : "JobSatisfaction"
-    dim-satisfaction ||--o{ fact-attrition : "RelationshipSatisfaction"
-    dim-satisfaction ||--o{ fact-attrition : "WorkLifeBalance"
-
-    dim-satisfaction ||--o{ fact-survey : "EnvironmentSatisfaction"
-    dim-satisfaction ||--o{ fact-survey : "JobInvolvement"
-    dim-satisfaction ||--o{ fact-survey : "JobSatisfaction"
-    dim-satisfaction ||--o{ fact-survey : "RelationshipSatisfaction"
-    dim-satisfaction ||--o{ fact-survey : "WorkLifeBalance"
+    dim-employee ||--o* fact-attrition : "1 : N"
+    dim-employee ||--o* fact-survey : "1 : N"
+    dim-education ||--o* fact-attrition : "1 : N"
+    dim-department ||--o* fact-attrition : "1 : N"
+    dim-job ||--o* fact-attrition : "1 : N"
+    dim-satisfaction ||--o* fact-attrition : "1 : N (Satisfaction*)" %% (EnvironmentSatisfaction)"
+    %% dim-satisfaction ||--o* fact-attrition : "1 : N (JobInvolvement)"
+    %% dim-satisfaction ||--o* fact-attrition : "1 : N (JobSatisfaction)"
+    %% dim-satisfaction ||--o* fact-attrition : "1 : N (RelationshipSatisfaction)"
+    %% dim-satisfaction ||--o* fact-attrition : "1 : N (WorkLifeBalance)"
+    dim-satisfaction ||--o* fact-survey : "1 : N (Satisfaction*)" %% (EnvironmentSatisfaction)"
+    %% dim-satisfaction ||--o* fact-survey : "1 : N (JobInvolvement)"
+    %% dim-satisfaction ||--o* fact-survey : "1 : N (JobSatisfaction)"
+    %% dim-satisfaction ||--o* fact-survey : "1 : N (RelationshipSatisfaction)"
+    %% dim-satisfaction ||--o* fact-survey : "1 : N (WorkLifeBalance)"
 
     dim-employee {
-        int EmployeeNumber PK
         int Age
         string BusinessTravel
         int DailyRate
         int DistanceFromHome
+        int EmployeeNumber PK
         string Gender
         int HourlyRate
         string MaritalStatus
@@ -152,19 +150,19 @@ erDiagram
     }
 
     dim-department {
-        int Department_Id PK
         string Department
+        int Department_Id PK
     }
 
     dim-job {
         int Job_Id PK
-        int JobLevel
+        string JobLevel
         string JobRole
     }
 
     dim-satisfaction {
+        int Level
         int Satisfaction_Id PK
-        string Level
     }
 
     fact-attrition {
@@ -172,73 +170,23 @@ erDiagram
         int Department_Id FK
         int Education_Id FK
         int EmployeeNumber FK
+        int EnvironmentSatisfaction FK
         int Job_Id FK
-        int EnvironmentSatisfaction FK
         int JobInvolvement FK
         int JobSatisfaction FK
         int RelationshipSatisfaction FK
-        int WorkLifeBalance FK
         date SurveyDate
+        int WorkLifeBalance FK
     }
 
     fact-survey {
         int EmployeeNumber FK
-        int Survey_Id PK
         int EnvironmentSatisfaction FK
         int JobInvolvement FK
         int JobSatisfaction FK
         int RelationshipSatisfaction FK
-        int WorkLifeBalance FK
-        date SurveyDate
-    }
-```
-
----
-
-```mermaid
-erDiagram
-    %% Relacionamentos de Dimensão para Factos
-    dim-employee ||--o{ fact-attrition : "EmployeeNumber"
-    dim-employee ||--o{ fact-survey : "EmployeeNumber"
-    dim-education ||--o{ fact-attrition : "Education_Id"
-    dim-department ||--o{ fact-attrition : "Department_Id"
-    dim-job ||--o{ fact-attrition : "Job_Id"
-    
-    %% Relacionamentos de Satisfação para Factos
-    dim-satisfaction ||--o{ fact-attrition : "EnvironmentSatisfaction / JobSatisfaction / ..."
-    dim-satisfaction ||--o{ fact-survey : "EnvironmentSatisfaction / JobSatisfaction / ..."
-
-    %% Definição das Entidades
-    dim-employee {
-        int EmployeeNumber PK
-        int Age
-        string BusinessTravel
-        string Department
-        int DistanceFromHome
-        string EducationField
-        string Gender
-        int JobLevel
-        string JobRole
-        int MonthlyIncome
-        string OverTime
-        int TotalWorkingYears
-    }
-    dim-education { int Education_Id PK; string EducationLabel }
-    dim-department { int Department_Id PK; string Department }
-    dim-job { int Job_Id PK; string JobRole }
-    dim-satisfaction { int Satisfaction_Id PK; string Level }
-    fact-attrition {
-        string Attrition
-        int EmployeeNumber FK
-        int EnvironmentSatisfaction FK
-        int JobSatisfaction FK
-        date SurveyDate
-    }
-    fact-survey {
         int Survey_Id PK
-        int EmployeeNumber FK
-        int EnvironmentSatisfaction FK
-        int JobSatisfaction FK
         date SurveyDate
+        int WorkLifeBalance FK
     }
 ```
