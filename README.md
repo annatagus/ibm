@@ -22,6 +22,7 @@ O projeto será apresentado nos **dias 5 e 6 (primeira semana) de agosto de 2026
 
 Para manter o projeto limpo e colaborativo no Git, a estrutura de pastas foi organizada da seguinte forma:
 
+* **`/componente SQL`**: Armazena os scripts SQL (`.sql`) desenvolvidos no SQL Server para a extração, transformação e modelagem prévia dos dados de RH.
 * **`/dashboards`**: Contém os ficheiros de desenvolvimento e relatórios finais do Power BI (`.pbix` ou `.pbip`).
 * **`/documentation`**: Centraliza os ficheiros de suporte do projeto, incluindo o relatório escrito em Word/PDF, a apresentação em PowerPoint e o levantamento de requisitos.
 * **`/img`**: Armazena os recursos visuais do projeto, como logótipos, ícones e imagens de fundo (*backgrounds*) usadas no design das páginas do relatório.

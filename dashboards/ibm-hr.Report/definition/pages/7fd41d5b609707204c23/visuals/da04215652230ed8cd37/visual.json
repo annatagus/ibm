@@ -75,7 +75,17 @@
               {
                 "textRuns": [
                   {
-                    "value": "o\t?"
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "-> Adaptar pedido na entrevista / indice felicidade (satisfaçao)",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
                   }
                 ]
               },

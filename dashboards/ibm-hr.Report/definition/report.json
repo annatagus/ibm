@@ -11,7 +11,7 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "NewExecutive",
+      "name": "Temperature",
       "reportVersionAtImport": {
         "visual": "2.1.0",
         "report": "3.0.0",
@@ -59,9 +59,25 @@
           "type": "BaseTheme"
         },
         {
-          "name": "NewExecutive",
-          "path": "BuiltInThemes/NewExecutive.json",
+          "name": "Temperature",
+          "path": "BuiltInThemes/Temperature.json",
           "type": "CustomTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "ibm-dark778979657938325.png",
+          "path": "ibm-dark778979657938325.png",
+          "type": "Image"
+        },
+        {
+          "name": "ibm-light3381151910191652.png",
+          "path": "ibm-light3381151910191652.png",
+          "type": "Image"
         }
       ]
     }

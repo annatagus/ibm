@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "4b7fdbee2ae704d04123",
+  "name": "6391c394839a9393950a",
   "position": {
-    "x": 152,
-    "y": 72,
-    "z": 1000,
-    "height": 152,
-    "width": 176,
-    "tabOrder": 1000
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 80,
+    "width": 1280
   },
   "visual": {
     "visualType": "shape",
@@ -18,7 +17,7 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'heart'"
+                  "Value": "'rectangle'"
                 }
               }
             }
@@ -41,13 +40,20 @@
       "fill": [
         {
           "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            },
             "fillColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 7,
-                      "Percent": 0.2
+                      "ColorId": 3,
+                      "Percent": 0
                     }
                   }
                 }
@@ -59,30 +65,31 @@
           }
         }
       ],
-      "text": [
+      "outline": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
           }
-        },
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
         {
           "properties": {
-            "text": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'pensar positivo'"
+                  "Value": "false"
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ]

@@ -1,47 +1,47 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "e229bb6e0b08a9f95689",
+  "name": "16aed407008d1a1e3645",
   "position": {
-    "x": 0,
-    "y": 120,
-    "z": 0,
-    "height": 120,
-    "width": 320,
-    "tabOrder": 1000
+    "x": 624,
+    "y": 336.00000000000006,
+    "z": 4000,
+    "height": 288,
+    "width": 576,
+    "tabOrder": 4000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Y": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Dev by"
+                  "Property": "Total_Colaboradores_Ativos"
                 }
               },
-              "queryRef": "_Medidas.Dev by",
-              "nativeQueryRef": "Dev by"
+              "queryRef": "_Medidas.Total_Colaboradores_Ativos",
+              "nativeQueryRef": "Total_Colaboradores_Ativos"
             },
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Last update"
+                  "Property": "Total_Colaboradores_Dataset"
                 }
               },
-              "queryRef": "_Medidas.Last update.Variation.Date Hierarchy.Year",
-              "nativeQueryRef": "Last update Year"
+              "queryRef": "_Medidas.Total_Colaboradores_Dataset",
+              "nativeQueryRef": "Total_Colaboradores_Dataset"
             }
           ]
         }
@@ -50,13 +50,13 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Dev by"
+                "Property": "Total_Colaboradores_Ativos"
               }
             },
             "direction": "Descending"
@@ -65,33 +65,50 @@
       }
     },
     "objects": {
-      "columnWidth": [
+      "labels": [
         {
           "properties": {
-            "value": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "150.85103369684714D"
+                  "Value": "true"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "_Medidas.Dev by"
           }
-        },
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
         {
           "properties": {
-            "value": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "157.38461484957122D"
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "_Medidas.Last update.Variation.Date Hierarchy.Year"
           }
         }
       ]
