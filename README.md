@@ -8,13 +8,13 @@ O projeto será apresentado nos **dias 5 e 6 (primeira semana) de agosto de 2026
 ---
 
 ## 👥 Elementos do Grupo
-* Edgar Apolinário, mailto:edgarapolinario855@gmail.com 
-* Nilton Ávido, mailto:capaia1986@gmail.com 
-* Raquel Cunha, mailto:raquelmcunha@gmail.com 
-* Tiago Rodrigues, mailto:tiag0rkayh@gmail.com 
+* Edgar Apolinário: 📧 mailto:edgarapolinario855@gmail.com :octocat: [@Edgar295](https://github.com/Edgar295)
+* Nilton Ávido: 📧 mailto:capaia1986@gmail.com :octocat: [@NiltonAvido](https://github.com/NiltonAvido)
+* Raquel Cunha: 📧 mailto:raquelmcunha@gmail.com :octocat: [@annatagus](https://github.com/annatagus)
+* Tiago Rodrigues: 📧 mailto:tiag0rkayh@gmail.com :octocat: [@Tiago-Alex](https://github.com/Tiago-Alex)
 
 ## 👨‍🏫 Professor Orientador
-* João Lauro de Marco, https://pt.linkedin.com/in/joao-lauro-de-marco/pt
+* João Lauro de Marco: 💼 https://pt.linkedin.com/in/joao-lauro-de-marco/pt
 
 ---
 
@@ -51,9 +51,9 @@ Para manter o projeto limpo e colaborativo no Git, a estrutura de pastas foi org
 
 ---
 
-## 📐 Modelo de Dados (Star Schema)
+## 📐 Modelo de Dados (Multi-Fact Star Schema)
 
-Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estruturado seguindo um esquema em estrela (*Star Schema*), composto por uma tabela central de factos interligada a tabelas de dimensões.
+Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estruturado seguindo um esquema em estrela com múltiplas tabelas de factos (*Multi-Fact Star Schema*). Esta arquitetura é composta por duas tabelas centrais de factos (`fact-attrition` e `fact-survey`) que partilham dimensões comuns, permitindo correlacionar de forma isolada os indicadores históricos de satisfação laboral com os resultados do novo inquérito interno (mesa de _ping-pong_).
 
-* 🔍 [Visualizar Imagem do Modelo Star Schema (PNG)](img/modelo_star_schema.png)
+* 🔍 [Visualizar Imagem do Modelo Multi-Fact Star Schema (PNG)](img/modelo_multi_fact_star_schema.png)
 * 📖 [Consultar Dicionário de Dados Detalhado](documentation/dicionario_dados.md) (Tipos de dados, transformações e mapeamento de chaves)
