@@ -102,21 +102,21 @@ Os valores numéricos originais da coluna `DistanceFromHome` foram mantidos inta
 
 ```mermaid
 erDiagram
-    dim_employee ||--o* fact_attrition : "1 : N"
-    dim_employee ||--o* fact_survey : "1 : N"
-    dim_education ||--o* fact_attrition : "1 : N"
-    dim_department ||--o* fact_attrition : "1 : N"
-    dim_job ||--o* fact_attrition : "1 : N"
-    dim_satisfaction ||--o* fact_attrition : "1 : N (EnvironmentSatisfaction)"
-    %% dim_satisfaction ||--o* fact_attrition : "1 : N (JobInvolvement)"
-    %% dim_satisfaction ||--o* fact_attrition : "1 : N (JobSatisfaction)"
-    %% dim_satisfaction ||--o* fact_attrition : "1 : N (RelationshipSatisfaction)"
-    %% dim_satisfaction ||--o* fact_attrition : "1 : N (WorkLifeBalance)"
-    dim_satisfaction ||--o* fact_survey : "1 : N (EnvironmentSatisfaction)"
-    %% dim_satisfaction ||--o* fact_survey : "1 : N (JobInvolvement)"
-    %% dim_satisfaction ||--o* fact_survey : "1 : N (JobSatisfaction)"
-    %% dim_satisfaction ||--o* fact_survey : "1 : N (RelationshipSatisfaction)"
-    %% dim_satisfaction ||--o* fact_survey : "1 : N (WorkLifeBalance)"
+    dim_employee ||--o{ fact_attrition : "1 : N"
+    dim_employee ||--o{ fact_survey : "1 : N"
+    dim_education ||--o{ fact_attrition : "1 : N"
+    dim_department ||--o{ fact_attrition : "1 : N"
+    dim_job ||--o{ fact_attrition : "1 : N"
+    dim_satisfaction ||--o{ fact_attrition : "1 : N (EnvironmentSatisfaction)"
+    %% dim_satisfaction ||--o{ fact_attrition : "1 : N (JobInvolvement)"
+    %% dim_satisfaction ||--o{ fact_attrition : "1 : N (JobSatisfaction)"
+    %% dim_satisfaction ||--o{ fact_attrition : "1 : N (RelationshipSatisfaction)"
+    %% dim_satisfaction ||--o{ fact_attrition : "1 : N (WorkLifeBalance)"
+    dim_satisfaction ||--o{ fact_survey : "1 : N (EnvironmentSatisfaction)"
+    %% dim_satisfaction ||--o{ fact_survey : "1 : N (JobInvolvement)"
+    %% dim_satisfaction ||--o{ fact_survey : "1 : N (JobSatisfaction)"
+    %% dim_satisfaction ||--o{ fact_survey : "1 : N (RelationshipSatisfaction)"
+    %% dim_satisfaction ||--o{ fact_survey : "1 : N (WorkLifeBalance)"
 
     dim_employee {
         int Age
