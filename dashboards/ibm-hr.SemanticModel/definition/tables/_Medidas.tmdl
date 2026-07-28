@@ -1,35 +1,229 @@
 table _Medidas
 	lineageTag: 3e53132e-386d-44e4-b568-b5a781404dcd
 
-	measure Total_Colaboradores_Ativos =
+	measure 'Colaboradores Ativos' =
 			
 			
-			CALCULATE([Total_Colaboradores_Dataset], 'fact-attrition'[Attrition] = "No")
+			CALCULATE(
+			    [Total Colaboradores DB],
+			    'fact-attrition'[Attrition] = "No"
+			)
 		formatString: 0
 		lineageTag: 9583f2a0-20dd-4a75-9403-fe4eeae072ad
 
-	measure Total_Colaboradores_Sairam =
+	measure 'Total Colaboradores Sairam' =
 			
 			
-			CALCULATE([Total_Colaboradores_Dataset], 'fact-attrition'[Attrition] = "Yes")
+			CALCULATE(
+			    [Total Colaboradores DB],
+			    'fact-attrition'[Attrition] = "Yes"
+			)
 		formatString: 0
 		lineageTag: 0ab4bc98-1d34-42f0-b490-794c53f83fcd
 
-	measure '%Taxa_Atrito (Rotatividade)' = ```
+	measure 'Rácio Masculino' =
 			
-			 -- esta medida não vai ser necessária
-			DIVIDE([Total_Colaboradores_Sairam], [Total_Colaboradores_Dataset])
-			```
-		formatString: 0.00%;-0.00%;0.00%
+			
+			DIVIDE(
+			    [Colaboradores Homens],
+			    [Colaboradores Ativos],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: a54f844c-edbb-4c01-a746-af66494c27e3
 
-	measure Total_Colaboradores_Dataset = ```
+	measure 'Total Colaboradores DB' = ```
 			
 			
 			DISTINCTCOUNT('fact-attrition'[EmployeeNumber]) 
 			```
 		formatString: 0
 		lineageTag: 0957bf60-199e-436c-bf9e-e0dafd700441
+
+	measure 'Colaboradores Homens' = ```
+			
+			
+			CALCULATE(
+			    [Colaboradores Ativos],
+			    'dim-employee'[Gender] = "Male"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 8da1b90d-270a-4e99-952d-b35150cfdf36
+
+	measure 'Colaboradores Mulheres' =
+			
+			
+			CALCULATE(
+			    [Colaboradores Ativos],
+			    'dim-employee'[Gender] = "Female"
+			)
+		formatString: 0
+		lineageTag: b5a540f2-632a-4974-9560-d02a0942f41b
+
+	measure 'Rácio Feminino' =
+			
+			
+			DIVIDE(
+			    [Colaboradores Mulheres],
+			    [Colaboradores Ativos],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: bb13ed17-c0e4-418c-b730-c06c8da3c1bf
+
+	measure Departamentos =
+			
+			
+			DISTINCTCOUNT('dim-department'[Department])
+		formatString: 0
+		lineageTag: a3a4fe83-b72a-4062-b510-4b086596602d
+
+	measure 'Categorias Profissionais' =
+			
+			
+			DISTINCTCOUNT('dim-job'[JobRole])
+		formatString: 0
+		lineageTag: 90ef49fb-d7a7-4e42-89f0-ee2f85e98aea
+
+	measure 'Participantes Survey PingPong' = ```
+			
+			
+			 CALCULATE(
+			    DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			    'fact-survey'[SurveyDate] = DATE(2026, 07, 01)
+			 )
+			
+			```
+		formatString: 0
+		lineageTag: d2864ac0-c9be-4000-993f-08ee91362f92
+
+	measure '%Participação Survey PingPong' = ```
+			
+			
+			DIVIDE(
+			    [Participantes Survey PingPong],
+			    [Colaboradores Ativos],
+			    0
+			)
+			
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: 371dde55-756c-4759-bcee-1764ce0575e4
+
+	measure 'Departamento Selecionado' =
+			
+			
+			SELECTEDVALUE(
+			    'dim-department'[Department],
+			    "Todos os departamentos"
+			)
+		lineageTag: e6bf9fb4-b66d-472d-bc6d-4a5c6799e689
+
+	measure 'Idade Média Atual' = ```
+			
+			
+			 CALCULATE(
+			    AVERAGE('dim-employee'[Age]),
+			    FILTER('dim-employee', [Colaboradores Ativos])
+			 )
+			```
+		lineageTag: f0fbff7f-88bf-4249-b685-0df99d3a31ee
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Idade Mediana Atual' = ```
+			
+			
+			 CALCULATE(
+			    MEDIAN('dim-employee'[Age]),
+			    FILTER('dim-employee', [Colaboradores Ativos])
+			 )
+			```
+		lineageTag: 2e80cf7f-06cd-4d47-9e0e-0379bfb04068
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Desvio Meta 50%' =
+			
+			
+			ABS([Rácio Feminino] - 0.5)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 67300684-89c5-4f18-900b-08b2ca850ea7
+
+	measure 'Colaboradores Sub-30' = ```
+			
+			
+			CALCULATE(
+			    [Colaboradores Ativos],
+			    'dim-employee'[AgeRange] = "18-29"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: ab49331b-2729-4822-ba0f-da54b7cee49f
+
+	measure '%Colaboradores sub-30' = ```
+			
+			
+			DIVIDE(
+			    [Colaboradores Sub-30],
+			    [Colaboradores Ativos],
+			    0
+			)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: a90919a1-32d0-4ac3-8271-97b64ceb0190
+
+	measure 'Colaboradores 60+' = ```
+			
+			
+			CALCULATE(
+			    [Colaboradores Ativos],
+			    'dim-employee'[AgeRange] = "60+"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 5cea0431-8286-48a9-a5e3-651af6ca56df
+
+	measure '%Colaboradores 60+' = ```
+			
+			
+			DIVIDE(
+			    [Colaboradores 60+],
+			    [Colaboradores Ativos],
+			    0
+			)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 8e263175-f46f-415f-bdc5-7f178bcba5ea
+
+	measure 'Distância Média Atual' =
+			
+			
+			CALCULATE(
+			    AVERAGE('dim-employee'[DistanceFromHome]),
+			    FILTER('dim-employee', [Colaboradores Ativos])
+			 )
+		formatString: 0.0
+		lineageTag: 7f95b61f-2747-406e-996f-19284140aa3b
+
+	measure '%Até 10km' =
+			
+			
+			DIVIDE(
+			    CALCULATE(
+			        [Colaboradores Ativos],
+			        'dim-employee'[DistanceFromHome] <= 10),
+			    [Colaboradores Ativos],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 78d84c87-e131-4fab-9570-866b6562fd72
 
 	column 'Dev by'
 		lineageTag: 055606ff-6bae-4fb1-912c-5adf71402d98
@@ -48,7 +242,7 @@ table _Medidas
 
 		variation Variation
 			isDefault
-			relationship: 7c56ff5e-282f-42ac-ba05-8efb509530c0
+			relationship: 8666ea39-bca5-446b-9513-db599e493516
 			defaultHierarchy: LocalDateTable_e5c9f64c-d53b-414e-a7b4-58b42903296a.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic

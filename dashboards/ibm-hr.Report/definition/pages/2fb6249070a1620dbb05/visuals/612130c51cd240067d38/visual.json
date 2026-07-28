@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "612130c51cd240067d38",
   "position": {
-    "x": 224,
-    "y": 584,
-    "z": 16002,
+    "x": 359,
+    "y": 485,
+    "z": 8000,
     "height": 104,
     "width": 200,
-    "tabOrder": 16002
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "card",
@@ -23,7 +23,7 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total_Colaboradores_Ativos"
+                  "Property": "Colaboradores Ativos"
                 }
               },
               "queryRef": "_Medidas.Total_Colaboradores_Ativos",
@@ -42,7 +42,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Total_Colaboradores_Ativos"
+                "Property": "Colaboradores Ativos"
               }
             },
             "direction": "Descending"

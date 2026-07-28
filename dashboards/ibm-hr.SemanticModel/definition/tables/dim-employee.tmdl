@@ -186,6 +186,24 @@ table dim-employee
 
 		annotation SummarizationSetBy = Automatic
 
+	column FaixaEtaria =
+			
+			
+			// TODO
+		formatString: 0
+		lineageTag: a07f3315-4d78-4155-b813-5d9c613ce2c9
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column AgeRange
+		dataType: string
+		lineageTag: d9bbc5e8-2165-4189-a939-e48bc0110411
+		summarizeBy: none
+		sourceColumn: AgeRange
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim-employee = m
 		mode: import
 		queryGroup: TABELAS-DIM
@@ -200,9 +218,14 @@ table dim-employee
 				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns1",{"EmployeeCount", "Over18", "StandardHours"}),
 				    #"Reordered Columns2" = Table.ReorderColumns(#"Removed Columns",{"EmployeeNumber", "Attrition", "Age", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "Department", "Education", "EducationField", "EnvironmentSatisfaction", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
 				    #"Removed Columns1" = Table.RemoveColumns(#"Reordered Columns2",{"Attrition", "Department", "Education", "EducationField", "EnvironmentSatisfaction", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "RelationshipSatisfaction", "WorkLifeBalance"}),
-				    #"Sorted Rows1" = Table.Sort(#"Removed Columns1",{{"EmployeeNumber", Order.Ascending}})
+				    #"Sorted Rows1" = Table.Sort(#"Removed Columns1",{{"EmployeeNumber", Order.Ascending}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Sorted Rows1", "AgeRange", each if [Age] >= 60 then 60 else if [Age] >= 45 then "45-59" else if [Age] >= 30 then "30-44" else if [Age] >= 18 then "18-29" else "N/A"),
+				    #"Reordered Columns3" = Table.ReorderColumns(#"Added Conditional Column",{"EmployeeNumber", "Age", "AgeRange", "Gender", "MaritalStatus", "DistanceFromHome", "StockOptionLevel", "BusinessTravel", "DailyRate", "HourlyRate", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike", "PerformanceRating", "TotalWorkingYears", "TrainingTimesLastYear", "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Reordered Columns3",{{"AgeRange", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type1","60","60+",Replacer.ReplaceText,{"AgeRange"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Replaced Value", each true)
 				in
-				    #"Sorted Rows1"
+				    #"Filtered Rows"
 
 	annotation PBI_NavigationStepName = Navigation
 

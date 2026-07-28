@@ -27,6 +27,14 @@ table dim-job
 
 		annotation SummarizationSetBy = Automatic
 
+	column JobPosition
+		dataType: string
+		lineageTag: cb441890-c3a3-4d54-bf4a-9216038d3b74
+		summarizeBy: none
+		sourceColumn: JobPosition
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim-job = m
 		mode: import
 		queryGroup: TABELAS-DIM
@@ -53,9 +61,11 @@ table dim-job
 				    #"Added Index" = Table.AddIndexColumn(#"Sorted Rows1", "Index", 1, 1, Int64.Type),
 				    #"Reordered Columns3" = Table.ReorderColumns(#"Added Index",{"Index", "JobLevel", "JobRole"}),
 				    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns3",{{"Index", "Job_Id"}}),
-				    #"Sorted Rows2" = Table.Sort(#"Renamed Columns1",{{"Job_Id", Order.Ascending}})
+				    #"Sorted Rows2" = Table.Sort(#"Renamed Columns1",{{"Job_Id", Order.Ascending}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Sorted Rows2", "JobPosition", each if [JobLevel] = 1 then "Entry-level" else if [JobLevel] = 2 then "Mid-level" else if [JobLevel] = 3 then "Mid-level" else if [JobLevel] >= 4 then "Senior" else null),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column",{{"JobPosition", type text}})
 				in
-				    #"Sorted Rows2"
+				    #"Changed Type1"
 
 	annotation PBI_NavigationStepName = Navigation
 

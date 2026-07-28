@@ -4,10 +4,10 @@
   "position": {
     "x": 864,
     "y": 512,
-    "z": 16009,
+    "z": 13000,
     "height": 192,
     "width": 392,
-    "tabOrder": 16009
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -23,7 +23,7 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total_Colaboradores_Ativos"
+                  "Property": "Colaboradores Ativos"
                 }
               },
               "queryRef": "_Medidas.Total_Colaboradores_Ativos",
@@ -37,7 +37,7 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Total_Colaboradores_Dataset"
+                  "Property": "Total Colaboradores DB"
                 }
               },
               "queryRef": "_Medidas.Total_Colaboradores_Dataset",
@@ -56,7 +56,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Total_Colaboradores_Ativos"
+                "Property": "Colaboradores Ativos"
               }
             },
             "direction": "Descending"

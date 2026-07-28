@@ -1,8 +1,3 @@
-relationship 7c56ff5e-282f-42ac-ba05-8efb509530c0
-	joinOnDateBehavior: datePartOnly
-	fromColumn: _Medidas.'Last update'
-	toColumn: LocalDateTable_e5c9f64c-d53b-414e-a7b4-58b42903296a.Date
-
 relationship AutoDetected_a3373a7e-ace9-44dd-80fd-622b286eab08
 	fromColumn: fact-attrition.Department_Id
 	toColumn: dim-department.Department_Id
@@ -80,4 +75,9 @@ relationship fbdff8e7-3993-ed13-9b68-4ffb5f5fe527
 	isActive: false
 	fromColumn: fact-survey.WorkLifeBalance
 	toColumn: dim-satisfaction.Satisfaction_Id
+
+relationship 8666ea39-bca5-446b-9513-db599e493516
+	joinOnDateBehavior: datePartOnly
+	fromColumn: _Medidas.'Last update'
+	toColumn: LocalDateTable_e5c9f64c-d53b-414e-a7b4-58b42903296a.Date
 
