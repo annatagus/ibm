@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 64,
-    "z": 12000,
+    "z": 10000,
     "height": 32,
     "width": 1280,
-    "tabOrder": 12000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "shape",
@@ -93,7 +93,14 @@
             "weight": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }

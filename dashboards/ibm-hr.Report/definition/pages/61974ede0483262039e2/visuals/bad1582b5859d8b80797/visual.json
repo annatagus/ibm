@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "62cea2f8b8621a1a7953",
+  "name": "bad1582b5859d8b80797",
   "position": {
     "x": 0,
-    "y": 80,
-    "z": 8000,
-    "height": 640,
-    "width": 208,
-    "tabOrder": 7000
+    "y": 0,
+    "z": 0,
+    "height": 80,
+    "width": 1280,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "shape",
@@ -38,6 +38,34 @@
           }
         }
       ],
+      "fill": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
       "outline": [
         {
           "properties": {
@@ -50,16 +78,26 @@
             }
           }
         }
-      ],
-      "fill": [
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
         {
           "properties": {
-            "fillColor": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#97C1FF'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -68,13 +106,10 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "60D"
+                  "Value": "0D"
                 }
               }
             }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ]
