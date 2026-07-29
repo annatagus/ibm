@@ -9,15 +9,6 @@
         "page": "2.3.0"
       },
       "type": "SharedResources"
-    },
-    "customTheme": {
-      "name": "Temperature",
-      "reportVersionAtImport": {
-        "visual": "2.1.0",
-        "report": "3.0.0",
-        "page": "2.3.0"
-      },
-      "type": "SharedResources"
     }
   },
   "objects": {
@@ -57,11 +48,6 @@
           "name": "CY25SU10",
           "path": "BaseThemes/CY25SU10.json",
           "type": "BaseTheme"
-        },
-        {
-          "name": "Temperature",
-          "path": "BuiltInThemes/Temperature.json",
-          "type": "CustomTheme"
         }
       ]
     },
@@ -72,6 +58,11 @@
         {
           "name": "ibm-dark778979657938325.png",
           "path": "ibm-dark778979657938325.png",
+          "type": "Image"
+        },
+        {
+          "name": "ibm-light34351737282194683.png",
+          "path": "ibm-light34351737282194683.png",
           "type": "Image"
         }
       ]

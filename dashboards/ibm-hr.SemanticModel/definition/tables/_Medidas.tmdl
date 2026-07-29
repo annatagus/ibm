@@ -11,7 +11,7 @@ table _Medidas
 		formatString: 0
 		lineageTag: 9583f2a0-20dd-4a75-9403-fe4eeae072ad
 
-	measure 'Total Colaboradores Sairam' =
+	measure 'Total Colaboradores Saíram' =
 			
 			
 			CALCULATE(
@@ -40,15 +40,13 @@ table _Medidas
 		formatString: 0
 		lineageTag: 0957bf60-199e-436c-bf9e-e0dafd700441
 
-	measure 'Colaboradores Homens' = ```
+	measure 'Colaboradores Homens' =
 			
 			
 			CALCULATE(
 			    [Colaboradores Ativos],
 			    'dim-employee'[Gender] = "Male"
 			)
-			
-			```
 		formatString: 0
 		lineageTag: 8da1b90d-270a-4e99-952d-b35150cfdf36
 
@@ -94,12 +92,11 @@ table _Medidas
 			    DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
 			    'fact-survey'[SurveyDate] = DATE(2026, 07, 01)
 			 )
-			
 			```
 		formatString: 0
 		lineageTag: d2864ac0-c9be-4000-993f-08ee91362f92
 
-	measure '%Participação Survey PingPong' = ```
+	measure '%Participação Survey PingPong' =
 			
 			
 			DIVIDE(
@@ -107,8 +104,6 @@ table _Medidas
 			    [Colaboradores Ativos],
 			    0
 			)
-			
-			```
 		formatString: 0%;-0%;0%
 		lineageTag: 371dde55-756c-4759-bcee-1764ce0575e4
 
@@ -152,19 +147,17 @@ table _Medidas
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 67300684-89c5-4f18-900b-08b2ca850ea7
 
-	measure 'Colaboradores Sub-30' = ```
+	measure 'Colaboradores Sub-30' =
 			
 			
 			CALCULATE(
 			    [Colaboradores Ativos],
 			    'dim-employee'[AgeRange] = "18-29"
 			)
-			
-			```
 		formatString: 0
 		lineageTag: ab49331b-2729-4822-ba0f-da54b7cee49f
 
-	measure '%Colaboradores sub-30' = ```
+	measure '%Colaboradores Sub-30' =
 			
 			
 			DIVIDE(
@@ -172,24 +165,20 @@ table _Medidas
 			    [Colaboradores Ativos],
 			    0
 			)
-			
-			```
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: a90919a1-32d0-4ac3-8271-97b64ceb0190
 
-	measure 'Colaboradores 60+' = ```
+	measure 'Colaboradores 60+' =
 			
 			
 			CALCULATE(
 			    [Colaboradores Ativos],
 			    'dim-employee'[AgeRange] = "60+"
 			)
-			
-			```
 		formatString: 0
 		lineageTag: 5cea0431-8286-48a9-a5e3-651af6ca56df
 
-	measure '%Colaboradores 60+' = ```
+	measure '%Colaboradores 60+' =
 			
 			
 			DIVIDE(
@@ -197,8 +186,6 @@ table _Medidas
 			    [Colaboradores Ativos],
 			    0
 			)
-			
-			```
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 8e263175-f46f-415f-bdc5-7f178bcba5ea
 
