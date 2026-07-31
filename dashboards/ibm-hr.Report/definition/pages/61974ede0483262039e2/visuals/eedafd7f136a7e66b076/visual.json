@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "eedafd7f136a7e66b076",
+  "position": {
+    "x": 217.1650485436893,
+    "y": 511.68932038834947,
+    "z": 24003,
+    "height": 78.291262135922324,
+    "width": 1062.5242718446602
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Taxa Horas Extra Atual"
+                }
+              },
+              "queryRef": "_Medidas.Taxa Horas Extra Atual",
+              "nativeQueryRef": "Taxa Horas Extra Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Taxa Viagens Frequentes Atual"
+                }
+              },
+              "queryRef": "_Medidas.Taxa Viagens Frequentes Atual",
+              "nativeQueryRef": "Taxa Viagens Frequentes Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Rendimento medio vs Saidas"
+                }
+              },
+              "queryRef": "_Medidas.Rendimento vs Saidas Atual",
+              "nativeQueryRef": "Rendimento medio vs Saidas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Rendimento Permaneceram"
+                }
+              },
+              "queryRef": "_Medidas.Rendimento Permaneceram",
+              "nativeQueryRef": "Rendimento Permaneceram"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Diferença Salarial Attrition"
+                }
+              },
+              "queryRef": "_Medidas.Diferença Salarial Attrition",
+              "nativeQueryRef": "Diferença Salarial Attrition"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

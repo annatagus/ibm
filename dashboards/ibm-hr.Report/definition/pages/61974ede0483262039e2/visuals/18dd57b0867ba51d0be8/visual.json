@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "18dd57b0867ba51d0be8",
+  "position": {
+    "x": 217.1650485436893,
+    "y": 445.51456310679606,
+    "z": 24002,
+    "height": 66.1747572815534,
+    "width": 1062.5242718446602,
+    "tabOrder": 22001
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Rendimento Médio Atual"
+                }
+              },
+              "queryRef": "_Medidas.Rendimento Médio Atual",
+              "nativeQueryRef": "Rendimento Médio Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Rendimento Mediano Atual"
+                }
+              },
+              "queryRef": "_Medidas.Rendimento Mediano Atual",
+              "nativeQueryRef": "Rendimento Mediano Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Aumento Salarial Médio Atual"
+                }
+              },
+              "queryRef": "_Medidas.Aumento Salarial Médio Atual",
+              "nativeQueryRef": "Aumento Salarial Médio Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Antiguidade Media Atual"
+                }
+              },
+              "queryRef": "_Medidas.Antiguidade Media Atual",
+              "nativeQueryRef": "Antiguidade Media Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Anos Desde Promocao Atual"
+                }
+              },
+              "queryRef": "_Medidas.Anos Desde Promocao Atual",
+              "nativeQueryRef": "Anos Desde Promocao Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Media Formacoes/ano Atual"
+                }
+              },
+              "queryRef": "_Medidas.Media Formacoes Atual",
+              "nativeQueryRef": "Media Formacoes/ano Atual"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

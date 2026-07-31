@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "c0f5a33843140b394752",
+  "position": {
+    "x": 217.1650485436893,
+    "y": 96,
+    "z": 15000,
+    "height": 113.70873786407766,
+    "width": 254.44660194174756,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Equilibrio Trabalho/Vida Inicial"
+                }
+              },
+              "queryRef": "_Medidas.Equilibrio Trabalho/Vida Inicial",
+              "nativeQueryRef": "Equilibrio Trabalho/Vida Inicial"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Equilibrio Trabalho/Vida Inicial"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

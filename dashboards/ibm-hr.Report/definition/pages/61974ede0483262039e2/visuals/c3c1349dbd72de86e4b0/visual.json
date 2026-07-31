@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "c3c1349dbd72de86e4b0",
+  "position": {
+    "x": 591.84466019417471,
+    "y": 631.9223300970873,
+    "z": 22000,
+    "height": 88.543689320388339,
+    "width": 287.06796116504853,
+    "tabOrder": 22000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Variação WLB - Amostra Comum"
+                }
+              },
+              "queryRef": "_Medidas.Variação WLB - Amostra Comum",
+              "nativeQueryRef": "Variação WLB - Amostra Comum"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Variação WLB - Amostra Comum"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

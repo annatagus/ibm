@@ -81,3 +81,13 @@ relationship 8666ea39-bca5-446b-9513-db599e493516
 	fromColumn: _Medidas.'Last update'
 	toColumn: LocalDateTable_e5c9f64c-d53b-414e-a7b4-58b42903296a.Date
 
+relationship c41f3d4d-7906-4db7-a5d3-bbc24b628b31
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DataQuestInicial.DataQuestInicial
+	toColumn: LocalDateTable_103cbf35-13ef-4603-9ecc-8d282a37e5c6.Date
+
+relationship 6c0c428f-66cf-4b1a-a900-a148c39a642c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DataQuestAtual.DataQuestAtual
+	toColumn: LocalDateTable_f087b1ff-1d8b-4b5a-990e-d0106b212d6c.Date
+

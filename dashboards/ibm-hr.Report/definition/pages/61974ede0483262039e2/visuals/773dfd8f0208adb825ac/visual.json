@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "773dfd8f0208adb825ac",
+  "position": {
+    "x": 471.61165048543688,
+    "y": 97.864077669902912,
+    "z": 18000,
+    "height": 111.84466019417475,
+    "width": 269.35922330097088,
+    "tabOrder": 18000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Felicidade Inicial - Amostra Comum"
+                }
+              },
+              "queryRef": "_Medidas.Felicidade Inicial - Amostra Comum",
+              "nativeQueryRef": "Felicidade Inicial - Amostra Comum"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Felicidade Inicial - Amostra Comum"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

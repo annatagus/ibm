@@ -1,0 +1,125 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "f995583a56a546a4bda0",
+  "position": {
+    "x": 0,
+    "y": 440,
+    "z": 0,
+    "height": 280,
+    "width": 1280
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Indice Felicidade Atual"
+                }
+              },
+              "queryRef": "_Medidas.Indice Felicidade Atual",
+              "nativeQueryRef": "Indice Felicidade Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Envolvimento Atual"
+                }
+              },
+              "queryRef": "_Medidas.Envolvimento Atual",
+              "nativeQueryRef": "Envolvimento Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Satisfação Ambiente Atual"
+                }
+              },
+              "queryRef": "_Medidas.Satisfação Ambiente Atual",
+              "nativeQueryRef": "Satisfação Ambiente Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Satisfacao Trabalho Atual"
+                }
+              },
+              "queryRef": "_Medidas.Satisfacao Trabalho Atual",
+              "nativeQueryRef": "Satisfacao Trabalho Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Satisfacao Relacoes Atual"
+                }
+              },
+              "queryRef": "_Medidas.Satisfacao Relacoes Atual",
+              "nativeQueryRef": "Satisfacao Relacoes Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Equilibrio Trabalho/Vida Atual"
+                }
+              },
+              "queryRef": "_Medidas.Equilibrio Trabalho/Vida Atual",
+              "nativeQueryRef": "Equilibrio Trabalho/Vida Atual"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Indice Felicidade Atual"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

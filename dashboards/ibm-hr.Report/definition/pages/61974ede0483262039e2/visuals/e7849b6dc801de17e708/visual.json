@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "e7849b6dc801de17e708",
+  "position": {
+    "x": 740.97087378640776,
+    "y": 97.864077669902912,
+    "z": 19000,
+    "height": 111.84466019417475,
+    "width": 219.02912621359221,
+    "tabOrder": 19000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Indice Felicidade Inicial"
+                }
+              },
+              "queryRef": "_Medidas.Indice Felicidade Inicial",
+              "nativeQueryRef": "Indice Felicidade Inicial"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Indice Felicidade Inicial"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

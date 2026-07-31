@@ -1,0 +1,140 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "ef9071504a2541c72612",
+  "position": {
+    "x": 0,
+    "y": 128,
+    "z": 1,
+    "height": 232,
+    "width": 1280,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Idade Media Atual"
+                }
+              },
+              "queryRef": "_Medidas.Idade Media Atual",
+              "nativeQueryRef": "Idade Media Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Idade Mediana Atual"
+                }
+              },
+              "queryRef": "_Medidas.Idade Mediana Atual",
+              "nativeQueryRef": "Idade Mediana Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Colaboradores Mulheres"
+                }
+              },
+              "queryRef": "_Medidas.Colaboradores Mulheres",
+              "nativeQueryRef": "Colaboradores Mulheres"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Colaboradores Homens"
+                }
+              },
+              "queryRef": "_Medidas.Colaboradores Homens",
+              "nativeQueryRef": "Colaboradores Homens"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Racio Feminino"
+                }
+              },
+              "queryRef": "_Medidas.Racio Feminino",
+              "nativeQueryRef": "Racio Feminino"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Racio Masculino"
+                }
+              },
+              "queryRef": "_Medidas.Racio Masculino",
+              "nativeQueryRef": "Racio Masculino"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Desvio Meta 50%"
+                }
+              },
+              "queryRef": "_Medidas.Desvio Meta 50%",
+              "nativeQueryRef": "Desvio Meta 50%"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Idade Media Atual"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -186,16 +186,6 @@ table dim-employee
 
 		annotation SummarizationSetBy = Automatic
 
-	column FaixaEtaria =
-			
-			
-			// TODO
-		formatString: 0
-		lineageTag: a07f3315-4d78-4155-b813-5d9c613ce2c9
-		summarizeBy: sum
-
-		annotation SummarizationSetBy = Automatic
-
 	column AgeRange
 		dataType: string
 		lineageTag: d9bbc5e8-2165-4189-a939-e48bc0110411

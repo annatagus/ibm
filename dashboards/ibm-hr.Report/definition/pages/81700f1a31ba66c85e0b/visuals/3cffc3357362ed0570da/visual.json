@@ -1,0 +1,223 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "3cffc3357362ed0570da",
+  "position": {
+    "x": 0,
+    "y": 392,
+    "z": 0,
+    "height": 328,
+    "width": 1280
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Idade Media Atual"
+                }
+              },
+              "queryRef": "_Medidas.Idade Media Atual",
+              "nativeQueryRef": "Idade Media Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Idade Mediana Atual"
+                }
+              },
+              "queryRef": "_Medidas.Idade Mediana Atual",
+              "nativeQueryRef": "Idade Mediana Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Colaboradores Mulheres"
+                }
+              },
+              "queryRef": "_Medidas.Colaboradores Mulheres",
+              "nativeQueryRef": "Colaboradores Mulheres"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Colaboradores Homens"
+                }
+              },
+              "queryRef": "_Medidas.Colaboradores Homens",
+              "nativeQueryRef": "Colaboradores Homens"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Racio Feminino"
+                }
+              },
+              "queryRef": "_Medidas.Racio Feminino",
+              "nativeQueryRef": "Racio Feminino"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Racio Masculino"
+                }
+              },
+              "queryRef": "_Medidas.Racio Masculino",
+              "nativeQueryRef": "Racio Masculino"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Desvio Meta 50%"
+                }
+              },
+              "queryRef": "_Medidas.Desvio Meta 50%",
+              "nativeQueryRef": "Desvio Meta 50%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Colaboradores Sub-30"
+                }
+              },
+              "queryRef": "_Medidas.Colaboradores Sub-30",
+              "nativeQueryRef": "Colaboradores Sub-30"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% Colaboradores Sub-30"
+                }
+              },
+              "queryRef": "_Medidas.% Colaboradores Sub-30",
+              "nativeQueryRef": "% Colaboradores Sub-30"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Colaboradores 60+"
+                }
+              },
+              "queryRef": "_Medidas.Colaboradores 60+",
+              "nativeQueryRef": "Colaboradores 60+"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% Colaboradores 60+"
+                }
+              },
+              "queryRef": "_Medidas.% Colaboradores 60+",
+              "nativeQueryRef": "% Colaboradores 60+"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Distancia Media Atual"
+                }
+              },
+              "queryRef": "_Medidas.Distancia Media Atual",
+              "nativeQueryRef": "Distancia Media Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% Ate 10km"
+                }
+              },
+              "queryRef": "_Medidas.% Ate 10km",
+              "nativeQueryRef": "% Ate 10km"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Idade Media Atual"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

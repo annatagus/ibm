@@ -9,9 +9,10 @@ table _Medidas
 			    'fact-attrition'[Attrition] = "No"
 			)
 		formatString: 0
+		displayFolder: 1-População
 		lineageTag: 9583f2a0-20dd-4a75-9403-fe4eeae072ad
 
-	measure 'Total Colaboradores Saíram' =
+	measure 'Total Colaboradores Sairam' =
 			
 			
 			CALCULATE(
@@ -19,9 +20,10 @@ table _Medidas
 			    'fact-attrition'[Attrition] = "Yes"
 			)
 		formatString: 0
+		displayFolder: 1-População
 		lineageTag: 0ab4bc98-1d34-42f0-b490-794c53f83fcd
 
-	measure 'Rácio Masculino' =
+	measure 'Racio Masculino' =
 			
 			
 			DIVIDE(
@@ -30,6 +32,7 @@ table _Medidas
 			    0
 			)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 2-Demografia
 		lineageTag: a54f844c-edbb-4c01-a746-af66494c27e3
 
 	measure 'Total Colaboradores DB' = ```
@@ -38,6 +41,7 @@ table _Medidas
 			DISTINCTCOUNT('fact-attrition'[EmployeeNumber]) 
 			```
 		formatString: 0
+		displayFolder: 1-População
 		lineageTag: 0957bf60-199e-436c-bf9e-e0dafd700441
 
 	measure 'Colaboradores Homens' =
@@ -48,6 +52,7 @@ table _Medidas
 			    'dim-employee'[Gender] = "Male"
 			)
 		formatString: 0
+		displayFolder: 2-Demografia
 		lineageTag: 8da1b90d-270a-4e99-952d-b35150cfdf36
 
 	measure 'Colaboradores Mulheres' =
@@ -58,9 +63,10 @@ table _Medidas
 			    'dim-employee'[Gender] = "Female"
 			)
 		formatString: 0
+		displayFolder: 2-Demografia
 		lineageTag: b5a540f2-632a-4974-9560-d02a0942f41b
 
-	measure 'Rácio Feminino' =
+	measure 'Racio Feminino' =
 			
 			
 			DIVIDE(
@@ -69,6 +75,7 @@ table _Medidas
 			    0
 			)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 2-Demografia
 		lineageTag: bb13ed17-c0e4-418c-b730-c06c8da3c1bf
 
 	measure Departamentos =
@@ -76,6 +83,7 @@ table _Medidas
 			
 			DISTINCTCOUNT('dim-department'[Department])
 		formatString: 0
+		displayFolder: Outras
 		lineageTag: a3a4fe83-b72a-4062-b510-4b086596602d
 
 	measure 'Categorias Profissionais' =
@@ -83,28 +91,30 @@ table _Medidas
 			
 			DISTINCTCOUNT('dim-job'[JobRole])
 		formatString: 0
+		displayFolder: Outras
 		lineageTag: 90ef49fb-d7a7-4e42-89f0-ee2f85e98aea
 
-	measure 'Participantes Survey PingPong' = ```
+	measure 'Participantes Survey Atual' =
 			
-			
+			// Survey PingPong
 			 CALCULATE(
 			    DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
-			    'fact-survey'[SurveyDate] = DATE(2026, 07, 01)
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual])
 			 )
-			```
 		formatString: 0
+		displayFolder: 1-População
 		lineageTag: d2864ac0-c9be-4000-993f-08ee91362f92
 
-	measure '%Participação Survey PingPong' =
+	measure '% Participacao Survey Atual' =
 			
-			
+			// Survey PingPong
 			DIVIDE(
-			    [Participantes Survey PingPong],
+			    [Participantes Survey Atual],
 			    [Colaboradores Ativos],
 			    0
 			)
 		formatString: 0%;-0%;0%
+		displayFolder: 1-População
 		lineageTag: 371dde55-756c-4759-bcee-1764ce0575e4
 
 	measure 'Departamento Selecionado' =
@@ -114,9 +124,10 @@ table _Medidas
 			    'dim-department'[Department],
 			    "Todos os departamentos"
 			)
+		displayFolder: 1-População
 		lineageTag: e6bf9fb4-b66d-472d-bc6d-4a5c6799e689
 
-	measure 'Idade Média Atual' = ```
+	measure 'Idade Media Atual' = ```
 			
 			
 			 CALCULATE(
@@ -124,6 +135,7 @@ table _Medidas
 			    FILTER('dim-employee', [Colaboradores Ativos])
 			 )
 			```
+		displayFolder: 2-Demografia
 		lineageTag: f0fbff7f-88bf-4249-b685-0df99d3a31ee
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -136,6 +148,7 @@ table _Medidas
 			    FILTER('dim-employee', [Colaboradores Ativos])
 			 )
 			```
+		displayFolder: 2-Demografia
 		lineageTag: 2e80cf7f-06cd-4d47-9e0e-0379bfb04068
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -143,8 +156,9 @@ table _Medidas
 	measure 'Desvio Meta 50%' =
 			
 			
-			ABS([Rácio Feminino] - 0.5)
+			ABS([Racio Feminino] - 0.5)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 2-Demografia
 		lineageTag: 67300684-89c5-4f18-900b-08b2ca850ea7
 
 	measure 'Colaboradores Sub-30' =
@@ -155,9 +169,10 @@ table _Medidas
 			    'dim-employee'[AgeRange] = "18-29"
 			)
 		formatString: 0
+		displayFolder: 2-Demografia
 		lineageTag: ab49331b-2729-4822-ba0f-da54b7cee49f
 
-	measure '%Colaboradores Sub-30' =
+	measure '% Colaboradores Sub-30' =
 			
 			
 			DIVIDE(
@@ -166,6 +181,7 @@ table _Medidas
 			    0
 			)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 2-Demografia
 		lineageTag: a90919a1-32d0-4ac3-8271-97b64ceb0190
 
 	measure 'Colaboradores 60+' =
@@ -176,9 +192,10 @@ table _Medidas
 			    'dim-employee'[AgeRange] = "60+"
 			)
 		formatString: 0
+		displayFolder: 2-Demografia
 		lineageTag: 5cea0431-8286-48a9-a5e3-651af6ca56df
 
-	measure '%Colaboradores 60+' =
+	measure '% Colaboradores 60+' =
 			
 			
 			DIVIDE(
@@ -187,9 +204,10 @@ table _Medidas
 			    0
 			)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 2-Demografia
 		lineageTag: 8e263175-f46f-415f-bdc5-7f178bcba5ea
 
-	measure 'Distância Média Atual' =
+	measure 'Distancia Media Atual' =
 			
 			
 			CALCULATE(
@@ -197,9 +215,10 @@ table _Medidas
 			    FILTER('dim-employee', [Colaboradores Ativos])
 			 )
 		formatString: 0.0
+		displayFolder: 2-Demografia
 		lineageTag: 7f95b61f-2747-406e-996f-19284140aa3b
 
-	measure '%Até 10km' =
+	measure '% Ate 10km' =
 			
 			
 			DIVIDE(
@@ -210,7 +229,870 @@ table _Medidas
 			    0
 			)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 2-Demografia
 		lineageTag: 78d84c87-e131-4fab-9570-866b6562fd72
+
+	measure 'Satisfacao Ambiente Inicial' = ```
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[EnvironmentSatisfaction]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial])
+			)
+			
+			```
+		displayFolder: 3-Questionário-Inicial
+		lineageTag: 1b761946-d1b0-459b-b41f-08608f3217cf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Indice Felicidade Inicial' =
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[IndividualHappinessIndex]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial])
+			)
+		displayFolder: 3-Questionário-Inicial
+		lineageTag: 87ead019-1f3b-4a7c-95be-6fa2844b738f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Indice Felicidade Atual' =
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[IndividualHappinessIndex]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual])
+			)
+		displayFolder: 4-Questionário-Atual
+		lineageTag: b974f327-08a7-4345-9b90-ef0e8bfa0033
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Envolvimento Inicial' =
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[JobInvolvement]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial])
+			)
+		displayFolder: 3-Questionário-Inicial
+		lineageTag: b11760d8-4b21-4946-9d3c-67e85adad696
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Satisfacao Relacoes Inicial' =
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[RelationshipSatisfaction]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial])
+			)
+		displayFolder: 3-Questionário-Inicial
+		lineageTag: 106da90d-19c1-43c7-a87c-b5f1004a79ca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Equilibrio Trabalho/Vida Inicial' =
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[WorkLifeBalance]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial])
+			)
+		displayFolder: 3-Questionário-Inicial
+		lineageTag: b5434a46-5569-4607-ae38-ebfa72a68268
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taxa Felicidade Inicial' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 4, 1),
+			        'fact-survey'[IndividualHappinessIndex] >= 2.5
+			    ),
+			    CALCULATE(
+			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 4, 1)
+			    ),
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 3-Questionário-Inicial
+		lineageTag: a8827cf8-0623-4555-8437-feac9b5e6c12
+
+	measure 'Taxa Felicidade Atual' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1),
+			        'fact-survey'[IndividualHappinessIndex] >= 2.5
+			    ),
+			    CALCULATE(
+			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1)
+			    ),
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 4-Questionário-Atual
+		lineageTag: 9e7ba4d0-aff0-4cae-a133-fb76c7f228f3
+
+	measure 'Satisfação Ambiente Atual' =
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[EnvironmentSatisfaction]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual])
+			)
+		displayFolder: 4-Questionário-Atual
+		lineageTag: 34c78f07-7d09-405f-83fb-fc7c83605ef3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Envolvimento Atual' =
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[JobInvolvement]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual])
+			)
+		displayFolder: 4-Questionário-Atual
+		lineageTag: 30b6da69-3cca-4e11-8de8-524e9109738c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Satisfacao Trabalho Inicial' =
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[JobSatisfaction]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial])
+			)
+		displayFolder: 3-Questionário-Inicial
+		lineageTag: 8243ac2d-70fb-40e7-9060-8ea179653d87
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Satisfacao Trabalho Atual' =
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[JobSatisfaction]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual])
+			)
+		displayFolder: 4-Questionário-Atual
+		lineageTag: fc076849-7ff4-41ee-93b1-913d6c02b5ca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Satisfacao Relacoes Atual' =
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[RelationshipSatisfaction]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual])
+			)
+		displayFolder: 4-Questionário-Atual
+		lineageTag: c629d66d-b712-4875-a213-9498851ce087
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Equilibrio Trabalho/Vida Atual' =
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[WorkLifeBalance]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual])
+			)
+		displayFolder: 4-Questionário-Atual
+		lineageTag: 53e83b0c-5054-4bf8-b817-775a8006568d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'WLB inferior Atual' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual]),
+			    'fact-survey'[WorkLifeBalance] <= 2
+			)
+		formatString: 0
+		displayFolder: 4-Questionário-Atual
+		lineageTag: 4fa15823-996d-4621-95fe-1857c84fc926
+
+	measure 'Taxa WLB inferior Atual' =
+			
+			DIVIDE(
+			    [WLB inferior Atual],
+			    CALCULATE(
+			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			        filter('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual])
+			    ),
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 4-Questionário-Atual
+		lineageTag: 496631a3-9851-4997-aad0-4f73a90c922b
+
+	measure 'Felicidade Inicial - Amostra Comum' =
+			
+			VAR EmpContexto =
+			    CALCULATETABLE(
+			        VALUES('fact-attrition'[EmployeeNumber]),
+			        REMOVEFILTERS('fact-attrition'[Attrition])
+			    )
+			
+			VAR RespondentesInicial =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 4, 1),
+			        TREATAS(
+			            EmpContexto,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			VAR RespondentesAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1),
+			        TREATAS(
+			            EmpContexto,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			VAR ColaboradoresComuns =
+			    INTERSECT(
+			        RespondentesInicial,
+			        RespondentesAtual
+			    )
+			
+			RETURN
+			    CALCULATE(
+			        [Indice Felicidade Inicial],
+			        TREATAS(
+			            ColaboradoresComuns,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+		displayFolder: 5-Comparação
+		lineageTag: 7247f792-cb2f-4c6e-a282-00373cf6de53
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Felicidade Atual - Amostra Comum' =
+			
+			VAR EmpContexto =
+			    CALCULATETABLE(
+			        VALUES('fact-attrition'[EmployeeNumber]),
+			        REMOVEFILTERS('fact-attrition'[Attrition])
+			    )
+			
+			VAR RespondentesInicial =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 4, 1),
+			        TREATAS(
+			            EmpContexto,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			VAR RespondentesAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1),
+			        TREATAS(
+			            EmpContexto,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			VAR ColaboradoresComuns =
+			    INTERSECT(
+			        RespondentesInicial,
+			        RespondentesAtual
+			    )
+			
+			RETURN
+			    CALCULATE(
+			        [Indice Felicidade Atual],
+			        TREATAS(
+			            ColaboradoresComuns,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+		displayFolder: 5-Comparação
+		lineageTag: ae073fbf-3f36-450e-91af-e8c57c1875b0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Variação Felicidade Amostra comum' =
+			
+			[Felicidade Atual - Amostra Comum]
+			- [Felicidade Inicial - Amostra Comum]
+		displayFolder: 5-Comparação
+		lineageTag: 32f413cd-6628-4f68-a1f2-e0d276c45771
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Variação WLB - Amostra Comum' =
+			
+			VAR EmpContexto =
+			    CALCULATETABLE(
+			        VALUES('fact-attrition'[EmployeeNumber]),
+			        REMOVEFILTERS('fact-attrition'[Attrition])
+			    )
+			
+			VAR RespondentesInicial =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 4, 1),
+			        TREATAS(
+			            EmpContexto,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			VAR RespondentesAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1),
+			        TREATAS(
+			            EmpContexto,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			VAR ColaboradoresComuns =
+			    INTERSECT(
+			        RespondentesInicial,
+			        RespondentesAtual
+			    )
+			
+			VAR WLBInicial =
+			    CALCULATE(
+			        [Equilibrio Trabalho/Vida Inicial],
+			        TREATAS(
+			            ColaboradoresComuns,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			VAR WLBAtual =
+			    CALCULATE(
+			        [Equilibrio Trabalho/Vida Atual],
+			        TREATAS(
+			            ColaboradoresComuns,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			RETURN
+			    WLBAtual - WLBInicial
+		displayFolder: 5-Comparação
+		lineageTag: b6c731df-de57-4d5e-916b-135dd76aaf49
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nr Colaboradores Melhoraram' =
+			
+			VAR EmpContexto =
+			    CALCULATETABLE(
+			        VALUES('fact-attrition'[EmployeeNumber]),
+			        REMOVEFILTERS('fact-attrition'[Attrition])
+			    )
+			
+			VAR RespondentesInicial =
+			    SELECTCOLUMNS(
+			        CALCULATETABLE(
+			            VALUES('fact-survey'[EmployeeNumber]),
+			            'fact-survey'[SurveyDate] = DATE(2026, 4, 1),
+			            TREATAS(
+			                EmpContexto,
+			                'fact-survey'[EmployeeNumber]
+			            )
+			        ),
+			        "Emp",
+			        'fact-survey'[EmployeeNumber]
+			    )
+			
+			VAR RespondentesAtual =
+			    SELECTCOLUMNS(
+			        CALCULATETABLE(
+			            VALUES('fact-survey'[EmployeeNumber]),
+			            'fact-survey'[SurveyDate] = DATE(2026, 7, 1),
+			            TREATAS(
+			                EmpContexto,
+			                'fact-survey'[EmployeeNumber]
+			            )
+			        ),
+			        "Emp",
+			        'fact-survey'[EmployeeNumber]
+			    )
+			
+			VAR ColaboradoresComuns =
+			    INTERSECT(
+			        RespondentesInicial,
+			        RespondentesAtual
+			    )
+			
+			RETURN
+			    SUMX(
+			        ColaboradoresComuns,
+			        VAR Emp = [Emp]
+			
+			        VAR ScoreInicial =
+			            CALCULATE(
+			                [Indice Felicidade Inicial],
+			                TREATAS(
+			                    { Emp },
+			                    'fact-survey'[EmployeeNumber]
+			                )
+			            )
+			
+			        VAR ScoreAtual =
+			            CALCULATE(
+			                [Indice Felicidade Atual],
+			                TREATAS(
+			                    { Emp },
+			                    'fact-survey'[EmployeeNumber]
+			                )
+			            )
+			
+			        RETURN
+			            IF(
+			                ScoreAtual > ScoreInicial,
+			                1,
+			                0
+			            )
+			    )
+		formatString: 0
+		displayFolder: 5-Comparação
+		lineageTag: e089dddd-248d-476f-a53a-aff3db88807d
+
+	measure 'Nr Colaboradores Pioraram' =
+			
+			VAR EmpContexto =
+			    CALCULATETABLE(
+			        VALUES('fact-attrition'[EmployeeNumber]),
+			        REMOVEFILTERS('fact-attrition'[Attrition])
+			    )
+			
+			VAR RespondentesInicial =
+			    SELECTCOLUMNS(
+			        CALCULATETABLE(
+			            VALUES('fact-survey'[EmployeeNumber]),
+			            'fact-survey'[SurveyDate] = DATE(2026, 4, 1),
+			            TREATAS(
+			                EmpContexto,
+			                'fact-survey'[EmployeeNumber]
+			            )
+			        ),
+			        "Emp",
+			        'fact-survey'[EmployeeNumber]
+			    )
+			
+			VAR RespondentesAtual =
+			    SELECTCOLUMNS(
+			        CALCULATETABLE(
+			            VALUES('fact-survey'[EmployeeNumber]),
+			            'fact-survey'[SurveyDate] = DATE(2026, 7, 1),
+			            TREATAS(
+			                EmpContexto,
+			                'fact-survey'[EmployeeNumber]
+			            )
+			        ),
+			        "Emp",
+			        'fact-survey'[EmployeeNumber]
+			    )
+			
+			VAR ColaboradoresComuns =
+			    INTERSECT(
+			        RespondentesInicial,
+			        RespondentesAtual
+			    )
+			
+			RETURN
+			    SUMX(
+			        ColaboradoresComuns,
+			        VAR Emp = [Emp]
+			
+			        VAR ScoreInicial =
+			            CALCULATE(
+			                [Indice Felicidade Inicial],
+			                TREATAS(
+			                    { Emp },
+			                    'fact-survey'[EmployeeNumber]
+			                )
+			            )
+			
+			        VAR ScoreAtual =
+			            CALCULATE(
+			                [Indice Felicidade Atual],
+			                TREATAS(
+			                    { Emp },
+			                    'fact-survey'[EmployeeNumber]
+			                )
+			            )
+			
+			        RETURN
+			            IF(
+			                ScoreAtual < ScoreInicial,
+			                1,
+			                0
+			            )
+			    )
+		formatString: 0
+		displayFolder: 5-Comparação
+		lineageTag: 816e48e7-38b3-4c15-8d90-a58129c6a1b1
+
+	measure '% Amostra comum Melhorou' =
+			
+			DIVIDE(
+			    [Nr Colaboradores Melhoraram],
+			    [Nr Amostra Comum],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 5-Comparação
+		lineageTag: e5f0b9b8-b83c-4e02-b9da-1653db57e1a4
+
+	measure 'Nr Amostra Comum' = ```
+			
+			VAR EmpContexto =
+			    CALCULATETABLE(
+			        VALUES('fact-attrition'[EmployeeNumber]),
+			        REMOVEFILTERS('fact-attrition'[Attrition])
+			    )
+			
+			VAR RespondentesInicial =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 4, 1),
+			        TREATAS(
+			            EmpContexto,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			VAR RespondentesAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1),
+			        TREATAS(
+			            EmpContexto,
+			            'fact-survey'[EmployeeNumber]
+			        )
+			    )
+			
+			RETURN
+			    COUNTROWS(
+			        INTERSECT(
+			            RespondentesInicial,
+			            RespondentesAtual
+			        )
+			    )
+			
+			```
+		formatString: 0
+		displayFolder: 5-Comparação
+		lineageTag: 6afbb6b7-7700-49f1-9a18-170760e8490a
+
+	measure '% Amostra comum Piorou' =
+			
+			DIVIDE(
+			    [Nr Colaboradores Pioraram],
+			    [Nr Amostra Comum],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 5-Comparação
+		lineageTag: 952d0667-b55a-4b7f-851f-5b4b795ce0da
+
+	measure 'Nr Colaboradores Sem Alteração' =
+			
+			[Nr Amostra Comum]
+			- [Nr Colaboradores Melhoraram]
+			- [Nr Colaboradores Pioraram]
+		formatString: 0
+		displayFolder: 5-Comparação
+		lineageTag: db4e5607-ac32-4e89-afef-1cdcd2c8915d
+
+	measure 'Rendimento Médio Atual' =
+			
+			VAR ColaboradoresSurveyAtual  =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1)
+			    )
+			
+			RETURN
+			    CALCULATE(
+			        AVERAGE('dim-employee'[MonthlyIncome]),
+			        TREATAS(
+			            ColaboradoresSurveyAtual ,
+			            'dim-employee'[EmployeeNumber]
+			        )
+			    )
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: 94752240-fd55-4725-9a67-0d0cd8488d3a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Rendimento Mediano Atual' =
+			
+			VAR ColaboradoresSurveyAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1)
+			    )
+			
+			RETURN
+			    CALCULATE(
+			        MEDIAN('dim-employee'[MonthlyIncome]),
+			        TREATAS(
+			            ColaboradoresSurveyAtual,
+			            'dim-employee'[EmployeeNumber]
+			        )
+			    )
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: 854e7c83-11cd-4bc9-a2bc-4b74eb7e8e31
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Aumento Salarial Médio Atual' =
+			
+			VAR ColaboradoresSurveyAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1)
+			    )
+			
+			RETURN
+			    CALCULATE(
+			        AVERAGE('dim-employee'[PercentSalaryHike]),
+			        TREATAS(
+			            ColaboradoresSurveyAtual,
+			            'dim-employee'[EmployeeNumber]
+			        )
+			    )
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: 900f08fd-27b0-4bb5-8bed-424a880e0ad8
+
+		formatStringDefinition = "0.0""%"""
+
+	measure 'Antiguidade Media Atual' =
+			
+			VAR ColaboradoresSurveyAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1)
+			    )
+			
+			RETURN
+			    CALCULATE(
+			        AVERAGE('dim-employee'[YearsAtCompany]),
+			        TREATAS(
+			            ColaboradoresSurveyAtual,
+			            'dim-employee'[EmployeeNumber]
+			        )
+			    )
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: b50f035c-f383-46aa-b630-84e3d235697b
+
+		formatStringDefinition = "0.0"" anos"""
+
+	measure 'Anos Desde Promocao Atual' =
+			
+			VAR ColaboradoresSurveyAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1)
+			    )
+			
+			RETURN
+			    CALCULATE(
+			        AVERAGE('dim-employee'[YearsSinceLastPromotion]),
+			        TREATAS(
+			            ColaboradoresSurveyAtual,
+			            'dim-employee'[EmployeeNumber]
+			        )
+			    )
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: f5fbe5b3-47be-4ffa-b6c3-9c540e22852e
+
+		formatStringDefinition = "0.0"" anos"""
+
+	measure 'Media Formacoes/ano Atual' =
+			
+			VAR ColaboradoresSurveyAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1)
+			    )
+			
+			RETURN
+			    CALCULATE(
+			        AVERAGE('dim-employee'[TrainingTimesLastYear]),
+			        TREATAS(
+			            ColaboradoresSurveyAtual,
+			            'dim-employee'[EmployeeNumber]
+			        )
+			    )
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: 0877537c-6fc8-4979-96d5-f0162fef6b95
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taxa Horas Extra Atual' =
+			
+			VAR ColaboradoresSurveyAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1)
+			    )
+			
+			VAR ColaboradoresComHorasExtra =
+			    CALCULATETABLE(
+			        VALUES('dim-employee'[EmployeeNumber]),
+			        'dim-employee'[OverTime] = "Yes",
+			        TREATAS(
+			            ColaboradoresSurveyAtual,
+			            'dim-employee'[EmployeeNumber]
+			        )
+			    )
+			
+			RETURN
+			    DIVIDE(
+			        COUNTROWS(ColaboradoresComHorasExtra),
+			        COUNTROWS(ColaboradoresSurveyAtual),
+			        0
+			    )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: a168abfb-7709-4568-a3b1-0d8f6b778053
+
+	measure 'Taxa Viagens Frequentes Atual' =
+			
+			VAR ColaboradoresSurveyAtual =
+			    CALCULATETABLE(
+			        VALUES('fact-survey'[EmployeeNumber]),
+			        'fact-survey'[SurveyDate] = DATE(2026, 7, 1)
+			    )
+			
+			VAR ColaboradoresComViagensFrequentes =
+			    CALCULATETABLE(
+			        VALUES('dim-employee'[EmployeeNumber]),
+			        'dim-employee'[BusinessTravel] = "Travel_Frequently",
+			        TREATAS(
+			            ColaboradoresSurveyAtual,
+			            'dim-employee'[EmployeeNumber]
+			        )
+			    )
+			
+			RETURN
+			    DIVIDE(
+			        COUNTROWS(ColaboradoresComViagensFrequentes),
+			        COUNTROWS(ColaboradoresSurveyAtual),
+			        0
+			    )
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: 2f0c1642-f551-47db-99b4-80db5080aaad
+
+	measure 'Rendimento medio vs Saidas' =
+			
+			// tem de ser revisto piorou a media do 1ro para o 2ndo
+			CALCULATE(
+			    AVERAGE('dim-employee'[MonthlyIncome]),
+			    'fact-attrition'[Attrition] = "Yes"
+			)
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: 2e430153-5f7d-4c2b-8085-2a542fb638be
+
+	measure 'Rendimento Permaneceram' =
+			
+			CALCULATE(
+			    [Rendimento Mediano Atual],
+			    'fact-attrition'[Attrition] = "No"
+			)
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: 01103f9d-773c-45b0-ae12-461cbd287cfa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diferença Salarial Attrition' = ```
+			
+			[Rendimento Permaneceram] - [Rendimento medio vs Saidas] 
+			```
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: 0ee8b1ce-0364-48dd-bac7-9d09f92f3aee
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure DataAtual =
+			
+			// Data Survey PingPong
+			SELECTEDVALUE(DataQuestAtual[DataQuestAtual])
+		formatString: General Date
+		displayFolder: 0-Parâmetros
+		lineageTag: d9868401-7975-4fb6-b169-c20e2f4e9fae
+
+	measure DataInicial =
+			
+			// Data Questionário Inicial
+			SELECTEDVALUE(DataQuestInicial[DataQuestInicial])
+		formatString: General Date
+		displayFolder: 0-Parâmetros
+		lineageTag: 7757fc69-17f5-4fae-9281-12752cc43148
+
+	measure 'Taxa Felicidade Inicial_v2' =
+			
+			
+			DIVIDE(
+			    // total de colaboradores cujas média respostas de satisfaçao foi superior 2,5 - survey inicial
+			    CALCULATE(
+			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			        FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial]),
+			        'fact-survey'[IndividualHappinessIndex] >= 2.5
+			    ),
+			    // total de colaboradores responderam survey inicial
+			    CALCULATE(
+			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			        FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial])
+			    ),
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 3-Questionário-Inicial
+		lineageTag: daf91168-7010-4f27-8ea7-3b570d6c4d8d
+
+	measure 'Taxa Felicidade Atual_v2' =
+			
+			
+			DIVIDE(
+			    // total de colaboradores cujas média respostas de satisfaçao foi superior 2,5 - survey pingpong
+			    CALCULATE(
+			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			        FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual]),
+			        'fact-survey'[IndividualHappinessIndex] >= 2.5
+			    ),
+			    // total de colaboradores responderam survey pingpong
+			    CALCULATE(
+			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
+			        FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual])
+			    ),
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 4-Questionário-Atual
+		lineageTag: 1957ace7-b69b-4354-a83b-693f7fe2428e
 
 	column 'Dev by'
 		lineageTag: 055606ff-6bae-4fb1-912c-5adf71402d98

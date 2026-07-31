@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "da09fb8f30e8cd7d1557",
+  "position": {
+    "x": 998.21359223300965,
+    "y": 153.78640776699029,
+    "z": 21000,
+    "height": 134.21359223300971,
+    "width": 269.35922330097088,
+    "tabOrder": 21000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Variação Felicidade Amostra comum"
+                }
+              },
+              "queryRef": "_Medidas.Variação Felicidade Pareados",
+              "nativeQueryRef": "Variação Felicidade Amostra comum"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Variação Felicidade Amostra comum"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

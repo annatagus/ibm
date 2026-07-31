@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "00c3b758531106904086",
+  "position": {
+    "x": 8,
+    "y": 0,
+    "z": 1,
+    "height": 152,
+    "width": 536,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "DataInicial"
+                }
+              },
+              "queryRef": "_Medidas.DataInicial",
+              "nativeQueryRef": "DataInicial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "DataAtual"
+                }
+              },
+              "queryRef": "_Medidas.DataAtual",
+              "nativeQueryRef": "DataAtual"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "DataAtual"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ae023084390da3e8557a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "DataAtual"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

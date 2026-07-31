@@ -1,0 +1,125 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "525c35c698cb057c1504",
+  "position": {
+    "x": 8,
+    "y": 432,
+    "z": 0,
+    "height": 280,
+    "width": 1240
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Total Colaboradores DB"
+                }
+              },
+              "queryRef": "_Medidas.Total Colaboradores DB",
+              "nativeQueryRef": "Total Colaboradores DB"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Total Colaboradores Sairam"
+                }
+              },
+              "queryRef": "_Medidas.Total Colaboradores Sairam",
+              "nativeQueryRef": "Total Colaboradores Sairam"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Colaboradores Ativos"
+                }
+              },
+              "queryRef": "_Medidas.Colaboradores Ativos",
+              "nativeQueryRef": "Colaboradores Ativos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Participantes Survey Atual"
+                }
+              },
+              "queryRef": "_Medidas.Participantes Survey PingPong",
+              "nativeQueryRef": "Participantes Survey Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% Participacao Survey Atual"
+                }
+              },
+              "queryRef": "_Medidas.% Participacao Survey PingPong",
+              "nativeQueryRef": "% Participacao Survey Atual"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Departamento Selecionado"
+                }
+              },
+              "queryRef": "_Medidas.Departamento Selecionado",
+              "nativeQueryRef": "Departamento Selecionado"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Total Colaboradores DB"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

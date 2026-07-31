@@ -4,19 +4,19 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 930.00000000000011,
-        "y": 678.57142857142867
+        "x": 127.7327602439434,
+        "y": 639.73892257440866
       },
       "nodes": [
         {
           "location": {
-            "x": 2559.5074581828203,
-            "y": 352.20690076389144
+            "x": 1667.3646010399632,
+            "y": 789.73892257440866
           },
           "nodeIndex": "_Medidas",
           "nodeLineageTag": "3e53132e-386d-44e4-b568-b5a781404dcd",
           "size": {
-            "height": 230.10249930069216,
+            "height": 1000,
             "width": 234
           },
           "zIndex": 2
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 998.584326289395,
-            "y": 577.5860352840341
+            "y": 840.832342808837
           },
           "nodeIndex": "dim-department",
           "nodeLineageTag": "6dbb4c72-5ec4-4907-acef-d6cc516f323f",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 418.26332509693378,
-            "y": 566.41091219280452
+            "y": 829.6572197176074
           },
           "nodeIndex": "dim-education",
           "nodeLineageTag": "93a0d02a-74b4-4df1-b0c1-6469cbc7141e",
@@ -50,20 +50,20 @@
         {
           "location": {
             "x": 2.6909231082447747,
-            "y": 788.77619827655269
+            "y": 986.3082200870698
           },
           "nodeIndex": "dim-employee",
           "nodeLineageTag": "f2a5681c-6ec9-4629-ac1e-76bef803a480",
           "size": {
-            "height": 633.70047663715991,
+            "height": 699.41476235144557,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 8
         },
         {
           "location": {
             "x": 703.71741871077245,
-            "y": 856.56802782398574
+            "y": 1119.8143353487885
           },
           "nodeIndex": "fact-attrition",
           "nodeLineageTag": "ce3fccef-6e78-4614-98ba-28137f9c8549",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 1354.8643437171559,
-            "y": 725.18464807248472
+            "y": 988.43095559728761
           },
           "nodeIndex": "dim-job",
           "nodeLineageTag": "33c6c7d5-e933-430a-a88c-c67833527f79",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 1190.8530672575084,
-            "y": 1356.022194826895
+            "y": 1619.2685023516979
           },
           "nodeIndex": "dim-satisfaction",
           "nodeLineageTag": "0876179f-615c-4937-9acf-8b08dada9b23",
@@ -97,24 +97,50 @@
             "height": 145,
             "width": 234
           },
-          "zIndex": 8
+          "zIndex": 6
         },
         {
           "location": {
             "x": 706.52397396975834,
-            "y": 1315.1599730881046
+            "y": 1578.4062806129075
           },
           "nodeIndex": "fact-survey",
           "nodeLineageTag": "7c1dd21a-8439-4f4a-9a2d-3e11324af7df",
           "size": {
-            "height": 297.82333505346469,
+            "height": 314.9661921963218,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1666.4038180371372,
+            "y": 666.24588432088342
+          },
+          "nodeIndex": "DataQuestAtual",
+          "nodeLineageTag": "6efeec6e-ddf7-4534-8a2c-c95c0d7a5bfb",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1665.4066923121918,
+            "y": 546.24710330289724
+          },
+          "nodeIndex": "DataQuestInicial",
+          "nodeLineageTag": "524b192d-212a-4f55-b588-aeb1c2627489",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 70,
+      "zoomValue": 69.913043478260875,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

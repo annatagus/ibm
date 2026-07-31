@@ -1,0 +1,124 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "6e6b55c27a705369e5ba",
+  "position": {
+    "x": 0,
+    "y": 440,
+    "z": 0,
+    "height": 280,
+    "width": 1280
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Indice Felicidade Inicial"
+                }
+              },
+              "queryRef": "_Medidas.Indice Felicidade Inicial",
+              "nativeQueryRef": "Indice Felicidade Inicial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Envolvimento Inicial"
+                }
+              },
+              "queryRef": "_Medidas.Envolvimento Inicial",
+              "nativeQueryRef": "Envolvimento Inicial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Satisfacao Ambiente Inicial"
+                }
+              },
+              "queryRef": "_Medidas.Satisfacao Ambiente Inicial",
+              "nativeQueryRef": "Satisfacao Ambiente Inicial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Satisfacao Trabalho Inicial"
+                }
+              },
+              "queryRef": "_Medidas.Satisfacao Trabalho Inicial",
+              "nativeQueryRef": "Satisfacao Trabalho Inicial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Satisfacao Relacoes Inicial"
+                }
+              },
+              "queryRef": "_Medidas.Satisfacao Relacoes Inicial",
+              "nativeQueryRef": "Satisfacao Relacoes Inicial"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Equilibrio Trabalho/Vida Inicial"
+                }
+              },
+              "queryRef": "_Medidas.Equilibrio Trabalho/Vida Inicial",
+              "nativeQueryRef": "Equilibrio Trabalho/Vida Inicial"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Indice Felicidade Inicial"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

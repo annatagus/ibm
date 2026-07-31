@@ -1,0 +1,245 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "2da5c6230c52d65e7030",
+  "position": {
+    "x": 217.1650485436893,
+    "y": 329.00970873786406,
+    "z": 24001,
+    "height": 116.50485436893203,
+    "width": 806.21359223300965
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Colaboradores Ativos"
+                }
+              },
+              "queryRef": "_Medidas.Colaboradores Ativos",
+              "nativeQueryRef": "Colaboradores Ativos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Total Colaboradores Sairam"
+                }
+              },
+              "queryRef": "_Medidas.Total Colaboradores Saíram",
+              "nativeQueryRef": "Total Colaboradores Sairam"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Nr Colaboradores Sem Alteração"
+                }
+              },
+              "queryRef": "_Medidas.Nr Colaboradores Sem Alteração",
+              "nativeQueryRef": "Nr Colaboradores Sem Alteração"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Nr Colaboradores Melhoraram"
+                }
+              },
+              "queryRef": "_Medidas.Nr Colaboradores Melhoraram",
+              "nativeQueryRef": "Nr Colaboradores Melhoraram"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% Amostra comum Melhorou"
+                }
+              },
+              "queryRef": "_Medidas.% Amostra comum Melhorou",
+              "nativeQueryRef": "% Amostra comum Melhorou"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Nr Colaboradores Pioraram"
+                }
+              },
+              "queryRef": "_Medidas.Nr Colaboradores Pioraram",
+              "nativeQueryRef": "Nr Colaboradores Pioraram"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% Amostra comum Piorou"
+                }
+              },
+              "queryRef": "_Medidas.% Amostra comum Piorou",
+              "nativeQueryRef": "% Amostra comum Piorou"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Nr Colaboradores Sem Alteração"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "100.65048040570085D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Colaboradores Ativos"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110.48542332968418D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Total Colaboradores Saíram"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "109.9126133089106D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Nr Colaboradores Melhoraram"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.57279978135549D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.% Amostra comum Melhorou"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118.36893203883496D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Nr Colaboradores Pioraram"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.9514372524295D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.% Amostra comum Piorou"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "139.3398058252427D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Nr Colaboradores Sem Alteração"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

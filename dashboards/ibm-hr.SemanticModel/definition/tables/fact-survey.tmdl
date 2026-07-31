@@ -82,6 +82,22 @@ table fact-survey
 
 		annotation SummarizationSetBy = Automatic
 
+	column IndividualHappinessIndex =
+			
+			DIVIDE(
+			    'fact-survey'[EnvironmentSatisfaction]
+			        + 'fact-survey'[JobSatisfaction]
+			        + 'fact-survey'[RelationshipSatisfaction]
+			        + 'fact-survey'[WorkLifeBalance],
+			    4
+			)
+		lineageTag: 96d92913-bc35-4888-87ea-3cb55752aa19
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition fact-survey = m
 		mode: import
 		queryGroup: TABELAS-FACT
