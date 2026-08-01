@@ -6,7 +6,7 @@ table _Medidas
 			
 			CALCULATE(
 			    [Total Colaboradores DB],
-			    'fact-attrition'[Attrition] = "No"
+			    FILTER('fact-attrition', 'fact-attrition'[Attrition] = "No")
 			)
 		formatString: 0
 		displayFolder: 1-População
@@ -44,13 +44,14 @@ table _Medidas
 		displayFolder: 1-População
 		lineageTag: 0957bf60-199e-436c-bf9e-e0dafd700441
 
-	measure 'Colaboradores Homens' =
+	measure 'Colaboradores Homens' = ```
 			
 			
 			CALCULATE(
 			    [Colaboradores Ativos],
-			    'dim-employee'[Gender] = "Male"
+			    FILTER('dim-employee', 'dim-employee'[Gender] = "Male")    
 			)
+			```
 		formatString: 0
 		displayFolder: 2-Demografia
 		lineageTag: 8da1b90d-270a-4e99-952d-b35150cfdf36
@@ -60,7 +61,7 @@ table _Medidas
 			
 			CALCULATE(
 			    [Colaboradores Ativos],
-			    'dim-employee'[Gender] = "Female"
+			    FILTER('dim-employee', 'dim-employee'[Gender] = "Female")
 			)
 		formatString: 0
 		displayFolder: 2-Demografia
@@ -69,11 +70,13 @@ table _Medidas
 	measure 'Racio Feminino' =
 			
 			
+			COALESCE(
 			DIVIDE(
 			    [Colaboradores Mulheres],
 			    [Colaboradores Ativos],
 			    0
-			)
+			),
+			0)
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: 2-Demografia
 		lineageTag: bb13ed17-c0e4-418c-b730-c06c8da3c1bf
@@ -135,10 +138,11 @@ table _Medidas
 			    FILTER('dim-employee', [Colaboradores Ativos])
 			 )
 			```
+		formatString: 0
 		displayFolder: 2-Demografia
 		lineageTag: f0fbff7f-88bf-4249-b685-0df99d3a31ee
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Idade Mediana Atual' = ```
 			
@@ -166,7 +170,7 @@ table _Medidas
 			
 			CALCULATE(
 			    [Colaboradores Ativos],
-			    'dim-employee'[AgeRange] = "18-29"
+			    FILTER('dim-employee', 'dim-employee'[AgeRange] = "18-29")
 			)
 		formatString: 0
 		displayFolder: 2-Demografia
@@ -187,10 +191,12 @@ table _Medidas
 	measure 'Colaboradores 60+' =
 			
 			
+			COALESCE(
 			CALCULATE(
 			    [Colaboradores Ativos],
-			    'dim-employee'[AgeRange] = "60+"
-			)
+			    FILTER('dim-employee', 'dim-employee'[AgeRange] = "60+")
+			),
+			0)
 		formatString: 0
 		displayFolder: 2-Demografia
 		lineageTag: 5cea0431-8286-48a9-a5e3-651af6ca56df
