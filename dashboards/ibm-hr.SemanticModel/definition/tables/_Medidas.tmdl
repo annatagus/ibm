@@ -152,10 +152,9 @@ table _Medidas
 			    FILTER('dim-employee', [Colaboradores Ativos])
 			 )
 			```
+		formatString: 0
 		displayFolder: 2-Demografia
 		lineageTag: 2e80cf7f-06cd-4d47-9e0e-0379bfb04068
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Desvio Meta 50%' =
 			
@@ -168,10 +167,12 @@ table _Medidas
 	measure 'Colaboradores Sub-30' =
 			
 			
+			COALESCE(
 			CALCULATE(
 			    [Colaboradores Ativos],
 			    FILTER('dim-employee', 'dim-employee'[AgeRange] = "18-29")
-			)
+			),
+			0)
 		formatString: 0
 		displayFolder: 2-Demografia
 		lineageTag: ab49331b-2729-4822-ba0f-da54b7cee49f
@@ -303,7 +304,7 @@ table _Medidas
 			
 			CALCULATE(
 			    AVERAGE('fact-survey'[WorkLifeBalance]),
-			    FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial])
+			        FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataInicial])
 			)
 		displayFolder: 3-Questionário-Inicial
 		lineageTag: b5434a46-5569-4607-ae38-ebfa72a68268
@@ -1083,7 +1084,7 @@ table _Medidas
 			
 			
 			DIVIDE(
-			    // total de colaboradores cujas média respostas de satisfaçao foi superior 2,5 - survey pingpong
+			    // total de colaboradores cujas média respostas de satisfaçao foi superior 2,5 (3?) - survey pingpong
 			    CALCULATE(
 			        DISTINCTCOUNT('fact-survey'[EmployeeNumber]),
 			        FILTER('fact-survey', 'fact-survey'[SurveyDate] = [DataAtual]),
@@ -1099,6 +1100,27 @@ table _Medidas
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: 4-Questionário-Atual
 		lineageTag: 1957ace7-b69b-4354-a83b-693f7fe2428e
+
+	measure 'Equilibrio Trabalho/Vida Atual_v2' = ```
+			
+			
+			CALCULATE(
+			    AVERAGE('fact-survey'[WorkLifeBalance]),
+			    FILTER(
+			        VALUES('fact-survey'[SurveyDate]), 
+			        'fact-survey'[SurveyDate] = [DataAtual]
+			    ),
+			    // Ativa a relação direta mas inativa entre as duas tabelas de factos
+			    TREATAS(
+			        VALUES('fact-attrition'[EmployeeNumber]), 
+			        'fact-survey'[EmployeeNumber]
+			    )
+			)
+			```
+		displayFolder: 4-Questionário-Atual
+		lineageTag: edd7ec85-6e59-45e5-8851-cf6ebe59f0bc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Dev by'
 		lineageTag: 055606ff-6bae-4fb1-912c-5adf71402d98

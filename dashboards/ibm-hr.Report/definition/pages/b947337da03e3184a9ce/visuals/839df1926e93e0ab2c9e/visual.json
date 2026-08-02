@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "839df1926e93e0ab2c9e",
+  "position": {
+    "x": 48.000000000000007,
+    "y": 336,
+    "z": 26004,
+    "height": 304,
+    "width": 800,
+    "tabOrder": 25004
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "falta fazer",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "60pt",
+                      "color": "#d64550"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

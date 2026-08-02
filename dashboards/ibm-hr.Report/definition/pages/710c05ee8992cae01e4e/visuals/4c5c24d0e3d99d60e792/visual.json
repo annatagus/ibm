@@ -7,7 +7,7 @@
     "z": 22000,
     "height": 240,
     "width": 336.00000000000006,
-    "tabOrder": 22000
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -42,11 +42,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Indice Felicidade Atual"
+                  "Property": "Equilibrio Trabalho/Vida Atual_v2"
                 }
               },
-              "queryRef": "_Medidas.Indice Felicidade Atual",
-              "nativeQueryRef": "Indice Felicidade Atual"
+              "queryRef": "_Medidas.Equilibrio Trabalho/Vida Atual_v2",
+              "nativeQueryRef": "Equilibrio Trabalho/Vida Atual_v2"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Indice Felicidade Atual"
+                "Property": "Equilibrio Trabalho/Vida Atual_v2"
               }
             },
             "direction": "Descending"
@@ -137,6 +137,20 @@
                   }
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
             }
           }
         }
@@ -177,6 +191,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
             }
           }
         }
@@ -188,6 +209,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -216,7 +244,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Felicidade atual por departamento'"
+                  "Value": "'Índice Equilíbrio Trabalho/Vida Atual'"
                 }
               }
             },
@@ -320,8 +348,39 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "261ec215603921028ade",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim-department"
+              }
+            },
+            "Property": "Department"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

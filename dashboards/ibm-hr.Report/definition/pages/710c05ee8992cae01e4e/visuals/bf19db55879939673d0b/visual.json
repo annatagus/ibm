@@ -7,7 +7,7 @@
     "z": 24000,
     "height": 240,
     "width": 496,
-    "tabOrder": 24000
+    "tabOrder": 23000
   },
   "visual": {
     "visualType": "textbox",
@@ -38,7 +38,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "texto",
+                    "value": "\"Sales\" com maior risco de reforma em 5 anos",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -50,7 +50,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "texto",
+                    "value": "\"Human Resources\" com maior desequilíbrio rácio feminino",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -62,7 +62,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "texto",
+                    "value": "\"Research & Development\" com índices mais baixos de Felicidade",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -74,7 +74,31 @@
               {
                 "textRuns": [
                   {
-                    "value": "texto",
+                    "value": "Contratar mais colaboradores género feminino",
+                    "textStyle": {
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Ênfase substituição cargos Seniores",
+                    "textStyle": {
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Implementar políticas aumento Felicidade",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"

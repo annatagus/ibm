@@ -7,7 +7,7 @@
     "z": 21000,
     "height": 240,
     "width": 336.00000000000006,
-    "tabOrder": 21000
+    "tabOrder": 20000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -42,11 +42,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Colaboradores 60+"
+                  "Property": "% Colaboradores 60+"
                 }
               },
-              "queryRef": "_Medidas.Colaboradores 60+",
-              "nativeQueryRef": "Colaboradores 60+"
+              "queryRef": "_Medidas.% Colaboradores 60+",
+              "nativeQueryRef": "% Colaboradores 60+"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Colaboradores 60+"
+                "Property": "% Colaboradores 60+"
               }
             },
             "direction": "Descending"
@@ -137,6 +137,13 @@
                   }
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
             }
           }
         }
@@ -177,6 +184,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
             }
           }
         }
@@ -188,6 +202,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -315,6 +336,26 @@
               "expr": {
                 "Literal": {
                   "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'3e3b3e7286437ce96d6b'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
             }

@@ -255,51 +255,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5b0023ede33c0b8adc54",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Idade Mediana Atual"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c1959fed4c3d3b4b63c0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Departamento Selecionado"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c706169e9014ae09a02b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim-department"
-              }
-            },
-            "Property": "Department"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

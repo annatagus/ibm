@@ -7,7 +7,7 @@
     "z": 17000,
     "height": 80,
     "width": 160,
-    "tabOrder": 16000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Colaboradores 60+"
+                  "Property": "% Colaboradores Sub-30"
                 }
               },
-              "queryRef": "_Medidas.Colaboradores 60+",
-              "nativeQueryRef": "Colaboradores 60+"
+              "queryRef": "_Medidas.% Colaboradores Sub-30",
+              "nativeQueryRef": "% Colaboradores Sub-30"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Colaboradores 60+"
+                "Property": "% Colaboradores Sub-30"
               }
             },
             "direction": "Descending"
@@ -138,7 +138,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Reforma em 5 anos'"
+                  "Value": "'Até 30 anos'"
                 }
               }
             },
