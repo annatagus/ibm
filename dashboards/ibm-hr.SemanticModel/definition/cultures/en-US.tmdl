@@ -7200,6 +7200,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.452
 			          }
+			        },
+			        {
+			          "Departamento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7876,16 +7886,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "Nível": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -11111,6 +11111,118 @@ cultureInfo en-US
 			        }
 			      ],
 			      "SemanticType": "Time"
+			    },
+			    "entity__medida.equilibrio_trabalho_vida_Atual_v2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Equilibrio Trabalho/Vida Atual_v2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "equilibrio trabalho/vida Atual_v2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "equilibrio trabalho": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "equilibrio trabalho vida Atual_v2": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vida Atual_v2": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.dept__maior_risco": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Dept. Maior Risco"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dept. maior risco": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.cargo_maior_risco": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Cargo Maior Risco"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cargo maior risco": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.colaboradores_55": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Colaboradores 55+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "colaboradores 55+": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dimemployee.mais_55_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim-employee",
+			          "ConceptualProperty": "Mais55Anos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mais 55 ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Mai 55 ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Mais55Anos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -12074,6 +12186,171 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dimdepartments_have_factattritions"
+			        }
+			      ]
+			    },
+			    "dimemployee_has_mais_55_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim-employee"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimemployee": {
+			          "Target": {
+			            "Entity": "dimemployee"
+			          }
+			        },
+			        "dimemployee.mais_55_ano": {
+			          "Target": {
+			            "Entity": "dimemployee.mais_55_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimemployee"
+			            },
+			            "Object": {
+			              "Role": "dimemployee.mais_55_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimemployees_have_mais_55_anos"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_colaboradores_55": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.colaboradores_55": {
+			          "Target": {
+			            "Entity": "entity__medida.colaboradores_55"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.colaboradores_55"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_colaboradores_55"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_cargo_maior_risco": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.cargo_maior_risco": {
+			          "Target": {
+			            "Entity": "entity__medida.cargo_maior_risco"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.cargo_maior_risco"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_cargo_maior_risco"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_dept__maior_risco": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.dept__maior_risco": {
+			          "Target": {
+			            "Entity": "entity__medida.dept__maior_risco"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.dept__maior_risco"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_dept__maior_risco"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_equilibrio_trabalho_vida_Atual_v2": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.equilibrio_trabalho_vida_Atual_v2": {
+			          "Target": {
+			            "Entity": "entity__medida.equilibrio_trabalho_vida_Atual_v2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.equilibrio_trabalho_vida_Atual_v2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_equilibrio_trabalho_vida_Atual_v2"
 			        }
 			      ]
 			    },

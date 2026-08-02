@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "d654495aa5c4dc29d517",
+  "name": "2458db942461e441ab5c",
   "position": {
     "x": 224,
-    "y": 464.00000000000006,
-    "z": 25005,
+    "y": 464,
+    "z": 26009,
     "height": 240,
-    "width": 687.99999999999989,
-    "tabOrder": 25005
+    "width": 464,
+    "tabOrder": 25009
   },
   "visual": {
     "visualType": "pivotTable",
@@ -44,7 +44,7 @@
               },
               "queryRef": "dim-job.JobPosition",
               "nativeQueryRef": "JobPosition",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -58,55 +58,25 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Colaboradores Ativos"
-                }
-              },
-              "queryRef": "_Medidas.Colaboradores Ativos",
-              "nativeQueryRef": "Colaboradores Ativos"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "Idade Media Atual"
-                }
-              },
-              "queryRef": "_Medidas.Idade Media Atual",
-              "nativeQueryRef": "Idade Média Atual",
-              "displayName": "Idade Média Atual"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "Racio Feminino"
-                }
-              },
-              "queryRef": "_Medidas.Racio Feminino",
-              "nativeQueryRef": "Rácio Feminino",
-              "displayName": "Rácio Feminino"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
                   "Property": "% Colaboradores 60+"
                 }
               },
               "queryRef": "_Medidas.% Colaboradores 60+",
               "nativeQueryRef": "% Colaboradores 60+"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% Colaboradores 55+"
+                }
+              },
+              "queryRef": "_Medidas.% Colaboradores 55+",
+              "nativeQueryRef": "% Colaboradores 55+"
             }
           ]
         }
@@ -121,7 +91,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Idade Media Atual"
+                "Property": "% Colaboradores 55+"
               }
             },
             "direction": "Descending"
@@ -162,20 +132,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Human Resources'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -208,7 +165,122 @@
                   "Value": "11D"
                 }
               }
+            },
+            "valuesOnRow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "SelectRef": {
+                          "ExpressionName": "_Medidas.% Colaboradores 60+"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'minColor'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'maxColor'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Medidas.% Colaboradores 60+"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "SelectRef": {
+                          "ExpressionName": "_Medidas.% Colaboradores 55+"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'minColor'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'maxColor'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Medidas.% Colaboradores 55+"
           }
         }
       ],
@@ -226,6 +298,13 @@
               "expr": {
                 "Literal": {
                   "Value": "11D"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -305,6 +384,66 @@
           },
           "selector": {
             "id": "Column"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "_Medidas.% Colaboradores 60+"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "_Medidas.% Colaboradores 55+"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "dim-department.Department"
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "blankRows": [
+        {
+          "properties": {
+            "showBlankRows": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
@@ -463,80 +602,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e4c4ddf794858930997c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim-department"
-              }
-            },
-            "Property": "Department"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User"
-      },
-      {
-        "name": "0306cd180cd033222846",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Colaboradores Ativos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d2cf30481ae233db1c90",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Idade Media Atual"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "91bfaa3708d000d4546c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Racio Feminino"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "041d50cfebe734302377",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "% Colaboradores 60+"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

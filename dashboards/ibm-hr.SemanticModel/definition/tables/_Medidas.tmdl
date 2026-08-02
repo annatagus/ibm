@@ -1122,6 +1122,73 @@ table _Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Dept. Maior Risco' = ```
+			
+			MAXX(
+			    TOPN(
+			        1, 
+			        VALUES('dim-department'[Department]), 
+			        CALCULATE(
+			            [Colaboradores 60+],
+			            TREATAS(
+			                VALUES('fact-attrition'[EmployeeNumber]), 
+			                'dim-employee'[EmployeeNumber]
+			            )
+			        ), 
+			        DESC
+			    ), 
+			    'dim-department'[Department]
+			)
+			```
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: 61596332-68a2-4349-a614-304e9e18dc09
+
+	measure 'Cargo Maior Risco' = ```
+			
+			MAXX(
+			    TOPN(
+			        1, 
+			        VALUES('dim-job'[JobRole]), 
+			        CALCULATE(
+			            [Colaboradores 60+],
+			            TREATAS(
+			                VALUES('fact-attrition'[EmployeeNumber]), 
+			                'dim-employee'[EmployeeNumber]
+			            )
+			        ), 
+			        DESC
+			    ), 
+			    'dim-job'[JobRole]
+			)
+			```
+		displayFolder: 6-Remuneração-Carreiras
+		lineageTag: d689af1f-7bd2-4f51-a179-af749c6bd11b
+
+	measure 'Colaboradores 55+' =
+			
+			
+			COALESCE(
+			    CALCULATE(
+			        [Colaboradores Ativos],
+			        FILTER('dim-employee', 'dim-employee'[Mais55Anos] = 1)
+			    ),
+			0)
+		formatString: 0
+		displayFolder: 2-Demografia
+		lineageTag: 402b1be1-9f97-41ff-a78a-beed768e273b
+
+	measure '% Colaboradores 55+' =
+			
+			
+			DIVIDE(
+			    [Colaboradores 55+],
+			    [Colaboradores Ativos],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 2-Demografia
+		lineageTag: aa6a3a48-e7c4-4c54-ace2-a9747f4bcaea
+
 	column 'Dev by'
 		lineageTag: 055606ff-6bae-4fb1-912c-5adf71402d98
 		summarizeBy: none

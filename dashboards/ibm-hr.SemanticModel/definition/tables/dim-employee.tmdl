@@ -194,6 +194,20 @@ table dim-employee
 
 		annotation SummarizationSetBy = Automatic
 
+	column Mais55Anos = ```
+			
+			IF(
+			    'dim-employee'[Age] >= 55, 
+			    1, 
+			    0
+			)
+			```
+		formatString: 0
+		lineageTag: 974d0d3d-dfbb-4698-92a0-532e461e5187
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim-employee = m
 		mode: import
 		queryGroup: TABELAS-DIM

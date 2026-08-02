@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "bf19db55879939673d0b",
   "position": {
-    "x": 768,
+    "x": 704,
     "y": 464,
     "z": 24000,
     "height": 240,
-    "width": 496,
+    "width": 560,
     "tabOrder": 23000
   },
   "visual": {
@@ -38,7 +38,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "\"Sales\" com maior risco de reforma em 5 anos",
+                    "value": "Plano em Sales",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ": Priorizar sucessão devido à maior exposição a curto prazo (0,8%).",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -50,7 +58,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "\"Human Resources\" com maior desequilíbrio rácio feminino",
+                    "value": "Género em HR",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ": Mitigar disparidade com atração direcionada a mulheres.",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -62,7 +78,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "\"Research & Development\" com índices mais baixos de Felicidade",
+                    "value": "Intervenção em R&D",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ": Atuar na área com menor Felicidade atual (2,44).",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -74,7 +98,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "Contratar mais colaboradores género feminino",
+                    "value": "Queda Global",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ": Travar quebra urgente na Felicidade Geral (-0,32 pontos).",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -86,19 +118,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "Ênfase substituição cargos Seniores",
+                    "value": "Sucessão Sénior",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
                     }
-                  }
-                ],
-                "listType": "bullet"
-              },
-              {
-                "textRuns": [
+                  },
                   {
-                    "value": "Implementar políticas aumento Felicidade",
+                    "value": ": Desenvolver mentorias para retenção de conhecimento crítico.",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"

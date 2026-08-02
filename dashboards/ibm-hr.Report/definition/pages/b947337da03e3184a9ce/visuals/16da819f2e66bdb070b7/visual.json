@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "849cd956737553de2aeb",
+  "name": "16da819f2e66bdb070b7",
   "position": {
-    "x": 224,
+    "x": 928,
     "y": 208,
-    "z": 21000,
+    "z": 26008,
     "height": 240,
     "width": 336.00000000000006,
-    "tabOrder": 20000
+    "tabOrder": 25008
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -42,11 +42,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Colaboradores 60+"
+                  "Property": "Colaboradores 55+"
                 }
               },
-              "queryRef": "_Medidas.Colaboradores 60+",
-              "nativeQueryRef": "Colaboradores 60+"
+              "queryRef": "_Medidas.Colaboradores 55+",
+              "nativeQueryRef": "Colaboradores 55+"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Colaboradores 60+"
+                "Property": "Colaboradores 55+"
               }
             },
             "direction": "Descending"
@@ -216,7 +216,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Risco reforma por departamento'"
+                  "Value": "'Risco reforma em 10 anos por departamento'"
                 }
               }
             },
@@ -327,7 +327,7 @@
             "section": {
               "expr": {
                 "Literal": {
-                  "Value": "'0f446935904e2a43c515'"
+                  "Value": "'0fae9b3a423c05e6d3d8'"
                 }
               }
             }

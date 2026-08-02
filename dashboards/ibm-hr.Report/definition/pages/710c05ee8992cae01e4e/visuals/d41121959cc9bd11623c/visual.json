@@ -6,7 +6,7 @@
     "y": 464,
     "z": 23000,
     "height": 240,
-    "width": 528,
+    "width": 464,
     "tabOrder": 22000
   },
   "visual": {
@@ -271,6 +271,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "seriesPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
                 }
               }
             }

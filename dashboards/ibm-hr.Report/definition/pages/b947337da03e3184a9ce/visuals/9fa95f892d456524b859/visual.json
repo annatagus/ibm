@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "849cd956737553de2aeb",
+  "name": "9fa95f892d456524b859",
   "position": {
-    "x": 224,
+    "x": 576,
     "y": 208,
-    "z": 21000,
+    "z": 26006,
     "height": 240,
     "width": 336.00000000000006,
-    "tabOrder": 20000
+    "tabOrder": 25006
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim-department"
+                      "Entity": "dim-job"
                     }
                   },
-                  "Property": "Department"
+                  "Property": "JobPosition"
                 }
               },
-              "queryRef": "dim-department.Department",
-              "nativeQueryRef": "Department",
+              "queryRef": "dim-job.JobPosition",
+              "nativeQueryRef": "JobPosition",
               "active": true
             }
           ]
@@ -216,7 +216,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Risco reforma por departamento'"
+                  "Value": "'Risco reforma por nível'"
                 }
               }
             },

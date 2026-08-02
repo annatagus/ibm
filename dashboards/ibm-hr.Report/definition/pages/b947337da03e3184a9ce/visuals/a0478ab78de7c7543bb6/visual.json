@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "849cd956737553de2aeb",
+  "name": "a0478ab78de7c7543bb6",
   "position": {
-    "x": 224,
-    "y": 208,
-    "z": 21000,
-    "height": 240,
-    "width": 336.00000000000006,
-    "tabOrder": 20000
+    "x": 1104,
+    "y": 96,
+    "z": 26007,
+    "height": 80,
+    "width": 160,
+    "tabOrder": 25007
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "card",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim-department"
-                    }
-                  },
-                  "Property": "Department"
-                }
-              },
-              "queryRef": "dim-department.Department",
-              "nativeQueryRef": "Department",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -42,11 +23,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Colaboradores 60+"
+                  "Property": "Colaboradores 55+"
                 }
               },
-              "queryRef": "_Medidas.Colaboradores 60+",
-              "nativeQueryRef": "Colaboradores 60+"
+              "queryRef": "_Medidas.Colaboradores 55+",
+              "nativeQueryRef": "Colaboradores 55+"
             }
           ]
         }
@@ -61,7 +42,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Colaboradores 60+"
+                "Property": "Colaboradores 55+"
               }
             },
             "direction": "Descending"
@@ -71,58 +52,13 @@
       }
     },
     "objects": {
-      "dataPoint": [
+      "categoryLabels": [
         {
           "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#97C1FF'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Medidas.Total_Colaboradores_Ativos"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#0062FF'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Medidas.Total_Colaboradores_Dataset"
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "45D"
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -137,17 +73,11 @@
                   }
                 }
               }
-            }
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "showGradientLegend": {
+            },
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "12D"
                 }
               }
             },
@@ -161,33 +91,25 @@
           }
         }
       ],
-      "categoryAxis": [
+      "labels": [
         {
           "properties": {
-            "show": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "35D"
                 }
               }
             },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -216,7 +138,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Risco reforma por departamento'"
+                  "Value": "'Reforma em 10 anos'"
                 }
               }
             },
@@ -230,19 +152,21 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
                 }
               }
             },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.1
-                    }
-                  }
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "italic": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
@@ -253,10 +177,10 @@
                 }
               }
             },
-            "bold": {
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'center'"
                 }
               }
             }
@@ -298,7 +222,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#97C1FF'"
+                      "Value": "'#E6E6E6'"
                     }
                   }
                 }
@@ -314,20 +238,27 @@
             "width": {
               "expr": {
                 "Literal": {
-                  "Value": "2D"
+                  "Value": "1D"
                 }
               }
             }
           }
         }
       ],
-      "visualTooltip": [
+      "spacing": [
         {
           "properties": {
-            "section": {
+            "verticalSpacing": {
               "expr": {
                 "Literal": {
-                  "Value": "'0f446935904e2a43c515'"
+                  "Value": "0D"
+                }
+              }
+            },
+            "customizeSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

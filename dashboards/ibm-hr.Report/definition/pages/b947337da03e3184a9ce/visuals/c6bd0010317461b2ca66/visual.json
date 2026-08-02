@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "c6bd0010317461b2ca66",
   "position": {
-    "x": 768,
+    "x": 704,
     "y": 464,
     "z": 26003,
     "height": 240,
-    "width": 496,
+    "width": 560,
     "tabOrder": 25003
   },
   "visual": {
@@ -38,7 +38,30 @@
               {
                 "textRuns": [
                   {
-                    "value": "Plano de sucessão para cargos críticos",
+                    "value": "Foco em Sales",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ": Substituição urgente em ",
+                    "textStyle": {
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "Sales Executive",
+                    "textStyle": {
+                      "fontFamily": "DIN Light",
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": " (3 saídas a curto prazo).",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -50,7 +73,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "Transferência de conhecimento e mentoria",
+                    "value": "Mentoria em R&D",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ": Reter o conhecimento das 38 pessoas que saem a médio prazo.",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -62,7 +93,45 @@
               {
                 "textRuns": [
                   {
-                    "value": "Recrutamento faseado por horizonte de 5 anos",
+                    "value": "Recrutamento",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ": Atrair talento para níveis ",
+                    "textStyle": {
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "Senior",
+                    "textStyle": {
+                      "fontFamily": "DIN Light",
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": " e ",
+                    "textStyle": {
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "Mid-level",
+                    "textStyle": {
+                      "fontFamily": "DIN Light",
+                      "fontStyle": "italic",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": " (foco em reformas).",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -74,7 +143,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "Acompanhar risco por departamento e cargo",
+                    "value": "Equilíbrio Trabalho/Vida",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "DIN Light",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ": Monitorizar o equilíbrio para evitar saídas antes da reforma.",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -82,13 +159,6 @@
                   }
                 ],
                 "listType": "bullet"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
               }
             ]
           }

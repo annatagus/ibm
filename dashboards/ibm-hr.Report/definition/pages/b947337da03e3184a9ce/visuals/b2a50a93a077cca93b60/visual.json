@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "849cd956737553de2aeb",
+  "name": "b2a50a93a077cca93b60",
   "position": {
-    "x": 224,
-    "y": 208,
-    "z": 21000,
-    "height": 240,
-    "width": 336.00000000000006,
-    "tabOrder": 20000
+    "x": 800,
+    "y": 96,
+    "z": 26005,
+    "height": 80,
+    "width": 288,
+    "tabOrder": 25005
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "card",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim-department"
-                    }
-                  },
-                  "Property": "Department"
-                }
-              },
-              "queryRef": "dim-department.Department",
-              "nativeQueryRef": "Department",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -42,87 +23,27 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Colaboradores 60+"
+                  "Property": "Cargo Maior Risco"
                 }
               },
-              "queryRef": "_Medidas.Colaboradores 60+",
-              "nativeQueryRef": "Colaboradores 60+"
+              "queryRef": "_Medidas.Cargo Maior Risco",
+              "nativeQueryRef": "Cargo Maior Risco"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Medidas"
-                  }
-                },
-                "Property": "Colaboradores 60+"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
     "objects": {
-      "dataPoint": [
+      "categoryLabels": [
         {
           "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#97C1FF'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Medidas.Total_Colaboradores_Ativos"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#0062FF'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Medidas.Total_Colaboradores_Dataset"
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "45D"
+                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -137,17 +58,11 @@
                   }
                 }
               }
-            }
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "showGradientLegend": {
+            },
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "12D"
                 }
               }
             },
@@ -161,33 +76,45 @@
           }
         }
       ],
-      "categoryAxis": [
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "preserveWhitespace": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "wordWrap": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
@@ -216,7 +143,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Risco reforma por departamento'"
+                  "Value": "'Cargo crítico'"
                 }
               }
             },
@@ -230,19 +157,21 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
                 }
               }
             },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.1
-                    }
-                  }
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "italic": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
@@ -253,10 +182,10 @@
                 }
               }
             },
-            "bold": {
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'center'"
                 }
               }
             }
@@ -297,8 +226,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#97C1FF'"
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
                     }
                   }
                 }
@@ -321,13 +251,20 @@
           }
         }
       ],
-      "visualTooltip": [
+      "spacing": [
         {
           "properties": {
-            "section": {
+            "verticalSpacing": {
               "expr": {
                 "Literal": {
-                  "Value": "'0f446935904e2a43c515'"
+                  "Value": "0D"
+                }
+              }
+            },
+            "customizeSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
