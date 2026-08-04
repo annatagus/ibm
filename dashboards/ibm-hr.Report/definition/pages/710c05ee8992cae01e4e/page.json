@@ -1,10 +1,15 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "710c05ee8992cae01e4e",
   "displayName": "Resumo",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
+  "pageBinding": {
+    "name": "390e1527c2a51229d953",
+    "type": "Default",
+    "parameters": []
+  },
   "objects": {
     "background": [
       {

@@ -1,0 +1,37 @@
+table 'Dimensões Survey'
+	lineageTag: f42ded91-945b-4bda-9337-5747af71be55
+
+	column Dimensão
+		lineageTag: 3937c258-b55c-4f55-b05c-4b5312c256f3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Dimensão]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordem
+		formatString: 0
+		lineageTag: 99aed46c-1ba2-42ce-9eae-3f9cdfdcf373
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ordem]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dimensões Survey' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Dimensão", STRING,
+				    "Ordem", INTEGER,
+				    {
+				        {"Ambiente", 1},
+				        {"Trabalho", 2},
+				        {"Relacionamentos", 3},
+				        {"Equilíbrio V/T", 4}
+				    }
+				)
+
+	annotation PBI_Id = 56adfcfaa9f3438792d3fcb183c0bce6
+

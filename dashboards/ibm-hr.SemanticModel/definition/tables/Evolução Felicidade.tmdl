@@ -1,0 +1,37 @@
+table 'Evolução Felicidade'
+	lineageTag: 9d3e1f66-29de-44d4-a2d8-b4ef2834b5e0
+
+	column Evolução
+		lineageTag: 893a7e0e-7a70-4d23-99d3-013bad273069
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Evolução]
+		sortByColumn: Ordem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordem
+		formatString: 0
+		lineageTag: 14e29594-a7b6-4efa-a59a-99e6d39b9ba0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ordem]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Evolução Felicidade' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Evolução", STRING,
+				    "Ordem", INTEGER,
+				    {
+				        {"Melhoraram", 1},
+				        {"Sem alteração", 2},
+				        {"Pioraram", 3}
+				    }
+				)
+
+	annotation PBI_Id = 3e48c163878345cc8310992c6a2246b5
+

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "6a58e164e2c6ba1e07d0",
   "position": {
     "x": 928,
@@ -7,7 +7,7 @@
     "z": 18000,
     "height": 80,
     "width": 160,
-    "tabOrder": 16000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Indice Felicidade Atual"
+                  "Property": "Indice Felicidade Atual_v3"
                 }
               },
-              "queryRef": "_Medidas.Indice Felicidade Atual",
-              "nativeQueryRef": "Indice Felicidade Atual"
+              "queryRef": "_Medidas.% Felicidade Atual v0.5",
+              "nativeQueryRef": "Indice Felicidade Atual_v3"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Indice Felicidade Atual"
+                "Property": "Indice Felicidade Atual_v3"
               }
             },
             "direction": "Descending"
@@ -126,7 +126,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Índice Felicidade Atual'"
+                  "Value": "'% Felicidade Atual'"
                 }
               }
             },
@@ -222,12 +222,12 @@
                                       "Entity": "_Medidas"
                                     }
                                   },
-                                  "Property": "Indice Felicidade Atual"
+                                  "Property": "% Indice Felicidade Atual"
                                 }
                               },
                               "Right": {
                                 "Literal": {
-                                  "Value": "3D"
+                                  "Value": "60D"
                                 }
                               }
                             }
@@ -251,12 +251,12 @@
                                           "Entity": "_Medidas"
                                         }
                                       },
-                                      "Property": "Indice Felicidade Atual"
+                                      "Property": "% Indice Felicidade Atual"
                                     }
                                   },
                                   "Right": {
                                     "Literal": {
-                                      "Value": "2D"
+                                      "Value": "50D"
                                     }
                                   }
                                 }
@@ -271,12 +271,12 @@
                                           "Entity": "_Medidas"
                                         }
                                       },
-                                      "Property": "Indice Felicidade Atual"
+                                      "Property": "% Indice Felicidade Atual"
                                     }
                                   },
                                   "Right": {
                                     "Literal": {
-                                      "Value": "3D"
+                                      "Value": "60D"
                                     }
                                   }
                                 }
@@ -300,12 +300,12 @@
                                       "Entity": "_Medidas"
                                     }
                                   },
-                                  "Property": "Indice Felicidade Atual"
+                                  "Property": "% Indice Felicidade Atual"
                                 }
                               },
                               "Right": {
                                 "Literal": {
-                                  "Value": "2D"
+                                  "Value": "50D"
                                 }
                               }
                             }

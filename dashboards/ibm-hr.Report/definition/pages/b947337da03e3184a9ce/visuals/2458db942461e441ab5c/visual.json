@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "2458db942461e441ab5c",
   "position": {
     "x": 224,
     "y": 464,
-    "z": 26009,
+    "z": 25000,
     "height": 240,
     "width": 464,
-    "tabOrder": 25009
+    "tabOrder": 24000
   },
   "visual": {
     "visualType": "pivotTable",

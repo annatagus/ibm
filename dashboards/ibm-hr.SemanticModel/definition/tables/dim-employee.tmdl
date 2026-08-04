@@ -208,6 +208,37 @@ table dim-employee
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Range Rendimento' =
+			
+			SWITCH(
+			    TRUE(),
+			    'dim-employee'[MonthlyIncome] < 3000, "< €3 mil",
+			    'dim-employee'[MonthlyIncome] < 6000, "€3 - 6 mil",
+			    'dim-employee'[MonthlyIncome] < 9000, "€6 - 9 mil",
+			    'dim-employee'[MonthlyIncome] < 12000, "€9 - 12 mil",
+			    "€12 mil+"
+			)
+		lineageTag: 70075b91-b07f-4c1d-9d39-7b8edb531c1f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ordem Range Rendimento' =
+			
+			SWITCH(
+			    'dim-employee'[Range Rendimento],
+			    "< €3 mil", 1,
+			    "€3 - 6 mil", 2,
+			    "€6 - 9 mil", 3,
+			    "€9 - 12 mil", 4,
+			    "€12 mil+", 5
+			)
+		formatString: 0
+		lineageTag: 7c5098c7-cc6a-4e01-a3fa-7dc882e0f57a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim-employee = m
 		mode: import
 		queryGroup: TABELAS-DIM

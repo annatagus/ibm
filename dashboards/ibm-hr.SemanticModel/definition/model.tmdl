@@ -22,7 +22,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["StandardHours","fact-attrition","fact-survey","dim-employee","dim-education","dim-department","dim-job","dim-satisfaction","DataQuestInicial","DataQuestAtual"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
 
 ref table _Medidas
 ref table DateTableTemplate_d4432224-573d-42e6-894f-ca97203363c3
@@ -40,6 +40,10 @@ ref table DataQuestInicial
 ref table LocalDateTable_103cbf35-13ef-4603-9ecc-8d282a37e5c6
 ref table DataQuestAtual
 ref table LocalDateTable_f087b1ff-1d8b-4b5a-990e-d0106b212d6c
+ref table 'Dimensões Survey'
+ref table 'Evolução Felicidade'
+ref table 'Base Remuneração'
+ref table 'Bridge Base Remuneração'
 
 ref cultureInfo en-US
 

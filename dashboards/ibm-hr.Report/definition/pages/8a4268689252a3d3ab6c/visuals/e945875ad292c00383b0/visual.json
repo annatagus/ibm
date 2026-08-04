@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e945875ad292c00383b0",
   "position": {
     "x": 576,
     "y": 96,
-    "z": 24000,
+    "z": 20000,
     "height": 80,
     "width": 160,
-    "tabOrder": 24000
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "card",
@@ -271,14 +271,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "section": {
               "expr": {
                 "Literal": {
-                  "Value": "'7b54e4d87c0d1e681b69'"
+                  "Value": "'___AUTO___'"
                 }
               }
             }

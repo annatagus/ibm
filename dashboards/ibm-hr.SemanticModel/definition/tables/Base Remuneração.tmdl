@@ -1,0 +1,37 @@
+table 'Base Remuneração'
+	lineageTag: 58cdb892-254c-4542-bf42-d55e748cebd8
+
+	column Base
+		lineageTag: 287f3762-a799-47db-b60b-39fcb5b3f77b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Base]
+		sortByColumn: Ordem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordem
+		formatString: 0
+		lineageTag: 937e6068-a27d-4e8b-b777-8f757522ac44
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ordem]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Base Remuneração' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Base", STRING,
+				    "Ordem", INTEGER,
+				    {
+				        {"Survey Inicial", 1},
+				        {"Survey Atual", 2},
+				        {"Saídas", 3}
+				    }
+				)
+
+	annotation PBI_Id = bd5ad24094e2461a8e9e06b24dbff637
+

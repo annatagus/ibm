@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "daba2b1f4da960945608",
   "position": {
     "x": 928,
     "y": 208,
-    "z": 25006,
+    "z": 26000,
     "height": 240,
     "width": 336.00000000000006,
-    "tabOrder": 25006
+    "tabOrder": 25000
   },
   "visual": {
     "visualType": "hundredPercentStackedBarChart",

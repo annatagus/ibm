@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c6bd0010317461b2ca66",
   "position": {
     "x": 704,
     "y": 464,
-    "z": 26003,
+    "z": 19000,
     "height": 240,
     "width": 560,
-    "tabOrder": 25003
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "textbox",
@@ -67,8 +67,7 @@
                       "fontSize": "14pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -87,8 +86,7 @@
                       "fontSize": "14pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -137,13 +135,12 @@
                       "fontSize": "14pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Equilíbrio Trabalho/Vida",
+                    "value": "Equilíbrio VIda/Trabalho",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "DIN Light",
@@ -157,8 +154,7 @@
                       "fontSize": "14pt"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               }
             ]
           }

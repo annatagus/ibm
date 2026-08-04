@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "4c5c24d0e3d99d60e792",
   "position": {
     "x": 928,
@@ -7,7 +7,7 @@
     "z": 22000,
     "height": 240,
     "width": 336.00000000000006,
-    "tabOrder": 21000
+    "tabOrder": 20000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -42,11 +42,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "Equilibrio Trabalho/Vida Atual_v2"
+                  "Property": "% Equilibrio Trabalho/Vida Atual_v2"
                 }
               },
-              "queryRef": "_Medidas.Equilibrio Trabalho/Vida Atual_v2",
-              "nativeQueryRef": "Equilibrio Trabalho/Vida Atual_v2"
+              "queryRef": "_Medidas.% Equilibrio Trabalho/Vida Atual_v2",
+              "nativeQueryRef": "% Equilibrio Trabalho/Vida Atual_v2"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "Equilibrio Trabalho/Vida Atual_v2"
+                "Property": "% Equilibrio Trabalho/Vida Atual_v2"
               }
             },
             "direction": "Descending"
@@ -148,7 +148,7 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "1L"
                 }
               }
             }
@@ -244,7 +244,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Índice Equilíbrio Trabalho/Vida Atual'"
+                  "Value": "'% Equilíbrio Vida/Trabalho Atual'"
                 }
               }
             },
@@ -358,29 +358,18 @@
                   "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'___AUTO___'"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "261ec215603921028ade",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim-department"
-              }
-            },
-            "Property": "Department"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

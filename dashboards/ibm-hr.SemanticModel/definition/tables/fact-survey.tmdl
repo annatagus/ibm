@@ -98,6 +98,23 @@ table fact-survey
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'WLB Categoria' =
+			
+			SWITCH(
+			    'fact-survey'[WorkLifeBalance],
+			    1, "Muito Mau",
+			    2, "Mau",
+			    3, "Bom",
+			    4, "Muito bom"
+			)
+		lineageTag: a3efd236-2a1e-4090-911e-ec674bf6fc99
+		summarizeBy: none
+		sortByColumn: WorkLifeBalance
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact-survey = m
 		mode: import
 		queryGroup: TABELAS-FACT

@@ -1,16 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "16da819f2e66bdb070b7",
   "position": {
     "x": 928,
     "y": 208,
-    "z": 26008,
+    "z": 24000,
     "height": 240,
     "width": 336.00000000000006,
-    "tabOrder": 25008
+    "tabOrder": 23000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -144,13 +144,6 @@
       "legend": [
         {
           "properties": {
-            "showGradientLegend": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {

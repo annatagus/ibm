@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 250.03647603996319,
-        "y": 789.73892257440866
+        "x": 1.796875,
+        "y": 3101.40625
       },
       "nodes": [
         {
           "location": {
             "x": 1667.3646010399632,
-            "y": 789.73892257440866
+            "y": 3282.9815472003856
           },
           "nodeIndex": "_Medidas",
           "nodeLineageTag": "3e53132e-386d-44e4-b568-b5a781404dcd",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 998.584326289395,
-            "y": 840.832342808837
+            "y": 3334.0749674348135
           },
           "nodeIndex": "dim-department",
           "nodeLineageTag": "6dbb4c72-5ec4-4907-acef-d6cc516f323f",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 418.26332509693378,
-            "y": 829.6572197176074
+            "y": 3322.8998443435839
           },
           "nodeIndex": "dim-education",
           "nodeLineageTag": "93a0d02a-74b4-4df1-b0c1-6469cbc7141e",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 2.6909231082447747,
-            "y": 986.3082200870698
+            "y": 3479.550844713046
           },
           "nodeIndex": "dim-employee",
           "nodeLineageTag": "f2a5681c-6ec9-4629-ac1e-76bef803a480",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 703.71741871077245,
-            "y": 1119.8143353487885
+            "y": 3613.056959974765
           },
           "nodeIndex": "fact-attrition",
           "nodeLineageTag": "ce3fccef-6e78-4614-98ba-28137f9c8549",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 1354.8643437171559,
-            "y": 988.43095559728761
+            "y": 3481.6735802232643
           },
           "nodeIndex": "dim-job",
           "nodeLineageTag": "33c6c7d5-e933-430a-a88c-c67833527f79",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 1190.8530672575084,
-            "y": 1619.2685023516979
+            "y": 4112.5111269776744
           },
           "nodeIndex": "dim-satisfaction",
           "nodeLineageTag": "0876179f-615c-4937-9acf-8b08dada9b23",
@@ -102,7 +102,7 @@
         {
           "location": {
             "x": 706.52397396975834,
-            "y": 1578.4062806129075
+            "y": 4071.6489052388843
           },
           "nodeIndex": "fact-survey",
           "nodeLineageTag": "7c1dd21a-8439-4f4a-9a2d-3e11324af7df",
@@ -115,7 +115,7 @@
         {
           "location": {
             "x": 1666.4038180371372,
-            "y": 666.24588432088342
+            "y": 3159.48850894686
           },
           "nodeIndex": "DataQuestAtual",
           "nodeLineageTag": "6efeec6e-ddf7-4534-8a2c-c95c0d7a5bfb",
@@ -128,7 +128,7 @@
         {
           "location": {
             "x": 1665.4066923121918,
-            "y": 546.24710330289724
+            "y": 3039.4897279288734
           },
           "nodeIndex": "DataQuestInicial",
           "nodeLineageTag": "524b192d-212a-4f55-b588-aeb1c2627489",
@@ -137,6 +137,54 @@
             "width": 234
           },
           "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1948.6736779317184,
+            "y": 3071.6133474618919
+          },
+          "nodeIndex": "Dimensões Survey",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2229.9827548234734,
+            "y": 2798.4897958104439
+          },
+          "nodeIndex": "Evolução Felicidade",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2511.2918317152285,
+            "y": 2509.3044343924857
+          },
+          "nodeIndex": "Base Remuneração",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2792.6009086069835,
+            "y": 2159.8690899449202
+          },
+          "nodeIndex": "Bridge Base Remuneração",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

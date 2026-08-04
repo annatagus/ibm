@@ -1220,14 +1220,34 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Satisfacao Ambiente Inicial"
+			          "ConceptualProperty": "% Satisfacao Ambiente Inicial"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "satisfacao ambiente inicial": {
+			          "% satisfacao ambiente inicial": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage satisfacao ambiente inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct satisfacao ambiente inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -1236,14 +1256,34 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Indice Felicidade Inicial"
+			          "ConceptualProperty": "% Indice Felicidade Inicial"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "indice felicidade inicial": {
+			          "% indice felicidade inicial": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage indice felicidade inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct indice felicidade inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -1252,14 +1292,34 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Indice Felicidade Atual"
+			          "ConceptualProperty": "% Indice Felicidade Atual"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "indice felicidade atual": {
+			          "% indice felicidade atual": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage indice felicidade atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct indice felicidade atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -1268,30 +1328,34 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Envolvimento Inicial"
+			          "ConceptualProperty": "% Envolvimento Inicial"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "envolvimento inicial": {
+			          "% envolvimento inicial": {
 			            "State": "Generated"
 			          }
-			        }
-			      ]
-			    },
-			    "entity__medida.satisfacao_relacoes_inicial": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Satisfacao Relacoes Inicial"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
+			        },
 			        {
-			          "satisfacao relacoes inicial": {
-			            "State": "Generated"
+			          "percentage envolvimento inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct envolvimento inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
 			          }
 			        }
 			      ]
@@ -1300,24 +1364,24 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Equilibrio Trabalho/Vida Inicial"
+			          "ConceptualProperty": "% Equilibrio Trabalho/Vida Inicial"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "equilibrio trabalho/vida inicial": {
+			          "% equilibrio trabalho/vida inicial": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "equilibrio trabalho": {
+			          "% equilibrio trabalho": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "equilibrio trabalho vida inicial": {
+			          "% equilibrio trabalho vida inicial": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -1326,6 +1390,46 @@ cultureInfo en-US
 			          "vida inicial": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "percentage equilibrio trabalho vida inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "percentage equilibrio trabalho": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct equilibrio trabalho vida inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "pct equilibrio trabalho": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
 			          }
 			        }
 			      ]
@@ -1362,18 +1466,38 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__medida.satisfação_ambiente_atual": {
+			    "entity__medida.satisfacao_ambiente_atual": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Satisfação Ambiente Atual"
+			          "ConceptualProperty": "% Satisfacao Ambiente Atual"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "satisfação ambiente atual": {
+			          "% satisfacao ambiente atual": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage satisfacao ambiente atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct satisfacao ambiente atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -1382,14 +1506,34 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Envolvimento Atual"
+			          "ConceptualProperty": "% Envolvimento Atual"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "envolvimento atual": {
+			          "% envolvimento atual": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage envolvimento atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct envolvimento atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
 			          }
 			        }
 			      ]
@@ -1398,14 +1542,34 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Satisfacao Trabalho Inicial"
+			          "ConceptualProperty": "% Satisfacao Trabalho Inicial"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "satisfacao trabalho inicial": {
+			          "% satisfacao trabalho inicial": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage satisfacao trabalho inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct satisfacao trabalho inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -1414,14 +1578,34 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Satisfacao Trabalho Atual"
+			          "ConceptualProperty": "% Satisfacao Trabalho Atual"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "satisfacao trabalho atual": {
+			          "% satisfacao trabalho atual": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage satisfacao trabalho atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct satisfacao trabalho atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -1430,14 +1614,34 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Satisfacao Relacoes Atual"
+			          "ConceptualProperty": "% Satisfacao Relacoes Atual"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "satisfacao relacoes atual": {
+			          "% satisfacao relacoes atual": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage satisfacao relacoe atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct satisfacao relacoe atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -1508,46 +1712,66 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__medida.felicidade_inicial__amostra_comum": {
+			    "entity__medida.felicidade_inicial__amostra_comum_v2": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Felicidade Inicial - Amostra Comum"
+			          "ConceptualProperty": "% Felicidade Inicial - Amostra Comum v2"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "felicidade inicial - amostra comum": {
+			          "% felicidade inicial - amostra comum v2": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "felicidade inicial amostra comum": {
+			          "% felicidade inicial amostra comum v2": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Felicidade Inicial": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    },
-			    "entity__medida.felicidade_atual__amostra_comum": {
+			    "entity__medida.felicidade_atual__amostra_comum_v2": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Felicidade Atual - Amostra Comum"
+			          "ConceptualProperty": "% Felicidade Atual - Amostra Comum v2"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "felicidade atual - amostra comum": {
+			          "% felicidade atual - amostra comum v2": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "felicidade atual amostra comum": {
+			          "% felicidade atual amostra comum v2": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Felicidade Atual": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -1565,6 +1789,16 @@ cultureInfo en-US
 			          "variação felicidade amostra comum": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Variação Felicidade": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1572,20 +1806,50 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Variação WLB - Amostra Comum"
+			          "ConceptualProperty": "% Variação WLB - Amostra Comum"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "variação WLB - amostra comum": {
+			          "% variação WLB - amostra comum": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "variação WLB amostra comum": {
+			          "% variação WLB amostra comum": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "percentage variação wlb amostra comum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct variação wlb amostra comum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "Variação Equil. V/T": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -1655,6 +1919,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.599
 			          }
+			        },
+			        {
+			          "% Melhoraram": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1670,6 +1944,16 @@ cultureInfo en-US
 			        {
 			          "nr amostra comum": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "N.º Colab.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -1706,6 +1990,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "% Pioraram": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2140,17 +2434,17 @@ cultureInfo en-US
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "entity__medida.taxa_felicidade_Inicial_v2": {
+			    "entity__medida.nr_colaboradores_felicidade_boa_ou_melhor_inicial": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Taxa Felicidade Inicial_v2"
+			          "ConceptualProperty": "Nr Colaboradores Felicidade Boa ou melhor Inicial"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "taxa felicidade Inicial_v2": {
+			          "nr colaboradores felicidade boa ou melhor inicial": {
 			            "State": "Generated"
 			          }
 			        }
@@ -11116,24 +11410,24 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Equilibrio Trabalho/Vida Atual_v2"
+			          "ConceptualProperty": "% Equilibrio Trabalho/Vida Atual_v2"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "equilibrio trabalho/vida Atual_v2": {
+			          "% equilibrio trabalho/vida Atual_v2": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "equilibrio trabalho": {
+			          "% equilibrio trabalho": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "equilibrio trabalho vida Atual_v2": {
+			          "% equilibrio trabalho vida Atual_v2": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -11142,6 +11436,46 @@ cultureInfo en-US
 			          "vida Atual_v2": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "percentage equilibrio trabalho vida atual_v2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "percentage equilibrio trabalho": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct equilibrio trabalho vida atual_v2": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "pct equilibrio trabalho": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
 			          }
 			        }
 			      ]
@@ -11220,6 +11554,1665 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.colaboradores_551": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Colaboradores 55+"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% colaboradores 55+": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage colaboradore 55+": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct colaboradore 55+": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.participantes_survey_inicial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Participantes Survey Inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "participantes survey inicial": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.WLB_inferior_inicial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "WLB inferior Inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "WLB inferior inicial": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.WLB_inferior_inicial1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% WLB inferior Inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% WLB inferior inicial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage wlb inferior inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct wlb inferior inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.satisfação_relacionamentos_inicial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Satisfação Relacionamentos Inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% satisfação relacionamentos inicial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage satisfação relacionamento inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct satisfação relacionamento inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.valor_dimensão_inicial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Valor Dimensão Inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor dimensão inicial": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.WLB_inicial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% WLB Inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% WLB inicial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage wlb inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct wlb inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.índice_felicidade_inicial_por_departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Índice Felicidade Inicial por Departamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "índice felicidade inicial por departamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.WLB_inicial_por_departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "WLB Inicial por Departamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "WLB inicial por departamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.v_WLB_inicial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "V WLB Inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "v WLB inicial": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.valor_dimensão_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Valor Dimensão Atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor dimensão atual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.satisfação_relacionamentos_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Satisfação Relacionamentos Atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "satisfação relacionamentos atual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.WLB_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "WLB Atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "WLB atual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.índice_felicidade_atual_por_departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Índice Felicidade Atual por Departamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "índice felicidade atual por departamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.WLB_atual_por_departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "WLB Atual por Departamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "WLB atual por departamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.v_WLB_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "V WLB Atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "v WLB atual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.colaboradores_por_evolução": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Colaboradores por Evolução"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "colaboradores por evolução": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.por_evolução": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% por Evolução"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% por evolução": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage por evolução": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct por evolução": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.indice_felicidade_Atual_v3": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Indice Felicidade Atual_v3"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "indice felicidade Atual_v3": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.felicidade_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Felicidade Atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% felicidade atual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage felicidade atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct felicidade atual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.felicidade_inicial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Felicidade Inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% felicidade inicial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage felicidade inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct felicidade inicial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.felicidade_atual__amostra_comum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Felicidade Atual - Amostra Comum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% felicidade atual - amostra comum": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% felicidade atual amostra comum": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "percentage felicidade atual amostra comum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct felicidade atual amostra comum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.felicidade_inicial__amostra_comum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Felicidade Inicial - Amostra Comum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% felicidade inicial - amostra comum": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% felicidade inicial amostra comum": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "percentage felicidade inicial amostra comum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct felicidade inicial amostra comum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.variação_felicidade_amostra_comum1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "% Variação Felicidade Amostra comum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% variação felicidade amostra comum": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage variação felicidade amostra comum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct variação felicidade amostra comum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.nr_colaboradores_felicidade_boa_ou_melhor_atual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Nr Colaboradores Felicidade Boa ou melhor Atual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nr colaboradores felicidade boa ou melhor atual": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.título_detalhe_remuneração": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Título Detalhe Remuneração"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "título detalhe remuneração": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.base_remuneração_selecionada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Base Remuneração Selecionada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "base remuneração selecionada": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.nr_colaboradores_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Nr Colaboradores Base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nr colaboradores base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nr colaboradore headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "nr colaboradore center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "nr colaboradore seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "nr colaboradore station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "nr colaboradore pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "N.º Colab.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.rendimento_médio_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Rendimento Médio Base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rendimento médio base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rendimento médio headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "rendimento médio center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "rendimento médio seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "rendimento médio station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "rendimento médio pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "Média": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.rendimento_mediano_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Rendimento Mediano Base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rendimento mediano base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rendimento mediano headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "rendimento mediano center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "rendimento mediano seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "rendimento mediano station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "rendimento mediano pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "Mediana": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.aumento_salarial_médio_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Aumento Salarial Médio Base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aumento salarial médio base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aumento salarial médio headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "aumento salarial médio center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "aumento salarial médio seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "aumento salarial médio station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "aumento salarial médio pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.464
+			          }
+			        },
+			        {
+			          "aumento salarial médio bottom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "aumento salarial médio foot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "aumento salarial médio pedestal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "aumento salarial médio stand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "aumento salarial médio support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "Aumento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.antiguidade_média_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Antiguidade Média Base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "antiguidade média base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "antiguidade média headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "antiguidade média center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "antiguidade média seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "antiguidade média station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "antiguidade média pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "Antiguidade": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.anos_desde_promoção_base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Anos Desde Promoção Base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anos desde promoção base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano desde promoção headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "ano desde promoção center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "ano desde promoção seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "ano desde promoção station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "ano desde promoção pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.464
+			          }
+			        },
+			        {
+			          "ano desde promoção bottom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "ano desde promoção foot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "ano desde promoção pedestal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "ano desde promoção stand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "ano desde promoção support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.45
+			          }
+			        },
+			        {
+			          "Últ. Promoção": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.entity__antiguidade_média_base_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "_Antiguidade Média Base FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_antiguidade média base FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "factsurvey.WLB_categoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact-survey",
+			          "ConceptualProperty": "WLB Categoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "WLB categoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dimensões_survey": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dimensões Survey"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dimensões survey": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dimensõe survey": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "dimensõe examination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dimensõe investigation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dimensõe inspection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dimensõe assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dimensõe analysis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dimensõe appraisal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dimensõe scrutiny": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dimensõe evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dimensõe consideration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dimensõe enquiry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "dimensões_survey.dimensão": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dimensões Survey",
+			          "ConceptualProperty": "Dimensão"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dimensão": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dimensões_survey.ordem": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dimensões Survey",
+			          "ConceptualProperty": "Ordem"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ordem": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "evolução_felicidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Evolução Felicidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "evolução felicidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "evolução_felicidade.evolução": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Evolução Felicidade",
+			          "ConceptualProperty": "Evolução"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "evolução": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "evolução_felicidade.ordem": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Evolução Felicidade",
+			          "ConceptualProperty": "Ordem"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ordem": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_remuneração": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base Remuneração"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "base remuneração": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "base_remuneração.base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base Remuneração",
+			          "ConceptualProperty": "Base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "base_remuneração.ordem": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Base Remuneração",
+			          "ConceptualProperty": "Ordem"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ordem": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "bridge_base_remuneração": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Bridge Base Remuneração"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bridge base remuneração": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "bridge_base_remuneração.base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Bridge Base Remuneração",
+			          "ConceptualProperty": "Base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "bridge_base_remuneração.employee_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Bridge Base Remuneração",
+			          "ConceptualProperty": "EmployeeNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "employee number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EmployeeNumber": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "employee no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dimemployee.range_rendimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim-employee",
+			          "ConceptualProperty": "Range Rendimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "range rendimento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dimemployee.ordem_range_rendimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim-employee",
+			          "ConceptualProperty": "Ordem Range Rendimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ordem range rendimento": {
+			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -12189,6 +14182,1656 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dimemployee_has_ordem_range_rendimento": {
+			      "Binding": {
+			        "ConceptualEntity": "dim-employee"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimemployee": {
+			          "Target": {
+			            "Entity": "dimemployee"
+			          }
+			        },
+			        "dimemployee.ordem_range_rendimento": {
+			          "Target": {
+			            "Entity": "dimemployee.ordem_range_rendimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimemployee"
+			            },
+			            "Object": {
+			              "Role": "dimemployee.ordem_range_rendimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimemployees_have_ordem_range_rendimentos"
+			        }
+			      ]
+			    },
+			    "dimemployee_has_range_rendimento": {
+			      "Binding": {
+			        "ConceptualEntity": "dim-employee"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimemployee": {
+			          "Target": {
+			            "Entity": "dimemployee"
+			          }
+			        },
+			        "dimemployee.range_rendimento": {
+			          "Target": {
+			            "Entity": "dimemployee.range_rendimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimemployee"
+			            },
+			            "Object": {
+			              "Role": "dimemployee.range_rendimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimemployees_have_range_rendimentos"
+			        }
+			      ]
+			    },
+			    "bridge_base_remuneração_has_employee_number": {
+			      "Binding": {
+			        "ConceptualEntity": "Bridge Base Remuneração"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bridge_base_remuneração": {
+			          "Target": {
+			            "Entity": "bridge_base_remuneração"
+			          }
+			        },
+			        "bridge_base_remuneração.employee_number": {
+			          "Target": {
+			            "Entity": "bridge_base_remuneração.employee_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bridge_base_remuneração"
+			            },
+			            "Object": {
+			              "Role": "bridge_base_remuneração.employee_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bridge_base_remuneraçãos_have_employee_numbers"
+			        }
+			      ]
+			    },
+			    "bridge_base_remuneração_has_base": {
+			      "Binding": {
+			        "ConceptualEntity": "Bridge Base Remuneração"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bridge_base_remuneração": {
+			          "Target": {
+			            "Entity": "bridge_base_remuneração"
+			          }
+			        },
+			        "bridge_base_remuneração.base": {
+			          "Target": {
+			            "Entity": "bridge_base_remuneração.base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bridge_base_remuneração"
+			            },
+			            "Object": {
+			              "Role": "bridge_base_remuneração.base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bridge_base_remuneraçãos_have_bases"
+			        }
+			      ]
+			    },
+			    "base_remuneração_has_ordem": {
+			      "Binding": {
+			        "ConceptualEntity": "Base Remuneração"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_remuneração": {
+			          "Target": {
+			            "Entity": "base_remuneração"
+			          }
+			        },
+			        "base_remuneração.ordem": {
+			          "Target": {
+			            "Entity": "base_remuneração.ordem"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_remuneração"
+			            },
+			            "Object": {
+			              "Role": "base_remuneração.ordem"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_remuneraçãos_have_ordems"
+			        }
+			      ]
+			    },
+			    "base_remuneração_has_base": {
+			      "Binding": {
+			        "ConceptualEntity": "Base Remuneração"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_remuneração": {
+			          "Target": {
+			            "Entity": "base_remuneração"
+			          }
+			        },
+			        "base_remuneração.base": {
+			          "Target": {
+			            "Entity": "base_remuneração.base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_remuneração"
+			            },
+			            "Object": {
+			              "Role": "base_remuneração.base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_remuneraçãos_have_bases"
+			        }
+			      ]
+			    },
+			    "evolução_felicidade_has_ordem": {
+			      "Binding": {
+			        "ConceptualEntity": "Evolução Felicidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "evolução_felicidade": {
+			          "Target": {
+			            "Entity": "evolução_felicidade"
+			          }
+			        },
+			        "evolução_felicidade.ordem": {
+			          "Target": {
+			            "Entity": "evolução_felicidade.ordem"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "evolução_felicidade"
+			            },
+			            "Object": {
+			              "Role": "evolução_felicidade.ordem"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "evolução_felicidades_have_ordems"
+			        }
+			      ]
+			    },
+			    "evolução_felicidade_has_evolução": {
+			      "Binding": {
+			        "ConceptualEntity": "Evolução Felicidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "evolução_felicidade": {
+			          "Target": {
+			            "Entity": "evolução_felicidade"
+			          }
+			        },
+			        "evolução_felicidade.evolução": {
+			          "Target": {
+			            "Entity": "evolução_felicidade.evolução"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "evolução_felicidade"
+			            },
+			            "Object": {
+			              "Role": "evolução_felicidade.evolução"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "evolução_felicidades_have_evoluçãos"
+			        }
+			      ]
+			    },
+			    "dimensões_survey_has_ordem": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimensões Survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimensões_survey": {
+			          "Target": {
+			            "Entity": "dimensões_survey"
+			          }
+			        },
+			        "dimensões_survey.ordem": {
+			          "Target": {
+			            "Entity": "dimensões_survey.ordem"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimensões_survey"
+			            },
+			            "Object": {
+			              "Role": "dimensões_survey.ordem"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensões_surveys_have_ordems"
+			        }
+			      ]
+			    },
+			    "dimensões_survey_has_dimensão": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimensões Survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimensões_survey": {
+			          "Target": {
+			            "Entity": "dimensões_survey"
+			          }
+			        },
+			        "dimensões_survey.dimensão": {
+			          "Target": {
+			            "Entity": "dimensões_survey.dimensão"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimensões_survey"
+			            },
+			            "Object": {
+			              "Role": "dimensões_survey.dimensão"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensões_surveys_have_dimensãos"
+			        }
+			      ]
+			    },
+			    "factsurvey_has_WLB_categoria": {
+			      "Binding": {
+			        "ConceptualEntity": "fact-survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "factsurvey": {
+			          "Target": {
+			            "Entity": "factsurvey"
+			          }
+			        },
+			        "factsurvey.WLB_categoria": {
+			          "Target": {
+			            "Entity": "factsurvey.WLB_categoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "factsurvey"
+			            },
+			            "Object": {
+			              "Role": "factsurvey.WLB_categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "factsurveys_have_WLB_categorias"
+			        }
+			      ]
+			    },
+			    "dimemployee_has_entity__medida_anos_desde_promoção_base": {
+			      "Binding": {
+			        "ConceptualEntity": "dim-employee"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimemployee": {
+			          "Target": {
+			            "Entity": "dimemployee"
+			          }
+			        },
+			        "entity__medida.anos_desde_promoção_base": {
+			          "Target": {
+			            "Entity": "entity__medida.anos_desde_promoção_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimemployee"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.anos_desde_promoção_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimemployees_have_anos_desde_promoção_base"
+			        }
+			      ]
+			    },
+			    "dimemployee_has_entity__medida_antiguidade_média_base": {
+			      "Binding": {
+			        "ConceptualEntity": "dim-employee"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimemployee": {
+			          "Target": {
+			            "Entity": "dimemployee"
+			          }
+			        },
+			        "entity__medida.antiguidade_média_base": {
+			          "Target": {
+			            "Entity": "entity__medida.antiguidade_média_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimemployee"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.antiguidade_média_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimemployees_have_antiguidade_média_base"
+			        }
+			      ]
+			    },
+			    "dimemployee_has_entity__medida_aumento_salarial_médio_base": {
+			      "Binding": {
+			        "ConceptualEntity": "dim-employee"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimemployee": {
+			          "Target": {
+			            "Entity": "dimemployee"
+			          }
+			        },
+			        "entity__medida.aumento_salarial_médio_base": {
+			          "Target": {
+			            "Entity": "entity__medida.aumento_salarial_médio_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimemployee"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.aumento_salarial_médio_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimemployees_have_aumento_salarial_médio_base"
+			        }
+			      ]
+			    },
+			    "dimemployee_has_entity__medida_rendimento_mediano_base": {
+			      "Binding": {
+			        "ConceptualEntity": "dim-employee"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimemployee": {
+			          "Target": {
+			            "Entity": "dimemployee"
+			          }
+			        },
+			        "entity__medida.rendimento_mediano_base": {
+			          "Target": {
+			            "Entity": "entity__medida.rendimento_mediano_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimemployee"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.rendimento_mediano_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimemployees_have_rendimento_mediano_base"
+			        }
+			      ]
+			    },
+			    "dimemployee_has_entity__medida_rendimento_médio_base": {
+			      "Binding": {
+			        "ConceptualEntity": "dim-employee"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimemployee": {
+			          "Target": {
+			            "Entity": "dimemployee"
+			          }
+			        },
+			        "entity__medida.rendimento_médio_base": {
+			          "Target": {
+			            "Entity": "entity__medida.rendimento_médio_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimemployee"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.rendimento_médio_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimemployees_have_rendimento_médio_base"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_nr_colaboradores_base": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.nr_colaboradores_base": {
+			          "Target": {
+			            "Entity": "entity__medida.nr_colaboradores_base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.nr_colaboradores_base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_nr_colaboradores_base"
+			        }
+			      ]
+			    },
+			    "base_remuneração_has_entity__medida_base_remuneração_selecionada": {
+			      "Binding": {
+			        "ConceptualEntity": "Base Remuneração"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_remuneração": {
+			          "Target": {
+			            "Entity": "base_remuneração"
+			          }
+			        },
+			        "entity__medida.base_remuneração_selecionada": {
+			          "Target": {
+			            "Entity": "entity__medida.base_remuneração_selecionada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_remuneração"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.base_remuneração_selecionada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_remuneraçãos_have_base_remuneração_selecionada"
+			        }
+			      ]
+			    },
+			    "base_remuneração_has_entity__medida_título_detalhe_remuneração": {
+			      "Binding": {
+			        "ConceptualEntity": "Base Remuneração"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "base_remuneração": {
+			          "Target": {
+			            "Entity": "base_remuneração"
+			          }
+			        },
+			        "entity__medida.título_detalhe_remuneração": {
+			          "Target": {
+			            "Entity": "entity__medida.título_detalhe_remuneração"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "base_remuneração"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.título_detalhe_remuneração"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "base_remuneraçãos_have_título_detalhe_remuneração"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_nr_colaboradores_felicidade_boa_ou_melhor_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.nr_colaboradores_felicidade_boa_ou_melhor_atual": {
+			          "Target": {
+			            "Entity": "entity__medida.nr_colaboradores_felicidade_boa_ou_melhor_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.nr_colaboradores_felicidade_boa_ou_melhor_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_nr_colaboradores_felicidade_boa_ou_melhor_atual"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_variação_felicidade_amostra_comum1": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.variação_felicidade_amostra_comum1": {
+			          "Target": {
+			            "Entity": "entity__medida.variação_felicidade_amostra_comum1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.variação_felicidade_amostra_comum1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have__variação_felicidade_amostra_comum"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_felicidade_inicial__amostra_comum": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.felicidade_inicial__amostra_comum": {
+			          "Target": {
+			            "Entity": "entity__medida.felicidade_inicial__amostra_comum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.felicidade_inicial__amostra_comum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have__felicidade_inicial__amostra_comum"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_felicidade_atual__amostra_comum": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.felicidade_atual__amostra_comum": {
+			          "Target": {
+			            "Entity": "entity__medida.felicidade_atual__amostra_comum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.felicidade_atual__amostra_comum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have__felicidade_atual__amostra_comum"
+			        }
+			      ]
+			    },
+			    "factsurvey_has_entity__medida_felicidade_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "fact-survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "factsurvey": {
+			          "Target": {
+			            "Entity": "factsurvey"
+			          }
+			        },
+			        "entity__medida.felicidade_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.felicidade_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "factsurvey"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.felicidade_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "factsurveys_have__felicidade_inicial"
+			        }
+			      ]
+			    },
+			    "data_quest_inicial_has_entity__medida_felicidade_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "DataQuestInicial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "data_quest_inicial": {
+			          "Target": {
+			            "Entity": "data_quest_inicial"
+			          }
+			        },
+			        "entity__medida.felicidade_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.felicidade_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "data_quest_inicial"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.felicidade_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_quest_inicials_have__felicidade_inicial"
+			        }
+			      ]
+			    },
+			    "factsurvey_has_entity__medida_felicidade_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "fact-survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "factsurvey": {
+			          "Target": {
+			            "Entity": "factsurvey"
+			          }
+			        },
+			        "entity__medida.felicidade_atual": {
+			          "Target": {
+			            "Entity": "entity__medida.felicidade_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "factsurvey"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.felicidade_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "factsurveys_have__felicidade_atual"
+			        }
+			      ]
+			    },
+			    "data_quest_atual_has_entity__medida_felicidade_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "DataQuestAtual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "data_quest_atual": {
+			          "Target": {
+			            "Entity": "data_quest_atual"
+			          }
+			        },
+			        "entity__medida.felicidade_atual": {
+			          "Target": {
+			            "Entity": "entity__medida.felicidade_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "data_quest_atual"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.felicidade_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_quest_atuals_have__felicidade_atual"
+			        }
+			      ]
+			    },
+			    "factsurvey_has_entity__medida_indice_felicidade_Atual_v3": {
+			      "Binding": {
+			        "ConceptualEntity": "fact-survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "factsurvey": {
+			          "Target": {
+			            "Entity": "factsurvey"
+			          }
+			        },
+			        "entity__medida.indice_felicidade_Atual_v3": {
+			          "Target": {
+			            "Entity": "entity__medida.indice_felicidade_Atual_v3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "factsurvey"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.indice_felicidade_Atual_v3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "factsurveys_have_indice_felicidade_Atual_v3"
+			        }
+			      ]
+			    },
+			    "data_quest_atual_has_entity__medida_indice_felicidade_Atual_v3": {
+			      "Binding": {
+			        "ConceptualEntity": "DataQuestAtual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "data_quest_atual": {
+			          "Target": {
+			            "Entity": "data_quest_atual"
+			          }
+			        },
+			        "entity__medida.indice_felicidade_Atual_v3": {
+			          "Target": {
+			            "Entity": "entity__medida.indice_felicidade_Atual_v3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "data_quest_atual"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.indice_felicidade_Atual_v3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_quest_atuals_have_indice_felicidade_Atual_v3"
+			        }
+			      ]
+			    },
+			    "evolução_felicidade_has_entity__medida_por_evolução": {
+			      "Binding": {
+			        "ConceptualEntity": "Evolução Felicidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "evolução_felicidade": {
+			          "Target": {
+			            "Entity": "evolução_felicidade"
+			          }
+			        },
+			        "entity__medida.por_evolução": {
+			          "Target": {
+			            "Entity": "entity__medida.por_evolução"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "evolução_felicidade"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.por_evolução"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "evolução_felicidades_have__por_evolução"
+			        }
+			      ]
+			    },
+			    "evolução_felicidade_has_entity__medida_colaboradores_por_evolução": {
+			      "Binding": {
+			        "ConceptualEntity": "Evolução Felicidade"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "evolução_felicidade": {
+			          "Target": {
+			            "Entity": "evolução_felicidade"
+			          }
+			        },
+			        "entity__medida.colaboradores_por_evolução": {
+			          "Target": {
+			            "Entity": "entity__medida.colaboradores_por_evolução"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "evolução_felicidade"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.colaboradores_por_evolução"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "evolução_felicidades_have_colaboradores_por_evolução"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_v_WLB_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.v_WLB_atual": {
+			          "Target": {
+			            "Entity": "entity__medida.v_WLB_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.v_WLB_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_v_WLB_atual"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_WLB_atual_por_departamento": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.WLB_atual_por_departamento": {
+			          "Target": {
+			            "Entity": "entity__medida.WLB_atual_por_departamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.WLB_atual_por_departamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_WLB_atual_por_departamento"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_índice_felicidade_atual_por_departamento": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.índice_felicidade_atual_por_departamento": {
+			          "Target": {
+			            "Entity": "entity__medida.índice_felicidade_atual_por_departamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.índice_felicidade_atual_por_departamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_índice_felicidade_atual_por_departamento"
+			        }
+			      ]
+			    },
+			    "factsurvey_has_entity__medida_WLB_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "fact-survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "factsurvey": {
+			          "Target": {
+			            "Entity": "factsurvey"
+			          }
+			        },
+			        "entity__medida.WLB_atual": {
+			          "Target": {
+			            "Entity": "entity__medida.WLB_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "factsurvey"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.WLB_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "factsurveys_have_WLB_atual"
+			        }
+			      ]
+			    },
+			    "data_quest_atual_has_entity__medida_WLB_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "DataQuestAtual"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "data_quest_atual": {
+			          "Target": {
+			            "Entity": "data_quest_atual"
+			          }
+			        },
+			        "entity__medida.WLB_atual": {
+			          "Target": {
+			            "Entity": "entity__medida.WLB_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "data_quest_atual"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.WLB_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_quest_atuals_have_WLB_atual"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_satisfação_relacionamentos_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.satisfação_relacionamentos_atual": {
+			          "Target": {
+			            "Entity": "entity__medida.satisfação_relacionamentos_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.satisfação_relacionamentos_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_satisfação_relacionamentos_atual"
+			        }
+			      ]
+			    },
+			    "dimensões_survey_has_entity__medida_valor_dimensão_atual": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimensões Survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimensões_survey": {
+			          "Target": {
+			            "Entity": "dimensões_survey"
+			          }
+			        },
+			        "entity__medida.valor_dimensão_atual": {
+			          "Target": {
+			            "Entity": "entity__medida.valor_dimensão_atual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimensões_survey"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.valor_dimensão_atual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensões_surveys_have_valor_dimensão_atual"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_v_WLB_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.v_WLB_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.v_WLB_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.v_WLB_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_v_WLB_inicial"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_WLB_inicial_por_departamento": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.WLB_inicial_por_departamento": {
+			          "Target": {
+			            "Entity": "entity__medida.WLB_inicial_por_departamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.WLB_inicial_por_departamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_WLB_inicial_por_departamento"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_índice_felicidade_inicial_por_departamento": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.índice_felicidade_inicial_por_departamento": {
+			          "Target": {
+			            "Entity": "entity__medida.índice_felicidade_inicial_por_departamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.índice_felicidade_inicial_por_departamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have_índice_felicidade_inicial_por_departamento"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_WLB_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.WLB_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.WLB_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.WLB_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have__WLB_inicial"
+			        }
+			      ]
+			    },
+			    "dimensões_survey_has_entity__medida_valor_dimensão_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimensões Survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimensões_survey": {
+			          "Target": {
+			            "Entity": "dimensões_survey"
+			          }
+			        },
+			        "entity__medida.valor_dimensão_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.valor_dimensão_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimensões_survey"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.valor_dimensão_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensões_surveys_have_valor_dimensão_inicial"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_satisfação_relacionamentos_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.satisfação_relacionamentos_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.satisfação_relacionamentos_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.satisfação_relacionamentos_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have__satisfação_relacionamentos_inicial"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_WLB_inferior_inicial1": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.WLB_inferior_inicial1": {
+			          "Target": {
+			            "Entity": "entity__medida.WLB_inferior_inicial1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.WLB_inferior_inicial1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have__WLB_inferior_inicial"
+			        }
+			      ]
+			    },
+			    "factsurvey_has_entity__medida_WLB_inferior_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "fact-survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "factsurvey": {
+			          "Target": {
+			            "Entity": "factsurvey"
+			          }
+			        },
+			        "entity__medida.WLB_inferior_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.WLB_inferior_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "factsurvey"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.WLB_inferior_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "factsurveys_have_WLB_inferior_inicial"
+			        }
+			      ]
+			    },
+			    "data_quest_inicial_has_entity__medida_WLB_inferior_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "DataQuestInicial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "data_quest_inicial": {
+			          "Target": {
+			            "Entity": "data_quest_inicial"
+			          }
+			        },
+			        "entity__medida.WLB_inferior_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.WLB_inferior_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "data_quest_inicial"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.WLB_inferior_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_quest_inicials_have_WLB_inferior_inicial"
+			        }
+			      ]
+			    },
+			    "factsurvey_has_entity__medida_participantes_survey_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "fact-survey"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "factsurvey": {
+			          "Target": {
+			            "Entity": "factsurvey"
+			          }
+			        },
+			        "entity__medida.participantes_survey_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.participantes_survey_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "factsurvey"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.participantes_survey_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "factsurveys_have_participantes_survey_inicial"
+			        }
+			      ]
+			    },
+			    "data_quest_inicial_has_entity__medida_participantes_survey_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "DataQuestInicial"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "data_quest_inicial": {
+			          "Target": {
+			            "Entity": "data_quest_inicial"
+			          }
+			        },
+			        "entity__medida.participantes_survey_inicial": {
+			          "Target": {
+			            "Entity": "entity__medida.participantes_survey_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "data_quest_inicial"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.participantes_survey_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_quest_inicials_have_participantes_survey_inicial"
+			        }
+			      ]
+			    },
+			    "entity__medida_has_colaboradores_551": {
+			      "Binding": {
+			        "ConceptualEntity": "_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__medida": {
+			          "Target": {
+			            "Entity": "entity__medida"
+			          }
+			        },
+			        "entity__medida.colaboradores_551": {
+			          "Target": {
+			            "Entity": "entity__medida.colaboradores_551"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__medida"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.colaboradores_551"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_medidas_have__colaboradores_55"
+			        }
+			      ]
+			    },
 			    "dimemployee_has_mais_55_ano": {
 			      "Binding": {
 			        "ConceptualEntity": "dim-employee"
@@ -12350,7 +15993,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_medidas_have_equilibrio_trabalho_vida_Atual_v2"
+			          "ID": "Phrasing_medidas_have__equilibrio_trabalho_vida_Atual_v2"
 			        }
 			      ]
 			    },
@@ -14149,20 +17792,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "factsurvey_has_entity__medida_taxa_felicidade_Inicial_v2": {
+			    "entity__medida_has_nr_colaboradores_felicidade_boa_ou_melhor_inicial": {
 			      "Binding": {
-			        "ConceptualEntity": "fact-survey"
+			        "ConceptualEntity": "_Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "factsurvey": {
+			        "entity__medida": {
 			          "Target": {
-			            "Entity": "factsurvey"
+			            "Entity": "entity__medida"
 			          }
 			        },
-			        "entity__medida.taxa_felicidade_Inicial_v2": {
+			        "entity__medida.nr_colaboradores_felicidade_boa_ou_melhor_inicial": {
 			          "Target": {
-			            "Entity": "entity__medida.taxa_felicidade_Inicial_v2"
+			            "Entity": "entity__medida.nr_colaboradores_felicidade_boa_ou_melhor_inicial"
 			          }
 			        }
 			      },
@@ -14170,48 +17813,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "factsurvey"
+			              "Role": "entity__medida"
 			            },
 			            "Object": {
-			              "Role": "entity__medida.taxa_felicidade_Inicial_v2"
+			              "Role": "entity__medida.nr_colaboradores_felicidade_boa_ou_melhor_inicial"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_taxa_felicidade_Inicial_v2"
-			        }
-			      ]
-			    },
-			    "data_quest_inicial_has_entity__medida_taxa_felicidade_Inicial_v2": {
-			      "Binding": {
-			        "ConceptualEntity": "DataQuestInicial"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "data_quest_inicial": {
-			          "Target": {
-			            "Entity": "data_quest_inicial"
-			          }
-			        },
-			        "entity__medida.taxa_felicidade_Inicial_v2": {
-			          "Target": {
-			            "Entity": "entity__medida.taxa_felicidade_Inicial_v2"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "data_quest_inicial"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.taxa_felicidade_Inicial_v2"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_quest_inicials_have_taxa_felicidade_Inicial_v2"
+			          "ID": "Phrasing_medidas_have_nr_colaboradores_felicidade_boa_ou_melhor_inicial"
 			        }
 			      ]
 			    },
@@ -14871,7 +18481,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_medidas_have_variação_WLB__amostra_comum"
+			          "ID": "Phrasing_medidas_have__variação_WLB__amostra_comum"
 			        }
 			      ]
 			    },
@@ -14908,7 +18518,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__medida_has_felicidade_atual__amostra_comum": {
+			    "entity__medida_has_felicidade_atual__amostra_comum_v2": {
 			      "Binding": {
 			        "ConceptualEntity": "_Medidas"
 			      },
@@ -14919,9 +18529,9 @@ cultureInfo en-US
 			            "Entity": "entity__medida"
 			          }
 			        },
-			        "entity__medida.felicidade_atual__amostra_comum": {
+			        "entity__medida.felicidade_atual__amostra_comum_v2": {
 			          "Target": {
-			            "Entity": "entity__medida.felicidade_atual__amostra_comum"
+			            "Entity": "entity__medida.felicidade_atual__amostra_comum_v2"
 			          }
 			        }
 			      },
@@ -14932,16 +18542,16 @@ cultureInfo en-US
 			              "Role": "entity__medida"
 			            },
 			            "Object": {
-			              "Role": "entity__medida.felicidade_atual__amostra_comum"
+			              "Role": "entity__medida.felicidade_atual__amostra_comum_v2"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_medidas_have_felicidade_atual__amostra_comum"
+			          "ID": "Phrasing_medidas_have__felicidade_atual__amostra_comum_v2"
 			        }
 			      ]
 			    },
-			    "entity__medida_has_felicidade_inicial__amostra_comum": {
+			    "entity__medida_has_felicidade_inicial__amostra_comum_v2": {
 			      "Binding": {
 			        "ConceptualEntity": "_Medidas"
 			      },
@@ -14952,9 +18562,9 @@ cultureInfo en-US
 			            "Entity": "entity__medida"
 			          }
 			        },
-			        "entity__medida.felicidade_inicial__amostra_comum": {
+			        "entity__medida.felicidade_inicial__amostra_comum_v2": {
 			          "Target": {
-			            "Entity": "entity__medida.felicidade_inicial__amostra_comum"
+			            "Entity": "entity__medida.felicidade_inicial__amostra_comum_v2"
 			          }
 			        }
 			      },
@@ -14965,12 +18575,12 @@ cultureInfo en-US
 			              "Role": "entity__medida"
 			            },
 			            "Object": {
-			              "Role": "entity__medida.felicidade_inicial__amostra_comum"
+			              "Role": "entity__medida.felicidade_inicial__amostra_comum_v2"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_medidas_have_felicidade_inicial__amostra_comum"
+			          "ID": "Phrasing_medidas_have__felicidade_inicial__amostra_comum_v2"
 			        }
 			      ]
 			    },
@@ -15139,15 +18749,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "factsurvey_has_entity__medida_satisfacao_relacoes_atual": {
+			    "entity__medida_has_satisfacao_relacoes_atual": {
 			      "Binding": {
-			        "ConceptualEntity": "fact-survey"
+			        "ConceptualEntity": "_Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "factsurvey": {
+			        "entity__medida": {
 			          "Target": {
-			            "Entity": "factsurvey"
+			            "Entity": "entity__medida"
 			          }
 			        },
 			        "entity__medida.satisfacao_relacoes_atual": {
@@ -15160,7 +18770,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "factsurvey"
+			              "Role": "entity__medida"
 			            },
 			            "Object": {
 			              "Role": "entity__medida.satisfacao_relacoes_atual"
@@ -15168,40 +18778,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_satisfacao_relacoes_atual"
-			        }
-			      ]
-			    },
-			    "data_quest_atual_has_entity__medida_satisfacao_relacoes_atual": {
-			      "Binding": {
-			        "ConceptualEntity": "DataQuestAtual"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "data_quest_atual": {
-			          "Target": {
-			            "Entity": "data_quest_atual"
-			          }
-			        },
-			        "entity__medida.satisfacao_relacoes_atual": {
-			          "Target": {
-			            "Entity": "entity__medida.satisfacao_relacoes_atual"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "data_quest_atual"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.satisfacao_relacoes_atual"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_quest_atuals_have_satisfacao_relacoes_atual"
+			          "ID": "Phrasing_medidas_have__satisfacao_relacoes_atual"
 			        }
 			      ]
 			    },
@@ -15234,19 +18811,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_satisfacao_trabalho_atual"
+			          "ID": "factsurveys_have__satisfacao_trabalho_atual"
 			        }
 			      ]
 			    },
-			    "data_quest_atual_has_entity__medida_satisfacao_trabalho_atual": {
+			    "data_quest_inicial_has_entity__medida_satisfacao_trabalho_atual": {
 			      "Binding": {
-			        "ConceptualEntity": "DataQuestAtual"
+			        "ConceptualEntity": "DataQuestInicial"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "data_quest_atual": {
+			        "data_quest_inicial": {
 			          "Target": {
-			            "Entity": "data_quest_atual"
+			            "Entity": "data_quest_inicial"
 			          }
 			        },
 			        "entity__medida.satisfacao_trabalho_atual": {
@@ -15259,7 +18836,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "data_quest_atual"
+			              "Role": "data_quest_inicial"
 			            },
 			            "Object": {
 			              "Role": "entity__medida.satisfacao_trabalho_atual"
@@ -15267,7 +18844,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_quest_atuals_have_satisfacao_trabalho_atual"
+			          "ID": "data_quest_inicials_have__satisfacao_trabalho_atual"
 			        }
 			      ]
 			    },
@@ -15300,7 +18877,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_satisfacao_trabalho_inicial"
+			          "ID": "factsurveys_have__satisfacao_trabalho_inicial"
 			        }
 			      ]
 			    },
@@ -15333,19 +18910,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_quest_inicials_have_satisfacao_trabalho_inicial"
+			          "ID": "data_quest_inicials_have__satisfacao_trabalho_inicial"
 			        }
 			      ]
 			    },
-			    "factsurvey_has_entity__medida_envolvimento_atual": {
+			    "entity__medida_has_envolvimento_atual": {
 			      "Binding": {
-			        "ConceptualEntity": "fact-survey"
+			        "ConceptualEntity": "_Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "factsurvey": {
+			        "entity__medida": {
 			          "Target": {
-			            "Entity": "factsurvey"
+			            "Entity": "entity__medida"
 			          }
 			        },
 			        "entity__medida.envolvimento_atual": {
@@ -15358,7 +18935,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "factsurvey"
+			              "Role": "entity__medida"
 			            },
 			            "Object": {
 			              "Role": "entity__medida.envolvimento_atual"
@@ -15366,24 +18943,24 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_envolvimento_atual"
+			          "ID": "Phrasing_medidas_have__envolvimento_atual"
 			        }
 			      ]
 			    },
-			    "data_quest_atual_has_entity__medida_envolvimento_atual": {
+			    "entity__medida_has_satisfacao_ambiente_atual": {
 			      "Binding": {
-			        "ConceptualEntity": "DataQuestAtual"
+			        "ConceptualEntity": "_Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "data_quest_atual": {
+			        "entity__medida": {
 			          "Target": {
-			            "Entity": "data_quest_atual"
+			            "Entity": "entity__medida"
 			          }
 			        },
-			        "entity__medida.envolvimento_atual": {
+			        "entity__medida.satisfacao_ambiente_atual": {
 			          "Target": {
-			            "Entity": "entity__medida.envolvimento_atual"
+			            "Entity": "entity__medida.satisfacao_ambiente_atual"
 			          }
 			        }
 			      },
@@ -15391,81 +18968,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "data_quest_atual"
+			              "Role": "entity__medida"
 			            },
 			            "Object": {
-			              "Role": "entity__medida.envolvimento_atual"
+			              "Role": "entity__medida.satisfacao_ambiente_atual"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_quest_atuals_have_envolvimento_atual"
-			        }
-			      ]
-			    },
-			    "factsurvey_has_entity__medida_satisfação_ambiente_atual": {
-			      "Binding": {
-			        "ConceptualEntity": "fact-survey"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "factsurvey": {
-			          "Target": {
-			            "Entity": "factsurvey"
-			          }
-			        },
-			        "entity__medida.satisfação_ambiente_atual": {
-			          "Target": {
-			            "Entity": "entity__medida.satisfação_ambiente_atual"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "factsurvey"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.satisfação_ambiente_atual"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "factsurveys_have_satisfação_ambiente_atual"
-			        }
-			      ]
-			    },
-			    "data_quest_atual_has_entity__medida_satisfação_ambiente_atual": {
-			      "Binding": {
-			        "ConceptualEntity": "DataQuestAtual"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "data_quest_atual": {
-			          "Target": {
-			            "Entity": "data_quest_atual"
-			          }
-			        },
-			        "entity__medida.satisfação_ambiente_atual": {
-			          "Target": {
-			            "Entity": "entity__medida.satisfação_ambiente_atual"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "data_quest_atual"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.satisfação_ambiente_atual"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_quest_atuals_have_satisfação_ambiente_atual"
+			          "ID": "Phrasing_medidas_have__satisfacao_ambiente_atual"
 			        }
 			      ]
 			    },
@@ -15564,7 +19075,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_equilibrio_trabalho_vida_inicial"
+			          "ID": "factsurveys_have__equilibrio_trabalho_vida_inicial"
 			        }
 			      ]
 			    },
@@ -15597,85 +19108,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_quest_inicials_have_equilibrio_trabalho_vida_inicial"
+			          "ID": "data_quest_inicials_have__equilibrio_trabalho_vida_inicial"
 			        }
 			      ]
 			    },
-			    "factsurvey_has_entity__medida_satisfacao_relacoes_inicial": {
+			    "entity__medida_has_envolvimento_inicial": {
 			      "Binding": {
-			        "ConceptualEntity": "fact-survey"
+			        "ConceptualEntity": "_Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "factsurvey": {
+			        "entity__medida": {
 			          "Target": {
-			            "Entity": "factsurvey"
-			          }
-			        },
-			        "entity__medida.satisfacao_relacoes_inicial": {
-			          "Target": {
-			            "Entity": "entity__medida.satisfacao_relacoes_inicial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "factsurvey"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.satisfacao_relacoes_inicial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "factsurveys_have_satisfacao_relacoes_inicial"
-			        }
-			      ]
-			    },
-			    "data_quest_inicial_has_entity__medida_satisfacao_relacoes_inicial": {
-			      "Binding": {
-			        "ConceptualEntity": "DataQuestInicial"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "data_quest_inicial": {
-			          "Target": {
-			            "Entity": "data_quest_inicial"
-			          }
-			        },
-			        "entity__medida.satisfacao_relacoes_inicial": {
-			          "Target": {
-			            "Entity": "entity__medida.satisfacao_relacoes_inicial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "data_quest_inicial"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.satisfacao_relacoes_inicial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_quest_inicials_have_satisfacao_relacoes_inicial"
-			        }
-			      ]
-			    },
-			    "factsurvey_has_entity__medida_envolvimento_inicial": {
-			      "Binding": {
-			        "ConceptualEntity": "fact-survey"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "factsurvey": {
-			          "Target": {
-			            "Entity": "factsurvey"
+			            "Entity": "entity__medida"
 			          }
 			        },
 			        "entity__medida.envolvimento_inicial": {
@@ -15688,7 +19133,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "factsurvey"
+			              "Role": "entity__medida"
 			            },
 			            "Object": {
 			              "Role": "entity__medida.envolvimento_inicial"
@@ -15696,40 +19141,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_envolvimento_inicial"
-			        }
-			      ]
-			    },
-			    "data_quest_inicial_has_entity__medida_envolvimento_inicial": {
-			      "Binding": {
-			        "ConceptualEntity": "DataQuestInicial"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "data_quest_inicial": {
-			          "Target": {
-			            "Entity": "data_quest_inicial"
-			          }
-			        },
-			        "entity__medida.envolvimento_inicial": {
-			          "Target": {
-			            "Entity": "entity__medida.envolvimento_inicial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "data_quest_inicial"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.envolvimento_inicial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_quest_inicials_have_envolvimento_inicial"
+			          "ID": "Phrasing_medidas_have__envolvimento_inicial"
 			        }
 			      ]
 			    },
@@ -15762,7 +19174,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_indice_felicidade_atual"
+			          "ID": "factsurveys_have__indice_felicidade_atual"
 			        }
 			      ]
 			    },
@@ -15795,7 +19207,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_quest_atuals_have_indice_felicidade_atual"
+			          "ID": "data_quest_atuals_have__indice_felicidade_atual"
 			        }
 			      ]
 			    },
@@ -15828,7 +19240,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_indice_felicidade_inicial"
+			          "ID": "factsurveys_have__indice_felicidade_inicial"
 			        }
 			      ]
 			    },
@@ -15861,19 +19273,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_quest_inicials_have_indice_felicidade_inicial"
+			          "ID": "data_quest_inicials_have__indice_felicidade_inicial"
 			        }
 			      ]
 			    },
-			    "factsurvey_has_entity__medida_satisfacao_ambiente_inicial": {
+			    "entity__medida_has_satisfacao_ambiente_inicial": {
 			      "Binding": {
-			        "ConceptualEntity": "fact-survey"
+			        "ConceptualEntity": "_Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "factsurvey": {
+			        "entity__medida": {
 			          "Target": {
-			            "Entity": "factsurvey"
+			            "Entity": "entity__medida"
 			          }
 			        },
 			        "entity__medida.satisfacao_ambiente_inicial": {
@@ -15886,7 +19298,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "factsurvey"
+			              "Role": "entity__medida"
 			            },
 			            "Object": {
 			              "Role": "entity__medida.satisfacao_ambiente_inicial"
@@ -15894,40 +19306,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "factsurveys_have_satisfacao_ambiente_inicial"
-			        }
-			      ]
-			    },
-			    "data_quest_inicial_has_entity__medida_satisfacao_ambiente_inicial": {
-			      "Binding": {
-			        "ConceptualEntity": "DataQuestInicial"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "data_quest_inicial": {
-			          "Target": {
-			            "Entity": "data_quest_inicial"
-			          }
-			        },
-			        "entity__medida.satisfacao_ambiente_inicial": {
-			          "Target": {
-			            "Entity": "entity__medida.satisfacao_ambiente_inicial"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "data_quest_inicial"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.satisfacao_ambiente_inicial"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_quest_inicials_have_satisfacao_ambiente_inicial"
+			          "ID": "Phrasing_medidas_have__satisfacao_ambiente_inicial"
 			        }
 			      ]
 			    },

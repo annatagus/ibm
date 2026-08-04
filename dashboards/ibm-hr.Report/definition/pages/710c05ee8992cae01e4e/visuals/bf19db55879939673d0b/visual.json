@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "bf19db55879939673d0b",
   "position": {
     "x": 704,
@@ -7,7 +7,7 @@
     "z": 24000,
     "height": 240,
     "width": 560,
-    "tabOrder": 23000
+    "tabOrder": 22000
   },
   "visual": {
     "visualType": "textbox",
@@ -86,7 +86,7 @@
                     }
                   },
                   {
-                    "value": ": Atuar na área com menor Felicidade atual (2,44).",
+                    "value": ": Atuar na área com menor Felicidade atual (-17,3%).",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"
@@ -106,7 +106,7 @@
                     }
                   },
                   {
-                    "value": ": Travar quebra urgente na Felicidade Geral (-0,32 pontos).",
+                    "value": ": Travar quebra urgente na Felicidade Geral (-3,5%).",
                     "textStyle": {
                       "fontFamily": "DIN Light",
                       "fontSize": "14pt"

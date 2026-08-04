@@ -1,0 +1,62 @@
+table 'Bridge Base Remuneração'
+	lineageTag: 1d495e7e-2045-43ba-8ec9-12aa155b81f0
+
+	column Base
+		lineageTag: 9e7e320e-4071-41db-91aa-8e42ea5b5e5b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Base]
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeNumber
+		formatString: 0
+		lineageTag: 2f812bc4-ef30-499e-97a3-f5a1e543cff0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [EmployeeNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Bridge Base Remuneração' = calculated
+		mode: import
+		source =
+				
+				VAR BaseInicial =
+				    SELECTCOLUMNS(
+				        'fact-attrition',
+				        "Base", "Survey Inicial",
+				        "EmployeeNumber", 'fact-attrition'[EmployeeNumber]
+				    )
+				
+				VAR BaseAtual =
+				    SELECTCOLUMNS(
+				        FILTER(
+				            'fact-attrition',
+				            'fact-attrition'[Attrition] = "No"
+				        ),
+				        "Base", "Survey Atual",
+				        "EmployeeNumber", 'fact-attrition'[EmployeeNumber]
+				    )
+				
+				VAR BaseSaidas =
+				    SELECTCOLUMNS(
+				        FILTER(
+				            'fact-attrition',
+				            'fact-attrition'[Attrition] = "Yes"
+				        ),
+				        "Base", "Saídas",
+				        "EmployeeNumber", 'fact-attrition'[EmployeeNumber]
+				    )
+				
+				RETURN
+				    DISTINCT(
+				        UNION(
+				            BaseInicial,
+				            BaseAtual,
+				            BaseSaidas
+				        )
+				    )
+
+	annotation PBI_Id = 77782ff3c8774a4385b7d2fbeaea338c
+
