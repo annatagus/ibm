@@ -3,7 +3,7 @@
 # Projeto 01 IBM-HR 📊
 Este repositório contém o projeto prático **Projeto 01 IBM-HR**, desenvolvido no âmbito do curso **AIDAPT-04** da **cegid Academy**. O objetivo principal do projeto é analisar dados de Recursos Humanos utilizando 'SQL', 'R' e 'Power BI' para gerar insights estratégicos.
 
-O projeto será apresentado nos **dias 5 e 6 (primeira semana) de agosto de 2026** pelo **Grupo #2 _Power Squad_**.
+O projeto será apresentado no **dia 5 de agosto de 2026** pelo **Grupo #2 _Power Squad_**.
 
 ---
 
@@ -22,6 +22,7 @@ O projeto será apresentado nos **dias 5 e 6 (primeira semana) de agosto de 2026
 
 Para manter o projeto limpo e colaborativo no Git, a estrutura de pastas foi organizada da seguinte forma:
 
+* **`/componente R**`: Contém o notebook desenvolvido em R (`.ipynb` via Google Colab) para a análise estatística e tratamento dos dados.
 * **`/componente SQL`**: Armazena os scripts SQL (`.sql`) desenvolvidos no SQL Server para a extração, transformação e modelagem prévia dos dados de RH.
 * **`/dashboards`**: Contém os ficheiros de desenvolvimento e relatórios finais do Power BI (`.pbix` ou `.pbip`).
 * **`/documentation`**: Centraliza os ficheiros de suporte do projeto, incluindo o relatório escrito em Word/PDF, a apresentação em PowerPoint e o levantamento de requisitos.
