@@ -10,6 +10,7 @@ Este documento fornece a descrição detalhada das variáveis do modelo de dados
 * **Idioma da Documentação:** Português (PT-PT)
 * **Unidade de Distância:** Quilómetros (km) — *valores numéricos originais assumidos diretamente em km*
 * **Arquitetura de Dados:** Multi-Fact Star Schema (Esquema em Estrela com Duas Tabelas de Factos)
+* **Documentação Técnica Completa (INFO.VIEW):** [Ver Ficheiro Excel de Apoio](ibm-hr_info-view.xlsx) *(Contém as tabelas, colunas, medidas DAX e relacionamentos extraídos do Power BI)*
 
 ---
 
@@ -28,6 +29,12 @@ O modelo de dados segue os padrões de Business Intelligence para estruturas mul
 * **`dim-job`**: Concentra os cargos específicos e os níveis hierárquicos de senioridade (`Job_Id`).
 * **`dim-satisfaction`**: Atua como uma tabela de normalização e parametrização das escalas numéricas de avaliação (1 a 4). Contém a descrição textual do nível de satisfação (`Level`) e serve de ponte para as múltiplas colunas de notas nas duas tabelas de factos.
 
+### 3. Tabelas Auxiliares, de Parâmetros e Medidas
+* **`_Medidas`**: Tabela dedicada e centralizada exclusivamente para agrupar todas as medidas DAX do projeto.
+* **`Dimensões Survey`**: Tabela auxiliar para seletor e ordenação das dimensões do inquérito.
+* **`Evolução Felicidade`**: Tabela auxiliar para categorizar a evolução temporal da felicidade.
+* **`DataQuestInicial` & `DataQuestAtual`**: Tabelas auxiliares de controlo de datas (implementado como parâmetros) e períodos de referência dos inquéritos.
+
 ---
 
 ## 🗂️ Tabela de Atributos (Localização e Significado)
@@ -35,11 +42,13 @@ O modelo de dados segue os padrões de Business Intelligence para estruturas mul
 | Nome da Coluna (Original) | Tipo de Dados (Power BI) | Localização no Modelo | Descrição em Português (PT-PT) | Notas / Transformações |
 | :--- | :--- | :--- | :--- | :--- |
 | **Age** | Inteiro | `dim-employee` | Idade do colaborador (18 a 60 anos). | Métrica demográfica base. |
+| **AgeRange** | Texto | `dim-employee` | Faixa etária agrupada do colaborador. | Coluna calculada de segmentação. |
 | **Attrition** | Texto | `fact-attrition` | Se o colaborador deixou a empresa (Yes/No). | Usado para mapear permanência vs. felicidade. |
 | **BusinessTravel** | Texto | `dim-employee` | Frequência de viagens em trabalho. | Categoria comportamental. |
 | **DailyRate** | Inteiro | `dim-employee` | Tarifa ou custo diário do colaborador. | Nível de custo do funcionário. |
 | **Department** | Texto | `dim-department` | Departamento atual na empresa. | Estrutura organizacional. |
 | **Department_Id** | Inteiro / Chave | `dim-department` / Factos | ID gerado para isolar o setor. | Chave de Relacionamento. |
+| **Dimensão** | Texto | `Dimensões Survey` | Nome da dimensão avaliada no inquérito. | Atributo de apoio visual. |
 | **DistanceFromHome** | Inteiro | `dim-employee` | Distância entre residência e o trabalho (em **km**). | Valores originais assumidos em km. |
 | **Education** | Inteiro | *N/A* | *Coluna Ignorada / Normalizada* | Substituída pelo ID na dimensão. |
 | **Education_Id** | Inteiro / Chave | `dim-education` / `fact-attrition` | ID de ligação para o nível de escolaridade. | Chave de Relacionamento. |
@@ -49,22 +58,28 @@ O modelo de dados segue os padrões de Business Intelligence para estruturas mul
 | **EmployeeCount** | Inteiro | *N/A* | *Coluna Ignorada*. | **Ignorado:** Valor fixo 1 removido. |
 | **EmployeeNumber** | Inteiro / Chave | `dim-employee` / Factos | Identificador único do colaborador. | Chave Primária de ligação comum. |
 | **EnvironmentSatisfaction** | Inteiro / Chave | `fact-attrition` / `fact-survey` | Grau de satisfação com o ambiente de trabalho. | Nota de clima (Lida via `dim-satisfaction`).|
+| **Evolução** | Texto | `Evolução Felicidade` | Descrição do sentido de evolução da felicidade. | Parâmetro visual. |
 | **Gender** | Texto | `dim-employee` | Género do colaborador (Female/Male). | Dado demográfico. |
 | **HourlyRate** | Inteiro | `dim-employee` | Valor faturado/pago por hora ao colaborador. | Métrica financeira horária. |
+| **IndividualHappinessIndex** | Decimal / Métrica | `fact-survey` | Índice individual de felicidade apurado no inquérito. | Indicador de bem-estar agregado. |
 | **JobInvolvement** | Inteiro / Chave | `fact-attrition` / `fact-survey` | Nível de envolvimento e dedicação ao trabalho. | Indicador comportamental. |
 | **Job_Id** | Inteiro / Chave | `dim-job` / `fact-attrition` | ID gerado para isolar a função e o cargo. | Chave de Relacionamento. |
 | **JobLevel** | Inteiro | `dim-job` | Nível hierárquico do cargo ocupado (1-5). | Senioridade na organização. |
 | **JobRole** | Texto | `dim-job` | Função ou cargo desempenhado pelo colaborador. | Categoria funcional. |
 | **JobSatisfaction** | Inteiro / Chave | `fact-attrition` / `fact-survey` | Nível de satisfação com o trabalho desempenhado.| Indicador de felicidade laboral. |
 | **Level** | Texto | `dim-satisfaction` | Descrição textual da nota (Ex: Low, Medium, High, Very High). | Tradução da escala 1-4. |
+| **Mais55Anos** | Texto / Booleano | `dim-employee` | Identifica se o colaborador tem mais de 55 anos. | Segmentação etária específica. |
 | **MaritalStatus** | Texto | `dim-employee` | Estado civil do colaborador. | Dado demográfico. |
 | **MonthlyIncome** | Inteiro | `dim-employee` | Rendimento ou salário mensal bruto. | Métrica de compensação. |
 | **MonthlyRate** | Inteiro | `dim-employee` | Valor de custo mensal associado ao colaborador. | Indicador financeiro interno. |
 | **NumCompaniesWorked** | Inteiro | `dim-employee` | Número de empresas onde o colaborador trabalhou antes. | Histórico profissional externo. |
+| **Ordem** | Inteiro | `Dimensões Survey` / `Evolução Felicidade` | Índice numérico para ordenação correta de itens visuais. | Atributo de ordenação de gráficos. |
+| **Ordem Range Rendimento** | Inteiro | `dim-employee` | Chave numérica para ordenar os escalões salariais. | Auxiliar de ordenação. |
 | **Over18** | Texto | *N/A* | *Coluna Ignorada*. | **Ignorado:** Removido no Power Query. |
 | **OverTime** | Texto | `dim-employee` | Indica se o colaborador faz horas extraordinárias. | Fator de impacto na qualidade de vida. |
 | **PercentSalaryHike** | Inteiro | `dim-employee` | Percentagem de aumento salarial no último ano. | Indicador de valorização. |
 | **PerformanceRating** | Inteiro | `dim-employee` | Avaliação de desempenho do último ano (1-4).| Métrica de produtividade. |
+| **Range Rendimento** | Texto | `dim-employee` | Escalão ou intervalo de rendimento salarial. | Categoria financeira segmentada. |
 | **RelationshipSatisfaction**| Inteiro / Chave | `fact-attrition` / `fact-survey` | Nível de satisfação com as relações no trabalho. | Clima de equipa e integração. |
 | **Satisfaction_Id** | Inteiro / Chave | `dim-satisfaction` | Código identificador da escala de notas (1-4). | Chave de Relacionamento. |
 | **StandardHours** | Inteiro | *N/A* | *Coluna Ignorada*. | **Ignorado / Convertido num Parâmetro**. |
@@ -73,11 +88,13 @@ O modelo de dados segue os padrões de Business Intelligence para estruturas mul
 | **SurveyDate** | Data | `fact-attrition` / `fact-survey` | Data de realização do registo ou do inquérito. | Chave temporal de contexto. |
 | **TotalWorkingYears** | Inteiro | `dim-employee` | Tempo total de carreira profissional em anos. | Experience de mercado. |
 | **TrainingTimesLastYear** | Inteiro | `dim-employee` | Número de ações de formação no ano passado. | Investimento no colaborador. |
+| **WLB Categoria** | Texto | `fact-survey` | Categoria de Equilíbrio Vida-Trabalho (*Work-Life Balance*). | Segmentação do inquérito de bem-estar. |
 | **WorkLifeBalance** | Inteiro / Chave | `fact-attrition` / `fact-survey` | Equilíbrio entre a vida pessoal e profissional. | Indicador crítico de bem-estar. |
 | **YearsAtCompany** | Inteiro | `dim-employee` | Total de anos de antiguidade na empresa atual. | Fidelização interna. |
 | **YearsInCurrentRole** | Inteiro | `dim-employee` | Total de anos decorridos na função ou cargo atual. | Tempo de estagnação ou estabilidade. |
 | **YearsSinceLastPromotion** | Inteiro | `dim-employee` | Anos decorridos desde a data da última promoção. | Ciclo de progressão de carreira. |
 | **YearsWithCurrManager** | Inteiro | `dim-employee` | Total de anos sob a liderança do atual gestor. | Relação com a chefia direta. |
+
 
 ---
 

@@ -58,4 +58,5 @@ Para manter o projeto limpo e colaborativo no Git, a estrutura de pastas foi org
 Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estruturado seguindo um esquema em estrela com múltiplas tabelas de factos (*Multi-Fact Star Schema*). Esta arquitetura é composta por duas tabelas centrais de factos (`fact-attrition` e `fact-survey`) que partilham dimensões comuns, permitindo correlacionar de forma isolada os indicadores históricos de satisfação laboral com os resultados do novo inquérito interno (mesa de _ping-pong_).
 
 * 🔍 [Visualizar Imagem do Modelo Multi-Fact Star Schema (PNG)](img/modelo_multi_fact_star_schema.png)
+* 🔍 [Visualizar Imagem do Modelo versão final (PNG)](img/modelo_final.png)
 * 📖 [Consultar Dicionário de Dados Detalhado](documentation/dicionario_dados.md) (Tipos de dados, transformações e mapeamento de chaves)
