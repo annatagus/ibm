@@ -60,3 +60,4 @@ Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estru
 * 🔍 [Visualizar Imagem do Modelo Multi-Fact Star Schema (PNG)](img/modelo_multi_fact_star_schema.png)
 * 🔍 [Visualizar Imagem do Modelo versão final (PNG)](img/modelo_ver_final.png)
 * 📖 [Consultar Dicionário de Dados Detalhado](documentation/dicionario_dados.md) (Tipos de dados, transformações e mapeamento de chaves)
+* 📊 [Consultar Relatório do Power BI exportado (PDF)](documentation/ibm-hr.pdf)
