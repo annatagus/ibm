@@ -437,7 +437,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Detalhe Remuneratório por Departamento e Cargo'"
+                  "Value": "'Detalhe Remuneratório por Departamento e Nível'"
                 }
               }
             },

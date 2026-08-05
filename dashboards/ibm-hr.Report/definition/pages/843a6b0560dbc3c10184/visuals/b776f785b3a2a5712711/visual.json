@@ -251,7 +251,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Rendimento Médio vs. Mediano por Departamento'"
+                  "Value": "'Rendimento Médio vs. Mediano por depart.'"
                 }
               }
             },

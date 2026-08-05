@@ -237,7 +237,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Exposição à reforma por departamento'"
+                  "Value": "'Exposição à reforma por nível'"
                 }
               }
             },
