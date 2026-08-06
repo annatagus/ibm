@@ -70,9 +70,4 @@ Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estru
 * 📊 [Consultar Relatório do Power BI exportado](documentation/ibm-hr.pdf) - Exportação das páginas visuais e dashboards interativos.
 
 
-![Power BI](https://shields.io)
-![SQL Server](https://shields.io)
-![R](https://shields.io)
-![Excel](https://shields.io)
-![Office](https://shields.io)
-![GitHub](https://shields.io)
+<img src="https://shields.io" alt="Power BI" /> <img src="https://shields.io" alt="SQL Server" /> <img src="https://shields.io" alt="R" /> <img src="https://shields.io" alt="Excel" /> <img src="https://shields.io" alt="Office" /> <img src="https://shields.io" alt="GitHub" />
