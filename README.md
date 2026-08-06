@@ -57,7 +57,14 @@ Para manter o projeto limpo e colaborativo no Git, a estrutura de pastas foi org
 
 Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estruturado seguindo um esquema em estrela com múltiplas tabelas de factos (*Multi-Fact Star Schema*). Esta arquitetura é composta por duas tabelas centrais de factos (`fact-attrition` e `fact-survey`) que partilham dimensões comuns, permitindo correlacionar de forma isolada os indicadores históricos de satisfação laboral com os resultados do novo inquérito interno (mesa de _ping-pong_).
 
-* 🔍 [Visualizar Imagem do Modelo Multi-Fact Star Schema (PNG)](img/modelo_multi_fact_star_schema.png)
-* 🔍 [Visualizar Imagem do Modelo versão final (PNG)](img/modelo_ver_final.png)
+* 🔍 [Visualizar Imagem do Modelo Multi-Fact Star Schema](img/modelo_multi_fact_star_schema.png)
+* 🔍 [Visualizar Imagem do Modelo versão final](img/modelo_ver_final.png)
 * 📖 [Consultar Dicionário de Dados Detalhado](documentation/dicionario_dados.md) (Tipos de dados, transformações e mapeamento de chaves)
-* 📊 [Consultar Relatório do Power BI exportado (PDF)](documentation/ibm-hr.pdf)
+* 📖 [Ver Ficheiro Excel de Apoio](documentation/ibm-hr_info-view.xlsx) Documentação Técnica Completa (INFO.VIEW)
+
+---
+
+## 📄 Documentação e Relatórios (PDF)
+
+* 📄 [Consultar Resumo Executivo & Diagnóstico](documentation/ibm-hr_introducao.pdf) — Raio-X da força de trabalho, diagnóstico de retenção e recomendações estratégicas de RH.
+* 📊 [Consultar Relatório do Power BI exportado](documentation/ibm-hr.pdf) — Exportação das páginas visuais e dashboards interativos.
