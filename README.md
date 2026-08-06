@@ -60,11 +60,19 @@ Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estru
 * 🔍 [Visualizar Imagem do Modelo Multi-Fact Star Schema](img/modelo_multi_fact_star_schema.png)
 * 🔍 [Visualizar Imagem do Modelo versão final](img/modelo_ver_final.png)
 * 📖 [Consultar Dicionário de Dados Detalhado](documentation/dicionario_dados.md) (Tipos de dados, transformações e mapeamento de chaves)
-* 📖 [Ver Ficheiro Excel de Apoio](documentation/ibm-hr_info-view.xlsx) Documentação Técnica Completa (INFO.VIEW)
+* 📖 [Ver Ficheiro Excel de Apoio](documentation/ibm-hr_info-view.xlsx) - Documentação Técnica Completa (INFO.VIEW)
 
 ---
 
 ## 📄 Documentação e Relatórios (PDF)
 
-* 📄 [Consultar Resumo Executivo & Diagnóstico](documentation/ibm-hr_introducao.pdf) Raio-X da força de trabalho, diagnóstico de retenção e recomendações estratégicas de RH.
-* 📊 [Consultar Relatório do Power BI exportado](documentation/ibm-hr.pdf) Exportação das páginas visuais e dashboards interativos.
+* 📄 [Consultar Resumo Executivo & Diagnóstico](documentation/ibm-hr_introducao.pdf) - Raio-X da força de trabalho, diagnóstico de retenção e recomendações estratégicas de RH.
+* 📊 [Consultar Relatório do Power BI exportado](documentation/ibm-hr.pdf) - Exportação das páginas visuais e dashboards interativos.
+
+
+![Power BI](https://shields.io)
+![SQL Server](https://shields.io)
+![R](https://shields.io)
+![Excel](https://shields.io)
+![Office](https://shields.io)
+![GitHub](https://shields.io)
