@@ -66,5 +66,5 @@ Para garantir o máximo desempenho e eficiência no Power BI, o modelo foi estru
 
 ## 📄 Documentação e Relatórios (PDF)
 
-* 📄 [Consultar Resumo Executivo & Diagnóstico](documentation/ibm-hr_introducao.pdf) — Raio-X da força de trabalho, diagnóstico de retenção e recomendações estratégicas de RH.
-* 📊 [Consultar Relatório do Power BI exportado](documentation/ibm-hr.pdf) — Exportação das páginas visuais e dashboards interativos.
+* 📄 [Consultar Resumo Executivo & Diagnóstico](documentation/ibm-hr_introducao.pdf) Raio-X da força de trabalho, diagnóstico de retenção e recomendações estratégicas de RH.
+* 📊 [Consultar Relatório do Power BI exportado](documentation/ibm-hr.pdf) Exportação das páginas visuais e dashboards interativos.
